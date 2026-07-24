@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image Art Direction"
+  short_description: "Direct authentic imagery and crop systems"
+  default_prompt: "Use $image-art-direction to inventory and direct the imagery."

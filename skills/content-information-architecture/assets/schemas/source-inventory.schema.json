@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xelius.example/schemas/source-inventory.schema.json",
+  "title": "Source inventory",
+  "type": "object",
+  "required": ["projectId", "sources"],
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "1.0"},
+    "projectId": {"type": "string"},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "location", "status", "rights"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[A-Z][A-Z0-9-]+$"},
+          "kind": {"enum": ["text", "markdown", "docx", "pdf", "url", "spreadsheet", "dataset", "image", "brand-asset", "research-note", "other"]},
+          "location": {"type": "string"},
+          "title": {"type": "string"},
+          "status": {"enum": ["available", "missing", "unreadable", "restricted", "superseded"]},
+          "rights": {"enum": ["owned", "licensed", "public-domain", "permission-required", "unknown"]},
+          "date": {"type": "string"},
+          "pagesOrRows": {"type": "integer", "minimum": 0},
+          "notes": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

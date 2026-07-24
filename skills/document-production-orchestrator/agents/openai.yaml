@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document Production Orchestrator"
+  short_description: "Route coordinated document production workflows"
+  default_prompt: "Use $document-production-orchestrator to route this document production request."

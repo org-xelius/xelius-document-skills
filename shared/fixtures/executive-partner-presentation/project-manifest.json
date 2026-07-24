@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "riverbend-partner-deck",
+  "title": "Riverbend Community Network: Synthetic Partner Briefing",
+  "productionModes": ["partner-briefing"],
+  "audience": ["funding partners", "programme leadership"],
+  "purpose": "Support a decision on the synthetic pilot's next phase.",
+  "desiredAction": "Approve design work for a measured twelve-month extension.",
+  "brandMode": "new-direction",
+  "sourceRoots": ["../../example-content"],
+  "deliverables": [
+    {"kind": "presentation", "format": "PPTX", "editable": true, "targetLength": 11},
+    {"kind": "handout", "format": "PDF", "editable": false, "targetLength": 11}
+  ],
+  "constraints": {"synthetic": true, "speakingDurationMinutes": 12},
+  "checkpoints": {"mode": "uninterrupted", "structure": "approved", "representativeSample": "approved", "finalQa": "limited"},
+  "toolAvailability": {},
+  "warnings": ["Binary generation and rendering depend on locally available presentation tools."]
+}

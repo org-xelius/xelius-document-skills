@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "direction": {
+    "profile": "select-a-profile",
+    "brandMode": "extend-brand",
+    "protected": [],
+    "flexible": [],
+    "prohibited": []
+  },
+  "typography": {
+    "families": {},
+    "roles": {},
+    "fallbacks": {},
+    "licensing": {}
+  },
+  "colour": {
+    "canvas": "#FFFFFF",
+    "text": "#111111",
+    "mutedText": "#555555",
+    "rule": "#D6D6D6",
+    "primary": "#0B3C5D",
+    "accent": "#D95D39",
+    "functional": {}
+  },
+  "layout": {
+    "canvas": {},
+    "margins": {},
+    "columns": 6,
+    "gutter": 16,
+    "spacingScale": [4, 8, 12, 16, 24, 32, 48, 64]
+  },
+  "components": {
+    "charts": {},
+    "tables": {},
+    "images": {},
+    "icons": {},
+    "footers": {},
+    "sourceLines": {}
+  },
+  "accessibility": {
+    "contrastTarget": "WCAG-AA",
+    "colourOnlyMeaning": false
+  }
+}

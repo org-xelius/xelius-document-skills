@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publication Design System"
+  short_description: "Define reusable publication design contracts"
+  default_prompt: "Use $publication-design-system to define a reusable visual system."

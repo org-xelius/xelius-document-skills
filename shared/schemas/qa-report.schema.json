@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xelius.example/schemas/qa-report.schema.json",
+  "title": "Rendered visual QA report",
+  "type": "object",
+  "required": ["artifact", "artifactType", "status", "inspectionCoverage", "issues"],
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "1.0"},
+    "artifact": {"type": "string"},
+    "artifactType": {"enum": ["pdf", "pptx", "svg", "png-pack"]},
+    "status": {"enum": ["pass", "repair-required", "limited"]},
+    "inspectionCoverage": {
+      "type": "object",
+      "required": ["rendered", "inspected", "total"],
+      "properties": {
+        "rendered": {"type": "integer", "minimum": 0},
+        "inspected": {"type": "integer", "minimum": 0},
+        "total": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["location", "severity", "category", "evidence", "repair", "status"],
+        "properties": {
+          "location": {"type": "string"},
+          "severity": {"enum": ["critical", "high", "medium", "low"]},
+          "category": {"enum": ["overflow", "clipping", "contrast", "typography", "spacing", "crop", "missing-asset", "svg", "chart", "table", "density", "repetition", "furniture", "source-line", "orphan", "pagination", "narrative", "accessibility", "other"]},
+          "evidence": {"type": "string"},
+          "repair": {"type": "string"},
+          "status": {"enum": ["open", "repaired", "accepted", "unverifiable"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

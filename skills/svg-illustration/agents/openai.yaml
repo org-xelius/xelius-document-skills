@@ -1,0 +1,4 @@
+interface:
+  display_name: "SVG Illustration"
+  short_description: "Create robust, accessible SVG visual assets"
+  default_prompt: "Use $svg-illustration to create and validate an SVG asset."

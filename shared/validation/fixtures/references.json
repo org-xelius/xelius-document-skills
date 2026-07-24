@@ -1,0 +1,7 @@
+{
+  "citations": ["ref-1", "ref-2"],
+  "bibliography": [
+    {"id": "ref-1", "author": "Synthetic Author", "year": 2026, "title": "Synthetic source one", "doi": "10.1234/example.1"},
+    {"id": "ref-2", "author": "Synthetic Author", "year": 2026, "title": "Synthetic source two", "url": "https://example.org/source-two"}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xelius.example/schemas/evidence-register.schema.json",
+  "title": "Evidence register",
+  "type": "object",
+  "required": ["projectId", "claims"],
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "1.0"},
+    "projectId": {"type": "string"},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "claim", "sourceIds", "locator", "confidence", "allowedUses"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^EV-[0-9]{3,}$"},
+          "claim": {"type": "string", "minLength": 1},
+          "sourceIds": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "locator": {"type": "string", "minLength": 1},
+          "confidence": {"enum": ["high", "medium", "low", "disputed"]},
+          "allowedUses": {"type": "array", "items": {"enum": ["body", "executive-summary", "slide", "chart", "caption", "speaker-notes", "annex"]}},
+          "caveats": {"type": "array", "items": {"type": "string"}},
+          "status": {"enum": ["verified", "needs-review", "excluded"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

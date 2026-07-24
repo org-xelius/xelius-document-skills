@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0",
+  "pageFamilies": {
+    "section-opener": {"density": "low", "required": ["sectionNumber", "title"], "optional": ["image", "standfirst"]},
+    "narrative": {"density": "medium", "required": ["headline", "body"], "optional": ["figure", "sidebar", "source"]},
+    "data-page": {"density": "medium-high", "required": ["insightTitle", "visual", "source"], "optional": ["annotation", "methodNote"]},
+    "image-led": {"density": "low", "required": ["image", "caption", "credit"], "optional": ["headline", "shortNarrative"]}
+  }
+}

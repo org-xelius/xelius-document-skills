@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "families": {
+    "opening-proposition": {"maxPrimaryMessages": 1, "dominantForm": "statement-or-image"},
+    "chart-led-insight": {"maxPrimaryMessages": 1, "dominantForm": "chart", "requires": ["source", "accessibleData"]},
+    "explanation": {"maxPrimaryMessages": 1, "dominantForm": "diagram-or-structured-copy"},
+    "recommendation": {"maxPrimaryMessages": 1, "dominantForm": "action"},
+    "closing": {"maxPrimaryMessages": 1, "dominantForm": "decision-or-call-to-action"}
+  }
+}

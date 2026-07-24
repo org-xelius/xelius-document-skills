@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPTX Production"
+  short_description: "Build editable, validated PowerPoint decks"
+  default_prompt: "Use $pptx-production to build and validate an editable PowerPoint deck."

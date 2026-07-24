@@ -1,0 +1,4 @@
+interface:
+  display_name: "Table Design"
+  short_description: "Design readable research and presentation tables"
+  default_prompt: "Use $table-design to redesign this table for its output format."

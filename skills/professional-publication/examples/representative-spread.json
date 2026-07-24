@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "pages": [
+    {"family": "section-opener", "purpose": "Open the evidence section", "evidenceIds": []},
+    {"family": "narrative", "purpose": "Explain the local context", "evidenceIds": ["EV-001"]},
+    {"family": "data-page", "purpose": "Show the primary outcome", "evidenceIds": ["EV-002", "EV-003"]},
+    {"family": "image-led", "purpose": "Ground the outcome in community practice", "evidenceIds": ["EV-004"]}
+  ]
+}

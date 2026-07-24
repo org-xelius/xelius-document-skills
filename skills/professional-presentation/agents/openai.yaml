@@ -1,0 +1,4 @@
+interface:
+  display_name: "Professional Presentation"
+  short_description: "Design clear, audience-led presentations"
+  default_prompt: "Use $professional-presentation to develop an audience-led presentation."

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0",
+  "canvas": {"ratio": "16:9", "width": 13.333, "height": 7.5, "units": "in"},
+  "safeArea": {"left": 0.8, "right": 0.8, "top": 0.65, "bottom": 0.55},
+  "zones": {"headline": [0.8, 0.65, 11.73, 0.9], "source": [0.8, 7.08, 11.73, 0.18]},
+  "typeMinimums": {"deckTitlePt": 50, "headlinePt": 35, "supportPt": 24, "bodyPt": 17, "sourcePt": 9},
+  "families": ["title", "opening-proposition", "section-divider", "single-statistic", "chart-led-insight", "comparison", "process", "case-study", "recommendation", "roadmap", "call-to-action", "appendix"]
+}

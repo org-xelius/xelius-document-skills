@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Visualisation"
+  short_description: "Turn evidence into accurate visual stories"
+  default_prompt: "Use $data-visualisation to choose and produce the right chart."

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Synthetic network maintenance illustration</title>
+  <desc id="d">A labelled geometric placeholder showing connected nodes and a maintenance tool.</desc>
+  <rect width="800" height="500" fill="#E9EEF6"/>
+  <path d="M180 160 L400 260 L620 150 M400 260 L560 390 M400 260 L210 390" fill="none" stroke="#2A7F9E" stroke-width="12"/>
+  <g fill="#FFFFFF" stroke="#16324F" stroke-width="8">
+    <circle cx="180" cy="160" r="48"/><circle cx="620" cy="150" r="48"/><circle cx="400" cy="260" r="60"/><circle cx="560" cy="390" r="48"/><circle cx="210" cy="390" r="48"/>
+  </g>
+  <text x="40" y="470" font-family="Arial, sans-serif" font-size="24" fill="#16324F">SYNTHETIC IMAGE PLACEHOLDER - NOT DOCUMENTARY</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Synthetic training illustration</title>
+  <desc id="d">A labelled geometric placeholder showing a facilitator and three learners.</desc>
+  <rect width="800" height="500" fill="#FFF3D6"/>
+  <rect x="110" y="80" width="580" height="250" rx="8" fill="#FFFFFF" stroke="#16324F" stroke-width="6"/>
+  <path d="M250 250 H550" stroke="#F4B942" stroke-width="20"/>
+  <circle cx="220" cy="390" r="45" fill="#0B5D57"/>
+  <circle cx="400" cy="390" r="45" fill="#2A7F9E"/>
+  <circle cx="580" cy="390" r="45" fill="#D95D39"/>
+  <text x="40" y="470" font-family="Arial, sans-serif" font-size="24" fill="#16324F">SYNTHETIC IMAGE PLACEHOLDER - NOT DOCUMENTARY</text>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "name": "xelius-document-skills",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Portable Agent Skills for professional reports, presentations, visual assets, and render-based QA.",
+  "license": "MIT",
+  "scripts": {
+    "sync:portable": "node scripts/sync-portable-assets.mjs",
+    "validate": "node scripts/validate-all-skills.mjs",
+    "test": "node --test shared/validation/*.test.mjs",
+    "check:environment": "node shared/validation/detect-environment.mjs",
+    "render:examples": "node scripts/render-examples.mjs",
+    "package:skill": "node scripts/package-skill.mjs",
+    "release": "node scripts/create-release.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

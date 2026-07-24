@@ -1,0 +1,8 @@
+measure,value,unit,period,source_id
+introductory_training_completions,120,people,six-month pilot,SRC-001
+advanced_maintenance_completions,18,people,six-month pilot,SRC-001
+hub_unique_visits,4800,visits,six-month pilot,SRC-001
+education_use,62,respondents,follow-up survey,SRC-002
+income_related_use,41,respondents,follow-up survey,SRC-002
+service_use,55,respondents,follow-up survey,SRC-002
+survey_sample,80,respondents,follow-up survey,SRC-002

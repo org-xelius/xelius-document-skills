@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "profiles": [
+    {
+      "id": "human-centred-development",
+      "intent": "Make community agency and lived experience lead while keeping evidence credible.",
+      "typography": {"character": "open humanist sans with warm editorial serif accents", "density": "moderate"},
+      "colour": {"character": "earth, sky, vegetation, and one high-contrast action accent", "avoid": "charity-cliche saturation"},
+      "layout": {"rhythm": "photographic openings alternating with calm narrative pages", "grid": "flexible 6-column"},
+      "imagery": "authentic documentary photography with visible credit and context",
+      "data": "few annotated comparisons and human-scale denominators",
+      "signature": "full-width environmental image, restrained metric, first-person voice"
+    },
+    {
+      "id": "institutional-research",
+      "intent": "Make methods, caveats, comparison, and traceability easy to audit.",
+      "typography": {"character": "neutral grotesk or serif-led research system", "density": "high but controlled"},
+      "colour": {"character": "dark institutional base, one analytical accent, accessible categorical set", "avoid": "decorative colour"},
+      "layout": {"rhythm": "consistent running furniture with clear section bands", "grid": "12-column"},
+      "imagery": "limited and evidentiary",
+      "data": "repeated chart grammar, direct labels, extensive notes",
+      "signature": "strong contents, methodology, annex, and cross-reference system"
+    },
+    {
+      "id": "editorial-technology",
+      "intent": "Give technical or policy material a contemporary editorial voice without AI cliches.",
+      "typography": {"character": "precise sans paired with a distinctive display face", "density": "moderate-high"},
+      "colour": {"character": "ink base, cool paper, one spectral or luminous accent used structurally", "avoid": "unmotivated purple-blue gradients"},
+      "layout": {"rhythm": "bold section transitions and disciplined long-form pages", "grid": "8-column"},
+      "imagery": "abstract systems imagery only when conceptually tied to the content",
+      "data": "high-contrast charts with restrained annotations",
+      "signature": "large numbered findings and deliberate section atmospheres"
+    },
+    {
+      "id": "premium-annual-report",
+      "intent": "Balance accountability, institutional confidence, and human impact.",
+      "typography": {"character": "confident brand sans with editorial hierarchy", "density": "varied"},
+      "colour": {"character": "brand-led chapter palettes with stable neutrals", "avoid": "one accent applied mechanically"},
+      "layout": {"rhythm": "modular chapter systems with photographic and financial pacing", "grid": "12-column"},
+      "imagery": "high-quality documentary and event photography with coherent crops",
+      "data": "impact metrics, maps, and financial tables treated as distinct families",
+      "signature": "chapter colour coding, recurring impact modules, premium section openers"
+    },
+    {
+      "id": "evidence-led-policy-brief",
+      "intent": "Enable scanning, quotation, and action by decision-makers.",
+      "typography": {"character": "authoritative serif or compact sans", "density": "moderate"},
+      "colour": {"character": "deep civic base, pale information tint, restrained emphasis", "avoid": "campaign-like decoration"},
+      "layout": {"rhythm": "short sections, margin callouts, recommendation blocks", "grid": "6-column"},
+      "imagery": "cover-led; sparse inside unless evidence-bearing",
+      "data": "compact tables and one-message charts",
+      "signature": "explicit implications, policy options, and numbered recommendations"
+    },
+    {
+      "id": "modern-executive-presentation",
+      "intent": "Support narration, decision-making, and viewing at distance.",
+      "typography": {"character": "large, direct sans with minimal hierarchy levels", "density": "low-moderate"},
+      "colour": {"character": "one dominant field colour and one focal accent", "avoid": "dashboard-card mosaics"},
+      "layout": {"rhythm": "clear silhouette changes within a stable margin and footer system", "grid": "12-column widescreen"},
+      "imagery": "one purposeful visual per slide; never repeated without reason",
+      "data": "simplified, focal, directly labelled",
+      "signature": "message-led headlines, high contrast, explicit closing action"
+    }
+  ]
+}

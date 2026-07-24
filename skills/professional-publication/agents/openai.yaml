@@ -1,0 +1,4 @@
+interface:
+  display_name: "Professional Publication"
+  short_description: "Compose polished, evidence-led reports"
+  default_prompt: "Use $professional-publication to plan and produce a polished report."

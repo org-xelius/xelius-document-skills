@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "riverbend-connectivity",
+  "claims": [
+    {"id": "EV-001", "claim": "The pilot combined training, access hubs, device support, and community governance.", "sourceIds": ["SRC-001"], "locator": "paragraph 2", "confidence": "high", "allowedUses": ["body", "slide", "speaker-notes"], "caveats": [], "status": "verified"},
+    {"id": "EV-002", "claim": "120 residents completed introductory training and 18 completed advanced maintenance training.", "sourceIds": ["SRC-001", "SRC-002"], "locator": "paragraph 3 and rows 2-3", "confidence": "high", "allowedUses": ["body", "executive-summary", "slide", "chart"], "caveats": [], "status": "verified"},
+    {"id": "EV-003", "claim": "The hubs recorded 4,800 unique visits during the six-month pilot.", "sourceIds": ["SRC-001", "SRC-002"], "locator": "paragraph 3 and row 4", "confidence": "medium", "allowedUses": ["body", "slide", "chart"], "caveats": ["Visits are not equivalent to unique people."], "status": "verified"},
+    {"id": "EV-004", "claim": "Survey respondents reported educational, income-related, and service uses.", "sourceIds": ["SRC-001", "SRC-002"], "locator": "paragraph 3 and rows 5-8", "confidence": "medium", "allowedUses": ["body", "slide", "chart", "speaker-notes"], "caveats": ["Multiple responses were allowed.", "Self-reported use is not a verified outcome."], "status": "verified"}
+  ]
+}

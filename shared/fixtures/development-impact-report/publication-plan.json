@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "riverbend-impact-report",
+  "archetype": "case-study",
+  "format": {"size": "A4", "orientation": "portrait", "delivery": "digital"},
+  "frontMatter": ["cover", "contents"],
+  "sections": [
+    {"id": "p01", "title": "Cover", "purpose": "Identify the report and synthetic status.", "estimatedPages": 1, "pageFamilies": ["cover"], "evidenceIds": [], "visualOpportunities": ["community-hub placeholder"]},
+    {"id": "p02", "title": "At a glance", "purpose": "Orient readers to the pilot.", "estimatedPages": 1, "pageFamilies": ["impact-overview"], "evidenceIds": ["EV-001", "EV-002", "EV-003"], "visualOpportunities": ["metrics"]},
+    {"id": "p03", "title": "Why local capacity mattered", "purpose": "Explain the context and model.", "estimatedPages": 1, "pageFamilies": ["section-opener"], "evidenceIds": ["EV-001"], "visualOpportunities": ["training placeholder"]},
+    {"id": "p04", "title": "The intervention", "purpose": "Describe the four-part pilot.", "estimatedPages": 1, "pageFamilies": ["two-column-narrative"], "evidenceIds": ["EV-001"], "visualOpportunities": ["process diagram"]},
+    {"id": "p05", "title": "Training moved into practice", "purpose": "Compare training pathways.", "estimatedPages": 1, "pageFamilies": ["chart-page"], "evidenceIds": ["EV-002"], "visualOpportunities": ["bar chart"]},
+    {"id": "p06", "title": "How residents used the hubs", "purpose": "Show reported uses and caveats.", "estimatedPages": 1, "pageFamilies": ["chart-page"], "evidenceIds": ["EV-004"], "visualOpportunities": ["dot plot"]},
+    {"id": "p07", "title": "What the pilot cannot yet prove", "purpose": "Make limitations visible.", "estimatedPages": 1, "pageFamilies": ["one-column-narrative"], "evidenceIds": ["EV-003", "EV-004"], "visualOpportunities": ["method callout"]},
+    {"id": "p08", "title": "Priorities for the next phase", "purpose": "Present three recommendations.", "estimatedPages": 1, "pageFamilies": ["recommendations"], "evidenceIds": ["EV-001", "EV-004"], "visualOpportunities": ["roadmap"]},
+    {"id": "p09", "title": "Methods and sources", "purpose": "Document the synthetic evidence base.", "estimatedPages": 1, "pageFamilies": ["methodology"], "evidenceIds": ["EV-001", "EV-002", "EV-003", "EV-004"], "visualOpportunities": []}
+  ],
+  "annexStrategy": "No annex; the full seven-row dataset is linked from the methods page.",
+  "referencesStrategy": "Use source IDs and an explicit synthetic-fixture note."
+}

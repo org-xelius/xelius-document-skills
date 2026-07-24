@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "riverbend-impact-report",
+  "title": "Riverbend Community Network: Synthetic Impact Report",
+  "productionModes": ["case-study"],
+  "audience": ["development partners", "local programme teams"],
+  "purpose": "Explain the synthetic pilot and its learning.",
+  "desiredAction": "Support a measured second phase.",
+  "brandMode": "new-direction",
+  "sourceRoots": ["../../example-content"],
+  "deliverables": [{"kind": "report", "format": "A4 PDF", "editable": true, "targetLength": 9}],
+  "constraints": {"synthetic": true, "delivery": "digital"},
+  "checkpoints": {"mode": "uninterrupted", "structure": "approved", "representativeSample": "approved", "finalQa": "limited"},
+  "toolAvailability": {},
+  "warnings": ["Binary rendering is environment-dependent."]
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0",
+  "artifact": "riverbend-impact-report.pdf",
+  "artifactType": "pdf",
+  "status": "limited",
+  "inspectionCoverage": {"rendered": 0, "inspected": 0, "total": 9},
+  "issues": [],
+  "limitations": ["The committed fixture contains complete source, not a rendered binary. Run build.mjs --render before visual QA."]
+}

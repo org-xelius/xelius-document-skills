@@ -1,0 +1,11 @@
+{
+  "message": "Education was the most frequently reported use",
+  "form": "ordered-dot-plot",
+  "dataFile": "../../example-content/outcomes.csv",
+  "units": "respondents",
+  "period": "six-month follow-up",
+  "source": "SRC-002",
+  "sample": "n=80; multiple responses allowed",
+  "zeroBaseline": true,
+  "accessibleTable": "Include education, services, and income-related values beside the chart in accessible output."
+}

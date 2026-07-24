@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Quality Assurance"
+  short_description: "Inspect rendered pages and slides for defects"
+  default_prompt: "Use $visual-quality-assurance to render, inspect, and repair this artifact."

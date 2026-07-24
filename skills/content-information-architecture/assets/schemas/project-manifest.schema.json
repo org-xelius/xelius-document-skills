@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xelius.example/schemas/project-manifest.schema.json",
+  "title": "Xelius document-production project manifest",
+  "type": "object",
+  "required": ["projectId", "title", "productionModes", "audience", "purpose", "desiredAction", "brandMode", "sourceRoots", "deliverables", "checkpoints"],
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "1.0"},
+    "projectId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,63}$"},
+    "title": {"type": "string", "minLength": 1},
+    "productionModes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["report", "annual-report", "research-report", "case-study", "policy-brief", "white-paper", "toolkit", "training-manual", "executive-deck", "pitch-deck", "partner-briefing", "conference-presentation", "training-presentation", "data-presentation", "presentation-plus-report", "visual-asset-pack"]}
+    },
+    "audience": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "purpose": {"type": "string", "minLength": 1},
+    "desiredAction": {"type": "string", "minLength": 1},
+    "brandMode": {"enum": ["extend-brand", "preserve-template", "new-direction", "light-modernisation", "reusable-system"]},
+    "sourceRoots": {"type": "array", "items": {"type": "string"}},
+    "deliverables": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["kind", "format", "editable"],
+        "properties": {
+          "kind": {"enum": ["report", "presentation", "handout", "chart", "table", "diagram", "image", "visual-scene"]},
+          "format": {"type": "string"},
+          "editable": {"type": "boolean"},
+          "targetLength": {"type": ["integer", "string"], "minimum": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "constraints": {"type": "object"},
+    "checkpoints": {
+      "type": "object",
+      "required": ["mode", "structure", "representativeSample", "finalQa"],
+      "properties": {
+        "mode": {"enum": ["interactive", "uninterrupted"]},
+        "structure": {"enum": ["pending", "approved", "waived"]},
+        "representativeSample": {"enum": ["pending", "approved", "waived"]},
+        "finalQa": {"enum": ["pending", "passed", "repair-required", "limited"]}
+      },
+      "additionalProperties": false
+    },
+    "toolAvailability": {"type": "object"},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

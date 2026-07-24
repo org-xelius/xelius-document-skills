@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xelius.example/schemas/deck-storyline.schema.json",
+  "title": "Presentation storyline",
+  "type": "object",
+  "required": ["projectId", "archetype", "audience", "speakingDurationMinutes", "desiredAction", "centralTakeaway", "narrativeArc", "slides"],
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "1.0"},
+    "projectId": {"type": "string"},
+    "archetype": {"enum": ["executive-deck", "pitch-deck", "partner-briefing", "conference-presentation", "training-presentation", "data-presentation"]},
+    "audience": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "speakingDurationMinutes": {"type": "integer", "minimum": 1},
+    "desiredAction": {"type": "string"},
+    "centralTakeaway": {"type": "string"},
+    "narrativeArc": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["number", "headline", "purpose", "primaryMessage", "visualForm", "evidenceIds", "previousLink", "nextLink"],
+        "properties": {
+          "number": {"type": "integer", "minimum": 1},
+          "family": {"type": "string"},
+          "headline": {"type": "string", "minLength": 8},
+          "purpose": {"type": "string"},
+          "primaryMessage": {"type": "string"},
+          "visualForm": {"type": "string"},
+          "evidenceIds": {"type": "array", "items": {"type": "string"}},
+          "previousLink": {"type": ["string", "null"]},
+          "nextLink": {"type": ["string", "null"]},
+          "speakerNotesRequired": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "appendixPlan": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Synthetic community meeting illustration</title>
+  <desc id="d">A labelled geometric placeholder showing six people around a round table.</desc>
+  <rect width="800" height="500" fill="#F2E8F7"/>
+  <ellipse cx="400" cy="270" rx="210" ry="105" fill="#FFFFFF" stroke="#5B2A86" stroke-width="8"/>
+  <g fill="#0B5D57">
+    <circle cx="400" cy="90" r="42"/><circle cx="220" cy="150" r="42"/><circle cx="580" cy="150" r="42"/><circle cx="190" cy="360" r="42"/><circle cx="610" cy="360" r="42"/><circle cx="400" cy="430" r="42"/>
+  </g>
+  <text x="40" y="485" font-family="Arial, sans-serif" font-size="24" fill="#16324F">SYNTHETIC IMAGE PLACEHOLDER - NOT DOCUMENTARY</text>
+</svg>

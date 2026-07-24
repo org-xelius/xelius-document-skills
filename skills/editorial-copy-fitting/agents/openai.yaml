@@ -1,0 +1,4 @@
+interface:
+  display_name: "Editorial Copy Fitting"
+  short_description: "Fit copy without weakening its meaning"
+  default_prompt: "Use $editorial-copy-fitting to fit this copy to its designed format."

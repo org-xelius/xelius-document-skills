@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Information Architecture"
+  short_description: "Structure source material for publication"
+  default_prompt: "Use $content-information-architecture to structure this evidence base."

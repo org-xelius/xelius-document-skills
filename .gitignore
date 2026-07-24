@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+dist/*
+!dist/.gitkeep
+coverage/
+tmp/
+work/
+**/output/
+**/renders/
+*.log

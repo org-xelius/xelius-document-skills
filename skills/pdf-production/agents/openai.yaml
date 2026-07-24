@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF Production"
+  short_description: "Export and preflight production-ready PDFs"
+  default_prompt: "Use $pdf-production to export and preflight this PDF."

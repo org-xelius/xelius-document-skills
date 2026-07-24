@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "riverbend-connectivity",
+  "sources": [
+    {"id": "SRC-001", "kind": "markdown", "location": "community-connectivity.md", "title": "Synthetic pilot narrative", "status": "available", "rights": "owned", "pagesOrRows": 0, "notes": "Synthetic fixture"},
+    {"id": "SRC-002", "kind": "dataset", "location": "outcomes.csv", "title": "Synthetic pilot outcomes", "status": "available", "rights": "owned", "pagesOrRows": 7, "notes": "Synthetic fixture with multi-response survey fields"},
+    {"id": "IMG-001", "kind": "image", "location": "images/community-hub.svg", "title": "Synthetic community hub placeholder", "status": "available", "rights": "owned", "notes": "Illustrative placeholder, not documentary evidence"},
+    {"id": "IMG-002", "kind": "image", "location": "images/training.svg", "title": "Synthetic training placeholder", "status": "available", "rights": "owned", "notes": "Illustrative placeholder, not documentary evidence"},
+    {"id": "IMG-003", "kind": "image", "location": "images/maintenance.svg", "title": "Synthetic maintenance placeholder", "status": "available", "rights": "owned", "notes": "Illustrative placeholder, not documentary evidence"},
+    {"id": "IMG-004", "kind": "image", "location": "images/community-meeting.svg", "title": "Synthetic meeting placeholder", "status": "available", "rights": "owned", "notes": "Illustrative placeholder, not documentary evidence"}
+  ]
+}

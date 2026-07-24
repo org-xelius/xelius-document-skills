@@ -1,0 +1,33 @@
+@page {
+  size: A4 portrait;
+  margin: 18mm 16mm 20mm;
+  @bottom-left { content: "Publication title"; font-size: 8pt; color: #52606d; }
+  @bottom-right { content: counter(page); font-size: 8pt; color: #52606d; }
+}
+:root {
+  --paper: #fff;
+  --ink: #102a43;
+  --muted: #52606d;
+  --accent: #d95d39;
+  --rule: #d9e2ec;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 10.5pt/1.5 Arial, sans-serif; }
+.page { break-after: page; min-height: 240mm; }
+h1, h2, p, figure { margin-top: 0; }
+h1 { max-width: 16ch; font-size: 34pt; line-height: 1.02; }
+h2 { max-width: 28ch; font-size: 22pt; line-height: 1.1; break-after: avoid; }
+.cover, .section-opener { display: grid; align-content: end; padding-bottom: 24mm; }
+.eyebrow, .section-number { color: var(--accent); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.standfirst { max-width: 44ch; color: var(--muted); font-size: 14pt; }
+.narrative { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5mm; }
+.narrative > h2, .narrative > p { grid-column: 1 / 5; }
+figure { grid-column: 2 / 7; break-inside: avoid; }
+.figure-frame { aspect-ratio: 16 / 9; background: #e9eef2; border-top: 2px solid var(--accent); }
+figcaption { margin-top: var(--space-2); color: var(--muted); font-size: 8.5pt; }
