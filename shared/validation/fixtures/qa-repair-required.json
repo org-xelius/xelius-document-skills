@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "artifact": "synthetic-report.pdf",
+  "artifactType": "pdf",
+  "status": "repair-required",
+  "reviewMethod": "manual-and-automated",
+  "inspectionCoverage": {"rendered": 2, "inspected": 2, "total": 2},
+  "surfaceReviews": [
+    {"location": "page-001", "method": "full-size-render", "result": "clear", "observation": "Cover hierarchy and trim edges are clear."},
+    {"location": "page-002", "method": "full-size-render", "result": "issue-found", "observation": "The figure label is clipped at the right edge."}
+  ],
+  "issues": [
+    {
+      "location": "page-002",
+      "severity": "high",
+      "category": "clipping",
+      "evidence": "The final figure label ends at the artboard edge and loses visible characters.",
+      "repair": "Wrap the label inside the figure safe area and re-render the page.",
+      "status": "open"
+    }
+  ],
+  "limitations": []
+}

@@ -29,14 +29,17 @@ Final PDF, preflight report, page renders, contact sheet, link report, and expli
 2. Detect browser, office, Poppler, Ghostscript, and PDF inspection tools.
 3. Export through the approved source path.
 4. Inspect metadata, encryption, page count and dimensions, fonts, text selection, images, bookmarks, links, annotations, SVGs, transparency, glyphs, colour, bleed, and file size where tools permit.
-5. Render every page to PNG at an inspection resolution.
-6. Create a contact sheet, invoke visual QA, repair the source, and repeat.
+5. When any optimizer, splitter, merger, sanitizer, print driver, or converter changes the exported PDF, run `node scripts/compare-pdf-properties.mjs raw.pdf final.pdf --strict`.
+6. Render every page to PNG at an inspection resolution.
+7. Create a contact sheet, invoke visual QA, repair the source, and repeat.
 
 ## Hard rules
 
 - Do not declare completion because export succeeded.
 - Do not claim a check passed when its required tool was unavailable.
 - Preserve readable source lines, live links, selectable text, page numbers, and accurate dimensions.
+- Fix accidental blank pages, overflow, or pagination at the editable source; do not hide them with a PDF transformation that removes tags, metadata, outlines, links, or text.
+- Reject unexplained regressions between raw and final PDF properties.
 - Repair at the editable source when possible.
 
 ## Checkpoints
@@ -49,7 +52,7 @@ Read PDF preflight before export and the visual QA reference before inspection.
 
 ## Quality checks
 
-Check every requested technical property plus render parity, missing glyphs, clipping, black boxes, soft images, broken links, incorrect page numbers, and output size.
+Check every requested technical property plus raw-to-final parity, render parity, missing glyphs, font warnings, clipping, black boxes, soft images, broken links, incorrect page numbers, and output size.
 
 ## Failure and fallback behaviour
 

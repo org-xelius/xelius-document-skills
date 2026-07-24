@@ -29,13 +29,16 @@ Validated SVG, PNG render, optional transparent and solid-background variants, i
 2. Define the artboard, hierarchy, labels, geometry, and target size.
 3. Create valid XML with explicit `viewBox`, `<title>`, and `<desc>`.
 4. Use consistent strokes, closed paths, safe masks, and available fonts or outlined display lettering where licensing permits.
-5. Run `node scripts/validate-svg.mjs asset.svg`.
+5. Run `node scripts/validate-svg.mjs asset.svg --strict`.
 6. Rasterize with Inkscape, ImageMagick, or browser fallback.
-7. Inspect the PNG and test the SVG inside the target PDF or PPTX.
+7. Inspect the PNG at the intended placed size, checking every label and each artboard edge.
+8. Test the SVG inside the target PDF or PPTX and repeat inspection after integration.
 
 ## Hard rules
 
 - No accidental clipping, broken masks, unsupported filters, missing fonts, invisible initial states, or objects outside the artboard.
+- Wrap long labels deliberately with target-safe `<tspan>` lines; never truncate source text or rely on SVG text to wrap automatically.
+- Keep text and strokes inside a safe inset and verify bounds from the rendered asset, not coordinates alone.
 - Simplify paths and avoid embedded raster data unless explicitly required.
 - Preserve label readability, print-safe colours, and contrast.
 - Do not claim validation until both structural and rendered checks complete.
@@ -50,7 +53,7 @@ Read SVG construction before authoring and the target production reference befor
 
 ## Quality checks
 
-Check XML parsing, unique IDs, references, viewBox, bounds, path closure warnings, text and font use, colour, metadata, PNG parity, and target integration.
+Check XML parsing, unique IDs, references, viewBox, bounds, path closure warnings, text wrapping, edge safety, font use, colour, metadata, PNG parity, and target integration.
 
 ## Failure and fallback behaviour
 

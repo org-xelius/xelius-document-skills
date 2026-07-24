@@ -13,10 +13,20 @@ Each family defines content capacity, grid span, typography roles, source zone, 
 - Avoid more than two consecutive pages with the same dominant composition.
 - Use consistent running furniture but vary content silhouettes.
 - Treat full bleed as emphasis, not default.
+- Distinguish purposeful whitespace from underfill. On an ordinary content page, a large unused region should trigger consolidation, a more useful visual, or a shorter publication rather than decorative filling.
+- Compare the delivered sequence with the approved architecture; account for omitted, duplicated, or substituted page families.
+
+## Reader-facing integrity
+
+- Remove internal evidence identifiers, workflow labels, source paths, prompts, and QA language from the published surface unless the brief explicitly calls for audit traceability.
+- Translate production status into reader-appropriate edition, date, or document-control language.
+- Keep substantiation in the evidence register, semantic source, citations, notes, or appendix.
 
 ## Integrity
 
 Keep headings with opening paragraphs, figures with captions, tables with titles and sources, and references with their sections. Repeat table headers and avoid row splits. Preserve meaningful whitespace and body-size minimums.
+
+Set minimum type sizes in the design contract before composition. For A4 or US Letter close-reading output, default to approximately 10–11 pt body text, 8.5–9 pt dense tables, and 8 pt source notes unless the approved audience, language, or accessibility target requires larger text. Never solve overflow by shrinking below the contract.
 
 ## Representative spread
 
@@ -28,3 +38,5 @@ Test:
 4. An image-led page when relevant
 
 Use the longest realistic title, densest note, and most complex data component. Repair the system before expanding.
+
+Also test the shortest realistic page. If the planned length creates repeated card pages, oversized headings over sparse content, or large accidental blanks, combine sections or reduce the page count.

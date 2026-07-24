@@ -9,6 +9,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const errors = [];
 const warnings = [];
 const textExtensions = new Set([".md", ".json", ".mjs", ".js", ".sh", ".yaml", ".yml", ".css", ".html", ".csv", ".txt"]);
+const ignoredDirectories = new Set([".git", "node_modules", "dist", "tmp", "work", "coverage"]);
 const ignoredLinkPrefixes = ["http://", "https://", "mailto:", "#", "$"];
 const secretPatterns = [
   /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,
@@ -19,6 +20,7 @@ const secretPatterns = [
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const full = path.join(dir, entry.name);
+    if (entry.isDirectory() && ignoredDirectories.has(entry.name)) return [];
     return entry.isDirectory() ? walk(full) : [full];
   });
 }

@@ -1,6 +1,6 @@
 {
   "name": "xelius-document-skills",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "Portable Agent Skills for professional reports, presentations, visual assets, and render-based QA.",

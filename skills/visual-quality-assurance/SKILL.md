@@ -21,7 +21,7 @@ Source artifact, all page or slide renders, contact sheet, expected count, desig
 
 ## Outputs
 
-`qa-report.json`, annotated issue locations, repair instructions, verification status, and coverage limitations.
+`qa-report.json`, one review record per rendered surface, annotated issue locations, repair instructions, verification status, and coverage limitations.
 
 ## Required workflow
 
@@ -29,8 +29,8 @@ Source artifact, all page or slide renders, contact sheet, expected count, desig
 2. Render every page or slide at a consistent inspection size.
 3. Confirm rendered count equals source count.
 4. Review the contact sheet for pacing, repetition, missing pages, colour drift, and weak openings or closings.
-5. Inspect every render individually at full size.
-6. Record each defect against `assets/schemas/qa-report.schema.json`.
+5. Inspect every render individually at full size and record a `surfaceReviews` entry even when it is clear.
+6. Record each defect against `assets/schemas/qa-report.schema.json`; automated checks may support but never replace this review.
 7. Prioritize critical and high issues, assign concrete repairs, and return them to the owning skill.
 8. Re-render repaired artifacts and verify the exact locations.
 9. Finish only when no open critical or high issue remains.
@@ -40,6 +40,8 @@ Source artifact, all page or slide renders, contact sheet, expected count, desig
 - Never infer visual quality from a successful export.
 - Never use a contact sheet instead of full-size inspection.
 - Inspect all pages or slides, not a sample.
+- Never claim manual inspection when only blank-page, resolution, file-existence, or other automated checks ran.
+- A `pass` requires one unique full-size review record per surface and no open or unverifiable issue.
 - Record tool gaps as limitations; do not mark unavailable checks passed.
 - Keep accepted deviations explicit and attributable.
 

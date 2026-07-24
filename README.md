@@ -191,7 +191,7 @@ npm run check:environment
 npm run render:examples
 ```
 
-Validation checks skill front matter, unique names, internal links, JSON and schema shape, executable scripts, release placeholders, large files, fonts, secrets, absolute local paths, and required packaging files.
+Validation checks skill front matter, unique names, internal links, JSON and schema shape, executable scripts, release placeholders, large files, fonts, secrets, absolute local paths, portable resource parity, strict SVG wrapping, per-surface QA evidence, and required packaging files.
 
 Visual validation remains environment-dependent. A missing renderer produces a limited status, never a false pass.
 

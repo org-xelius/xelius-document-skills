@@ -30,11 +30,12 @@ Editable semantic source, print and screen styles, final PDF, page renders, cont
 3. At Checkpoint A, approve structure and visual direction.
 4. Generate or import the design system.
 5. Build a representative spread containing a section opener, narrative page, data or table page, and image-led page when relevant.
-6. At Checkpoint B, approve the spread unless uninterrupted mode is recorded.
-7. Compose the full document with semantic HTML, CSS paged media, and SVG assets by default. Use a PPTX-to-PDF path only for justified fixed-layout work.
-8. Invoke editorial, data, table, image, SVG, and citation specialists where required.
-9. Invoke `pdf-production`, render every page, and invoke `visual-quality-assurance`.
-10. Repair, re-render, and deliver only when high-severity issues are closed.
+6. Stress-test the spread with the longest heading, densest table, longest label, most complex figure, and shortest realistic page.
+7. At Checkpoint B, approve the spread unless uninterrupted mode is recorded.
+8. Compose the full document with semantic HTML, CSS paged media, and SVG assets by default. Use a PPTX-to-PDF path only for justified fixed-layout work.
+9. Invoke editorial, data, table, image, SVG, and citation specialists where required.
+10. Invoke `pdf-production`, render every page, and invoke `visual-quality-assurance`.
+11. Repair, re-render, and deliver only when high-severity issues are closed.
 
 ## Hard rules
 
@@ -44,6 +45,8 @@ Editable semantic source, print and screen styles, final PDF, page renders, cont
 - Repeat table headers; avoid splitting rows where practical.
 - Avoid more than two consecutive pages with the same dominant composition.
 - Balance dense and open pages; use full bleed selectively.
+- Consolidate unintentionally underfilled pages; do not stretch thin content to satisfy a planned page count.
+- Keep evidence IDs, production labels, implementation notes, and validation disclaimers out of reader-facing copy unless traceability is an explicit publication requirement.
 - Preserve meaningful whitespace, caveats, citations, and data.
 - Never fabricate missing content or evidence.
 

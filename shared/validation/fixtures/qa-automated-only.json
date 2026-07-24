@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "artifact": "synthetic-report.pdf",
+  "artifactType": "pdf",
+  "status": "pass",
+  "reviewMethod": "automated-only",
+  "inspectionCoverage": {"rendered": 2, "inspected": 2, "total": 2},
+  "surfaceReviews": [
+    {"location": "page-001", "method": "full-size-render", "result": "clear", "observation": "Automated blank-page check returned content."},
+    {"location": "page-002", "method": "full-size-render", "result": "clear", "observation": "Automated resolution check returned expected dimensions."}
+  ],
+  "issues": [],
+  "limitations": []
+}

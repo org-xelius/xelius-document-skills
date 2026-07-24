@@ -9,6 +9,7 @@
     "artifact": {"type": "string"},
     "artifactType": {"enum": ["pdf", "pptx", "svg", "png-pack"]},
     "status": {"enum": ["pass", "repair-required", "limited"]},
+    "reviewMethod": {"enum": ["manual-full-size", "manual-and-automated", "automated-only", "source-only"]},
     "inspectionCoverage": {
       "type": "object",
       "required": ["rendered", "inspected", "total"],
@@ -31,6 +32,20 @@
           "evidence": {"type": "string"},
           "repair": {"type": "string"},
           "status": {"enum": ["open", "repaired", "accepted", "unverifiable"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "surfaceReviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["location", "method", "result", "observation"],
+        "properties": {
+          "location": {"type": "string", "minLength": 1},
+          "method": {"enum": ["full-size-render", "source-only", "unverifiable"]},
+          "result": {"enum": ["clear", "issue-found", "unverifiable"]},
+          "observation": {"type": "string", "minLength": 1}
         },
         "additionalProperties": false
       }

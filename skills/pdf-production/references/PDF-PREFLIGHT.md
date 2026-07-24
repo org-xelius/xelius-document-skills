@@ -14,6 +14,16 @@
 - File size is proportionate to purpose.
 - Tagged structure and reading order are checked when accessibility is requested.
 
+## Transformation integrity
+
+Treat PDF splitting, merging, sanitizing, optimizing, office conversion, and print-driver output as new exports. Compare the transformed file with its input:
+
+- Preserve or improve tagging, document language, metadata, outlines, links, annotations, selectable text, page geometry, and intended page count.
+- Investigate Type 3 fonts, glyph bounding-box warnings, substitutions, and unusually repeated font subsets.
+- Explain material file-size growth.
+- Fix accidental blank pages and pagination defects in the editable source whenever possible.
+- Do not deliver a visually similar transformation that silently removes accessibility or navigation features. If a required property cannot be preserved, use `limited` or `repair-required`.
+
 ## Render checks
 
 Render every page with Poppler when available. Use a second renderer for suspicious transparency or font issues. Compare render count to page count and inspect both contact sheet and full-size pages.
