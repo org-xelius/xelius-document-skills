@@ -1,0 +1,44 @@
+{
+  "instructionFilesActuallyRead": [
+    {
+      "path": "evaluation-snapshots/candidate/skills/content-information-architecture/SKILL.md",
+      "role": "selected skill instructions",
+      "readCount": 1,
+      "readEvents": [{"method": "sed -n '1,260p'", "actualLinesRead": "1-28", "complete": true, "partial": false}],
+      "repeatedRead": false
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/content-information-architecture/references/CITATIONS.md",
+      "role": "mode-specific citation audit instructions",
+      "readCount": 1,
+      "readEvents": [{"method": "sed -n '1,280p'", "actualLinesRead": "1-22", "complete": true, "partial": false}],
+      "repeatedRead": false
+    }
+  ],
+  "instructionFilesNotRead": "No other instruction/reference files were loaded. Other snapshot paths were listed only. Global installed document skills were not used.",
+  "sourceData": {
+    "path": "evaluation-snapshots/candidate/inputs/references.json",
+    "role": "audit input, not instruction text",
+    "displayRead": {"method": "sed -n '1,260p'", "actualLinesRead": "1-53", "complete": true, "partial": false},
+    "programmaticReads": "Read in full by the supplied validator, the supplementary local syntax check, and the final preservation/artifact checks."
+  },
+  "executedSnapshotScripts": [
+    {
+      "path": "evaluation-snapshots/candidate/skills/content-information-architecture/scripts/validate-references.mjs",
+      "executionCount": 1,
+      "arguments": ["evaluation-snapshots/candidate/inputs/references.json"],
+      "exitCode": 1,
+      "sourceLoadedAsInstructionText": false,
+      "sourceInspected": false,
+      "note": "Executed as required by CITATIONS.md; its source was not displayed or treated as instruction text."
+    }
+  ],
+  "otherExecutedChecks": [
+    {"kind": "inline Node command", "purpose": "JSON parse, counts, local URL syntax, and DOI syntax/canonical representation", "exitCode": 0},
+    {"kind": "inline Node command", "purpose": "Final JSON parse, preservation, normalization, findings, and scope assertions; results in validation.json", "exitCode": 0}
+  ],
+  "networkUsed": false,
+  "outputDirectory": "evaluation-output/cite-b",
+  "repositoryOrGlobalSkillFilesModified": false,
+  "tokens": null
+}

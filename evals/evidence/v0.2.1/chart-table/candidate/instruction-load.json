@@ -1,0 +1,33 @@
+{
+  "task": "v021_visual_candidate",
+  "tokens": null,
+  "instructionReferenceReads": [
+    {"sequence":1,"path":"evaluation-snapshots/candidate/skills/data-visualisation/SKILL.md","method":"sed -n '1,260p'","requestedLines":[1,260],"coverage":"complete; output reached EOF","repeated":false,"tokens":null},
+    {"sequence":2,"path":"evaluation-snapshots/candidate/skills/data-visualisation/references/CHART-SELECTION.md","method":"sed -n '1,320p'","requestedLines":[1,320],"coverage":"complete; output reached EOF","repeated":false,"tokens":null},
+    {"sequence":3,"path":"evaluation-snapshots/candidate/skills/data-visualisation/references/TABLE-DESIGN.md","method":"sed -n '1,320p'","requestedLines":[1,320],"coverage":"complete; output reached EOF","repeated":false,"tokens":null}
+  ],
+  "evidenceReads": [
+    {"sequence":4,"path":"evaluation-snapshots/candidate/inputs/visual-evidence.json","method":"sed -n '1,320p'","coverage":"complete; output reached EOF","repeated":false,"tokens":null},
+    {"sequence":5,"path":"evaluation-snapshots/candidate/inputs/visual-evidence.json","method":"fs.readFileSync in first validate.cjs execution","coverage":"complete","repeated":true,"tokens":null},
+    {"sequence":6,"path":"evaluation-snapshots/candidate/inputs/visual-evidence.json","method":"fs.readFileSync in second validate.cjs execution","coverage":"complete","repeated":true,"tokens":null},
+    {"sequence":7,"path":"evaluation-snapshots/candidate/inputs/visual-evidence.json","method":"fs.readFileSync in third validate.cjs execution","coverage":"complete","repeated":true,"tokens":null}
+  ],
+  "scriptsExecuted": [
+    {"path":"evaluation-output/visual-b/validate.cjs","origin":"task-authored","attempt":1,"result":"Failed at restricted Chrome launch; data was read and copied before launch","tokens":null},
+    {"path":"evaluation-output/visual-b/validate.cjs","origin":"task-authored","attempt":2,"result":"Passed with normal rendering escalation; generated report PDF and screenshots","tokens":null},
+    {"path":"evaluation-output/visual-b/validate.cjs","origin":"task-authored","attempt":3,"result":"Passed with normal rendering escalation after label searchability repair; refreshed final report PDF and screenshots","tokens":null}
+  ],
+  "codeInspected": [],
+  "codeAuthored": ["evaluation-output/visual-b/validate.cjs"],
+  "renderAndCheckUtilities": [
+    {"name":"Inkscape","attempts":3,"results":["restricted launch failed with exit 134","escalated render exit 0, PNG generated; app emitted sandbox-extension warning","escalated final rerender exit 0, PNG generated; same warning"],"tokens":null},
+    {"name":"pdftoppm","attempts":2,"result":"Both succeeded; PDF rendered at 96 dpi to report-page-1.png and report-page-2.png","tokens":null},
+    {"name":"pdfinfo","attempts":2,"result":"Confirmed two A4 portrait pages, untagged PDF","tokens":null},
+    {"name":"pdftotext -layout","attempts":2,"result":"Inspected extracted full PDF text; detected then verified repair of duplicate outlined labels","tokens":null},
+    {"name":"Node inline sRGB luminance calculation","attempts":1,"result":"Computed ink, muted text and chart accent contrast against white","tokens":null},
+    {"name":"view_image","attempts":6,"result":"Initial two report pages, initial chart PNG, final two report pages and final chart PNG visually inspected","tokens":null},
+    {"name":"Node inline JSON parsing check","attempts":2,"result":"First detected an extra closing brace in instruction-load.json; repaired it. Second check parsed all four delivered JSON files successfully.","tokens":null}
+  ],
+  "producedArtifactsRead": ["evaluation-output/visual-b/validation.json (sed -n '1,240p'; complete output)", "Generated instruction-load.json, validation.json, chart-spec.json and source-data.json read by final Node JSON parsing check"],
+  "notes": "No global document skills or snapshot scripts were read or executed. No dependency source file was opened for inspection. The installed Playwright package was imported and executed as a dependency, not inspected as source. Filesystem inventories are not instruction reads. Task-authored production/validation files are recorded separately from supplied instructions. No instruction/reference file was reread or partially read."
+}

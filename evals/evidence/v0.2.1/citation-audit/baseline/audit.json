@@ -1,0 +1,160 @@
+{
+  "auditVersion": "1.0",
+  "auditedAtUtc": "2026-11-08T18:37:12Z",
+  "inputPath": "evaluation-snapshots/baseline/inputs/references.json",
+  "mode": "offline",
+  "tokens": null,
+  "preservation": {
+    "sourceFieldsChanged": false,
+    "idsChanged": false,
+    "recordsMerged": false,
+    "policy": "All supplied data is preserved below. Supported normalizations are separate sidecar values; no missing fields are invented."
+  },
+  "summary": {
+    "bibliographyRecords": 5,
+    "uniqueBibliographyIds": 4,
+    "inTextCitationOccurrences": 3,
+    "figureCreditOccurrences": 2,
+    "missingDistinctCitationIds": 1,
+    "unresolvedOccurrences": 2,
+    "uncitedNonExemptRecords": 1,
+    "furtherReadingExemptRecords": 1,
+    "duplicateIdGroups": 1,
+    "metadataDuplicateSourceGroups": 1,
+    "ambiguousCitationOccurrences": 1,
+    "malformedDoiRecords": 1
+  },
+  "findings": [
+    {
+      "findingId": "F01",
+      "category": "missing_citation_target",
+      "severity": "error",
+      "ids": ["R4"],
+      "paths": ["/citations/2", "/figureCredits/0/citation"],
+      "description": "R4 has no bibliography record. Both the in-text citation and Figure 1 credit are unresolved.",
+      "disposition": "Retained R4 as supplied; no replacement source was inferred."
+    },
+    {
+      "findingId": "F02",
+      "category": "uncited_entry",
+      "severity": "warning",
+      "ids": ["R3"],
+      "paths": ["/bibliography/2"],
+      "description": "R3 is not referenced by either supplied citations or supplied figure credits and is not marked as further reading.",
+      "disposition": "Retained the record; R1 being cited does not make the separate R3 identifier cited."
+    },
+    {
+      "findingId": "F03",
+      "category": "duplicate_identifier",
+      "severity": "error",
+      "ids": ["R2"],
+      "paths": ["/bibliography/1/id", "/bibliography/3/id"],
+      "description": "Two records share R2. Their titles and URLs differ; the latter explicitly identifies a revised edition and supplies year 2026.",
+      "disposition": "Did not merge records or assign a new identifier. Distinct editions must remain distinguishable."
+    },
+    {
+      "findingId": "F04",
+      "category": "duplicate_source_metadata",
+      "severity": "warning",
+      "ids": ["R1", "R3"],
+      "paths": ["/bibliography/0", "/bibliography/2"],
+      "description": "R1 and R3 have identical author, year, title, and DOI. R1 additionally supplies a URL. This is a duplicate-source candidate on supplied metadata, not external proof of source identity.",
+      "disposition": "Retained both stable IDs and all fields; did not consolidate or copy R1's URL to R3."
+    },
+    {
+      "findingId": "F05",
+      "category": "ambiguous_match",
+      "severity": "error",
+      "ids": ["R2"],
+      "paths": ["/citations/1"],
+      "candidateRecordPaths": ["/bibliography/1", "/bibliography/3"],
+      "description": "The R2 citation matches both bibliography records. The supplied material does not establish which edition was intended.",
+      "disposition": "Left unresolved; did not prefer the record with more complete metadata."
+    },
+    {
+      "findingId": "F06",
+      "category": "malformed_identifier",
+      "severity": "error",
+      "ids": ["R2"],
+      "paths": ["/bibliography/1/doi"],
+      "suppliedValue": "not-a-doi",
+      "description": "The value does not match DOI syntax 10.<4-9 digits>/<non-whitespace suffix>.",
+      "disposition": "Preserved the value and supplied no canonical DOI or replacement."
+    },
+    {
+      "findingId": "F07",
+      "category": "incomplete_metadata",
+      "severity": "warning",
+      "ids": ["R2"],
+      "paths": ["/bibliography/1"],
+      "missingFields": ["year"],
+      "description": "The original Follow-up Survey record has no year. The year from the revised-edition record cannot safely be transferred.",
+      "disposition": "No date was invented. Citation-style completeness cannot be certified without an approved style."
+    },
+    {
+      "findingId": "F08",
+      "category": "incomplete_metadata",
+      "severity": "warning",
+      "ids": ["R5"],
+      "paths": ["/bibliography/4"],
+      "description": "Background Reading has only an ID, title, and furtherReading flag. No author, year, or source locator is supplied, so the source cannot be identified reliably from this file.",
+      "disposition": "Kept as intentional further reading, not as an uncited-entry error; no missing metadata was invented."
+    }
+  ],
+  "citationMatches": [
+    {"path": "/citations/0", "id": "R1", "status": "unique", "recordPaths": ["/bibliography/0"]},
+    {"path": "/citations/1", "id": "R2", "status": "ambiguous", "recordPaths": ["/bibliography/1", "/bibliography/3"]},
+    {"path": "/citations/2", "id": "R4", "status": "missing", "recordPaths": []},
+    {"path": "/figureCredits/0/citation", "object": "Figure 1", "id": "R4", "status": "missing", "recordPaths": []},
+    {"path": "/figureCredits/1/citation", "object": "Figure 2", "id": "R1", "status": "unique", "recordPaths": ["/bibliography/0"]}
+  ],
+  "intentionalFurtherReading": [{"id": "R5", "path": "/bibliography/4", "uncitedError": false}],
+  "supportedNormalizations": [
+    {"id": "R1", "sourcePath": "/bibliography/0/doi", "suppliedValue": "10.1234/learn.2025", "canonicalDoiUrl": "https://doi.org/10.1234/learn.2025", "syntax": "valid", "resolution": "not_checked_offline"},
+    {"id": "R3", "sourcePath": "/bibliography/2/doi", "suppliedValue": "10.1234/learn.2025", "canonicalDoiUrl": "https://doi.org/10.1234/learn.2025", "syntax": "valid", "resolution": "not_checked_offline"}
+  ],
+  "urlChecks": [
+    {"path": "/bibliography/0/url", "suppliedValue": "https://example.org/methods", "syntax": "valid_absolute_https", "networkStatus": "not_checked_offline"},
+    {"path": "/bibliography/1/url", "suppliedValue": "https://example.org/survey", "syntax": "valid_absolute_https", "networkStatus": "not_checked_offline"},
+    {"path": "/bibliography/3/url", "suppliedValue": "https://example.org/survey-revised", "syntax": "valid_absolute_https", "networkStatus": "not_checked_offline"}
+  ],
+  "validation": {
+    "snapshotValidator": {
+      "script": "evaluation-snapshots/baseline/skills/citation-and-references/scripts/validate-references.mjs",
+      "executed": true,
+      "exitCode": 1,
+      "result": {"missing": ["R4"], "uncited": ["R3"], "duplicates": ["R2"], "invalidDois": ["R2"]},
+      "interpretation": "Expected issue-detection exit; the audit did not pass cleanly.",
+      "limits": "Checks citation IDs against bibliography, duplicate IDs, and raw DOI syntax only. It does not check figure credits, duplicate-source metadata, citation ambiguity, URLs, missing fields, rights, or rendered placement."
+    },
+    "supplementaryValidation": {
+      "script": "evaluation-output/cite-a/verify-audit.mjs",
+      "executed": true,
+      "exitCode": 0,
+      "resultPath": "evaluation-output/cite-a/validation-result.json",
+      "interpretation": "Audit consistency and offline metadata checks passed; the underlying bibliography still has the reported errors."
+    },
+    "networkValidation": "not_performed_offline",
+    "renderedValidation": "not_possible_no_rendered_artifact_supplied"
+  },
+  "limitations": [
+    "No network requests were made. HTTP availability, redirects, access restrictions, link content, DOI registration and resolution, and bibliographic accuracy were not verified.",
+    "Identifier syntax is not proof that a DOI or source exists, and citation presence is not proof that a claim is true.",
+    "Only the JSON citation and credit lists were supplied. Full manuscript citation coverage, note order, citation link text, page references, and all figure/table/image coverage cannot be audited.",
+    "No figure assets, rights records, table inventory, or original-analysis statements were supplied. Figure 2's ID resolves, but attribution sufficiency, ownership and reuse rights remain unverified.",
+    "No rendered publication was supplied; source-line legibility, placement and attachment to the correct visual object were not inspected.",
+    "No approved citation style was supplied. Existing ID-based references were preserved; ID gaps were not treated as broken sequential reference numbering.",
+    "Author names, titles, years, publishers and access dates were not expanded, reformatted speculatively, or invented."
+  ],
+  "suppliedData": {
+    "citations": ["R1", "R2", "R4"],
+    "bibliography": [
+      {"id": "R1", "author": "A. Patel", "year": 2025, "title": "Community Learning: Pilot Methods", "doi": "10.1234/learn.2025", "url": "https://example.org/methods"},
+      {"id": "R2", "author": "L. Njeri", "title": "Follow-up Survey", "doi": "not-a-doi", "url": "https://example.org/survey"},
+      {"id": "R3", "author": "A. Patel", "year": 2025, "title": "Community Learning: Pilot Methods", "doi": "10.1234/learn.2025"},
+      {"id": "R2", "author": "L. Njeri", "year": 2026, "title": "Follow-up Survey: Revised Edition", "url": "https://example.org/survey-revised"},
+      {"id": "R5", "title": "Background Reading", "furtherReading": true}
+    ],
+    "figureCredits": [{"figure": "Figure 1", "citation": "R4"}, {"figure": "Figure 2", "citation": "R1"}]
+  }
+}

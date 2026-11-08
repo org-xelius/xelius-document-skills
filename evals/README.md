@@ -1,11 +1,15 @@
-# Behavioral evaluation
+# Evaluation procedures and evidence
 
-Use `npm run eval:prepare` to create isolated baseline and candidate snapshots in a temporary workspace. The baseline is the actual v0.1.1 commit. Each case in [cases.json](cases.json) has a realistic prompt, synthetic inputs where needed, and observable checks. [triggers.json](triggers.json) includes both relevant and unrelated prompts for skill selection.
+Use `npm run eval:prepare` for isolated immutable v0.2.0 and candidate skill snapshots. The four consolidation tasks are in [consolidation-cases.json](consolidation-cases.json); broader production cases remain in [cases.json](cases.json), and discovery prompts in [triggers.json](triggers.json).
 
-Run each case in a fresh agent context, once with the baseline and once with the candidate, using the same model, tools, and prompt. Supply only the snapshot skill path, prompt, input paths, and isolated output destination. Do not supply expected answers or the developer's diagnosis. Include Hermes and Codex; Claude Code can run the same protocol.
+Run paired tasks with the same model, raw prompt, input, tools, and output requirements. Give independent agents only their snapshot paths, source artifacts, and permitted output workspace—not expected answers, suspected defects, or prior conclusions. Do not alter live installations during evaluation.
 
-Save the execution transcript, generated artifacts, elapsed time, and actual token usage if the host exposes it. Grade objective assertions from the artifacts and inspect design quality separately. Blind comparisons are preferable for visual judgment. Missing timing or token data stays null; never infer a benchmark score from unit tests, file existence, or source staging.
+Record generated artifacts, execution observations, check results, elapsed time, and actual token usage only when the host exposes it. Ask each evaluator to list the instruction/reference files it actually opened, with repeated reads and partial reads distinguished. Count those observed text loads separately from collection footprint. Frontmatter metadata and SKILL bodies have different loading phases; neither folder counts nor fewer files prove token savings.
 
-Record results in each case's `result.json`: configuration, agent/model, check outcomes with artifact evidence, reviewer observations, duration, and tokens. Repeat enough runs before drawing statistical conclusions. A missing renderer case must run in a tool environment without that capability; merely telling a fully equipped agent to pretend it lacks a renderer is not a valid test.
+Compare factual integrity, scope adherence, editability, visual defects, validation honesty, and observed instruction loading. Test values, protected language, sources, OOXML text/notes, and artifact properties directly. Inspect real renders for visual conclusions. A measured regression blocks release; unperformed checks remain limitations. Keep failed attempts visible.
 
-Release automation verifies schema, installation, and real artifact behavior. These checks complement behavioral evaluation; they do not substitute for actual image inspection or a measured improvement over the baseline.
+Results should name baseline tag, candidate version/commit, model/agent, prompts, input hashes, loaded paths/words, status per dimension, and artifacts or reproducible evidence. Missing tokens/timing stay null. Single-run synthetic tasks cannot establish statistical superiority or general production quality. Installing for three agents is not a cross-agent behavioural benchmark.
+
+The missing-renderer case in the broader suite requires a genuinely tool-restricted environment, not an instruction to pretend a renderer is absent. Public fixtures contain synthetic material, not private reports or copyrighted reference PDFs.
+
+[Historical v0.2.0 evidence](v0.2.0-results.json) is retained unchanged. Read the [v0.2.1 evaluation summary](v0.2.1-results.md) or [machine-readable results](v0.2.1-results.json) for actual observations, the retained failed attempt, and limitations.

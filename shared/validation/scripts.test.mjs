@@ -33,8 +33,8 @@ test("chart specification includes analytical safeguards", () => {
 });
 
 test("slide bounds and reference fixtures pass", () => {
-  const bounds = run("skills/pptx-production/scripts/check-slide-bounds.mjs", path.join(validationFixtures, "layout-manifest.json"));
-  const references = run("skills/citation-and-references/scripts/validate-references.mjs", path.join(validationFixtures, "references.json"));
+  const bounds = run("skills/professional-presentation/scripts/check-slide-bounds.mjs", path.join(validationFixtures, "layout-manifest.json"));
+  const references = run("skills/content-information-architecture/scripts/validate-references.mjs", path.join(validationFixtures, "references.json"));
   assert.equal(bounds.status, 0, bounds.stderr);
   assert.equal(references.status, 0, references.stderr);
 });

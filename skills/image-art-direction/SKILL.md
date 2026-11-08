@@ -1,75 +1,24 @@
 ---
 name: image-art-direction
-description: Inventory, select, crop, and credit photographs or raster imagery for reports and
-  presentations. Use for resolution, focal points, authenticity, protected crop areas, rights, and
-  output-specific image variants.
+description: Select, crop, and credit report or presentation imagery. Check placed resolution, focal
+  protection, authenticity, rights, and destination variants.
 license: MIT
 metadata:
   author: org-xelius
-  version: 0.2.0
+  version: 0.2.1
   source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Image Art Direction
 
-Treat images as evidence, atmosphere, or explanation; never as anonymous filler.
+Use imagery as evidence, context, or explanation—not anonymous filler.
 
-## When to use
+Read [IMAGE-ART-DIRECTION.md](references/IMAGE-ART-DIRECTION.md). Inventory dimensions, colour mode, metadata, rights/credits, captions, duplicates, and resolution at placed size. Classify documentary, product/interface evidence, portrait, contextual, decorative, or unusable assets.
 
-Use when raster imagery affects narrative, authenticity, brand recognition, or layout.
+Identify focal subjects and protected crop regions. Create only variants required by real destinations. Preserve faces, meaningful objects, and context; inspect crops in the target report/deck, not just thumbnails. Apply a coherent treatment; keep credits attached to the correct asset.
 
-## When not to use
+Never fabricate documentary evidence of real people, places, programs, or events. Synthetic decorative imagery needs an explicit approved role and must not masquerade as documentation. Do not aggressively upscale unsuitable images or repeat heroes without narrative reason.
 
-Do not generate fake documentary photographs for real people, places, programs, or events.
+Deliver inventory, crop recommendations, destination variants, captions/credits, and duplicate, unknown-rights, low-resolution, or replacement flags. Agree consequential hero strategy before full composition.
 
-## Inputs
-
-Image folder, rights and credits, captions, intended page or slide roles, target sizes, aspect ratios, design tokens, and authenticity requirements.
-
-## Outputs
-
-Image inventory, duplicate and resolution report, focal and crop recommendations, aspect variants, treatment rules, captions, credits, and replacement flags.
-
-## Required workflow
-
-1. Read [IMAGE-ART-DIRECTION.md](references/IMAGE-ART-DIRECTION.md).
-2. Inventory dimensions, colour mode, metadata, rights, captions, and likely duplicates.
-3. Classify each image as documentary, product or interface evidence, portrait, contextual, decorative, or unusable.
-4. Define the focal subject and protected crop region.
-5. Recommend variants for each real destination, preserving faces and meaningful objects.
-6. Apply one coherent treatment and test crops in the target artifact.
-7. Flag low-resolution, repeated hero, rights-unknown, and replacement-needed assets.
-
-## Hard rules
-
-- Do not fabricate documentary evidence.
-- Do not repeat a hero image without narrative reason.
-- Do not aggressively upscale an unsuitable image to hide quality limits.
-- Keep captions and credits attached to the correct asset.
-- Do not crop out context that changes meaning.
-
-## Checkpoints
-
-Approve the hero-image strategy and any synthetic decorative imagery before generation or full composition.
-
-## Files to read by phase
-
-Read image art direction before inventory and the target composition reference before cropping.
-
-## Quality checks
-
-Check resolution at placed size, focal protection, duplicates, rights, captions, credits, colour consistency, crop diversity, and target rendering.
-
-## Failure and fallback behaviour
-
-Use a neutral asset-pending frame, alternate authentic image, or non-photographic diagram when the right image is unavailable. State the limitation.
-
-## Example invocations
-
-- "Audit these photographs for an annual report."
-- "Recommend portrait, landscape, and widescreen crops without cutting faces."
-- "Find duplicate hero images and flag weak replacements."
-
-## Adjacent skills
-
-Supply approved variants to publication and presentation; use SVG illustration for non-photographic explanation and visual QA for placed-image inspection.
+If suitable imagery is missing, use an authentic alternative, neutral pending frame, or non-photographic explanation. State gaps instead of inventing rights or concealing quality limits. Verify placed resolution, focal protection, contrast, colour consistency, crop diversity, and rendering.

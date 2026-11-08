@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Course options and monthly enrolment — 2026</title>
+  <style>
+    :root { color-scheme: light; --ink:#182b3b; --muted:#425466; --line:#bcc8d1; --accent:#165d7b; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#e7ebee; color:var(--ink); font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:1.45; }
+    .page { width:210mm; min-height:297mm; margin:24px auto; padding:15mm; background:white; }
+    .eyebrow { margin:0 0 12px; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+    h1 { font-size:30px; line-height:1.13; margin:0 0 16px; letter-spacing:-.025em; }
+    .intro { margin:0 0 26px; max-width:64ch; }
+    table { width:100%; border-collapse:collapse; table-layout:fixed; }
+    caption { text-align:left; font-size:19px; font-weight:700; margin-bottom:12px; }
+    th,td { padding:12px 9px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); overflow-wrap:normal; }
+    thead th { background:#edf3f6; border-top:2px solid var(--ink); color:var(--ink); font-size:14px; line-height:1.35; }
+    tbody th { font-weight:700; }
+    tbody tr:last-child th, tbody tr:last-child td { border-bottom:2px solid var(--ink); }
+    .number { text-align:right; font-variant-numeric:tabular-nums; }
+    .notes { color:var(--muted); font-size:14px; margin-top:18px; }
+    .notes p { margin:0 0 10px; }
+    .source { padding-top:12px; border-top:1px solid var(--line); }
+    .key { font-weight:700; }
+    figure { margin:22px 0 18px; }
+    .chart { display:block; width:100%; height:auto; }
+    figcaption { margin-top:10px; color:var(--muted); font-size:14px; }
+    .data-table { font-size:15px; margin-top:22px; }
+    .data-table caption { font-size:17px; }
+    .data-table th,.data-table td { padding:8px 10px; }
+    .footer { margin-top:28px; font-size:13px; color:var(--muted); }
+    sup { line-height:0; font-size:11px; }
+    thead { display:table-header-group; }
+    tr { break-inside:avoid; page-break-inside:avoid; }
+    @page { size:A4 portrait; margin:15mm; }
+    @media print {
+      body { background:white; }
+      .page { width:auto; min-height:0; margin:0; padding:0; break-after:page; }
+      .page:last-child { break-after:auto; }
+      a { color:inherit; }
+    }
+    @media screen and (max-width:820px) {
+      .page { margin:0 auto 20px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="page" aria-labelledby="course-title">
+    <p class="eyebrow">2026 · Course-option lookup</p>
+    <h1 id="course-title">Compare course options</h1>
+    <p class="intro">Use the table for exact hours, fees, delivery and status. Field practice remains provisional; its fee has not yet been set.</p>
+    <table id="course-options">
+      <caption>Course options, 2026</caption>
+      <colgroup><col style="width:22%"><col style="width:12%"><col style="width:14%"><col style="width:17%"><col style="width:35%"></colgroup>
+      <thead><tr><th scope="col">Course</th><th scope="col" class="number">Planned<br>hours</th><th scope="col" class="number">Fee<br>(USD)</th><th scope="col">Delivery</th><th scope="col">Status</th></tr></thead>
+      <tbody>
+        <tr data-course="Foundations"><th scope="row">Foundations</th><td class="number" data-field="hours">12</td><td class="number" data-field="fee" data-value="0">0</td><td data-field="delivery">In person</td><td data-field="status">Confirmed</td></tr>
+        <tr data-course="Field practice"><th scope="row">Field practice</th><td class="number" data-field="hours">24</td><td class="number" data-field="fee" data-value="null">Not set<sup>1</sup></td><td data-field="delivery">Blended</td><td data-field="status">Provisional; fee not yet set</td></tr>
+        <tr data-course="Maintenance"><th scope="row">Maintenance</th><td class="number" data-field="hours">18</td><td class="number" data-field="fee" data-value="75">75</td><td data-field="delivery">In person</td><td data-field="status">Confirmed</td></tr>
+      </tbody>
+    </table>
+    <div class="notes">
+      <p><span class="key">1 · Not set:</span> The source fee is null (not recorded); the course status specifies that the fee is not yet set. It is not a zero fee.</p>
+      <p><span class="key">Units:</span> Hours are planned instructional hours. All fees are in USD; source precision is preserved.</p>
+      <p><span class="key">Value key:</span> 0 is a recorded zero. Null means not recorded, not zero. No not-applicable or suppressed values are supplied.</p>
+      <p class="source"><span class="key">Source:</span> Synthetic curriculum and enrolment register, 2026; not real participant data.</p>
+    </div>
+    <p class="footer">Editable semantic table · 1 / 2</p>
+  </section>
+  <section class="page" aria-labelledby="enrolment-title">
+    <p class="eyebrow">January–April 2026 · Monthly enrolment</p>
+    <h1 id="enrolment-title">The monthly record has a gap</h1>
+    <p class="intro">Registrations were 10 in January, 18 in March and 16 in April. February was not recorded, so a continuous four-month trend cannot be established.</p>
+    <figure aria-labelledby="enrolment-caption">
+      <img class="chart" src="monthly-enrolment.svg" width="680" height="330" alt="Monthly enrolment registrations in January–April 2026: January 10; February not recorded; March 18; April 16. No line connects January to March across the February gap. A line connects March and April, showing a decline of 2 registrations.">
+      <figcaption id="enrolment-caption">Figure 1. Recorded monthly registrations. The line is broken at February; no value is interpolated. Counts are registrations, not completions.</figcaption>
+    </figure>
+    <table class="data-table" id="monthly-data">
+      <caption>Accessible chart data</caption>
+      <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+      <thead><tr><th scope="col">Month (2026)</th><th scope="col" class="number">Registrations</th></tr></thead>
+      <tbody>
+        <tr data-month="2026-01"><th scope="row">January</th><td class="number" data-value="10">10</td></tr>
+        <tr data-month="2026-02"><th scope="row">February</th><td class="number" data-value="null">Not recorded<sup>2</sup></td></tr>
+        <tr data-month="2026-03"><th scope="row">March</th><td class="number" data-value="18">18</td></tr>
+        <tr data-month="2026-04"><th scope="row">April</th><td class="number" data-value="16">16</td></tr>
+      </tbody>
+    </table>
+    <div class="notes">
+      <p><span class="key">2 · Not recorded:</span> February is null in the source, not zero. No uncertainty intervals or unique-participant counts were supplied. No total or completion rate is inferred.</p>
+      <p class="source"><span class="key">Source:</span> Synthetic curriculum and enrolment register, 2026; not real participant data.</p>
+    </div>
+    <p class="footer">Editable SVG chart + full data · 2 / 2</p>
+  </section>
+</main>
+</body>
+</html>

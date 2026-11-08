@@ -1,0 +1,213 @@
+{
+  "passed": true,
+  "sourceSha256": "773f6299a076db0959c86c3235d85361e6570dd0e61076c35ed01f4cda02ca8e",
+  "exactSourceCopy": true,
+  "checks": [
+    "all course names, hours, fee values, currency, delivery and statuses match source",
+    "zero fee distinct from null fee",
+    "all four monthly values including null match source",
+    "three chart points match source and declared linear scale",
+    "chronological monthly positions preserve missing February",
+    "only March–April connected; no path bridges February",
+    "all observed values directly labelled",
+    "SVG parses and all text bounds fit viewBox",
+    "no detected SVG text/text overlap over 2 px",
+    "HTML page content has no horizontal overflow",
+    "semantic row/column headers, repeat-header CSS and avoid-split-row CSS present",
+    "source line retained on each reader page",
+    "no browser page errors",
+    "A4 portrait PDF and one-to-one CSS-pixel screenshots produced"
+  ],
+  "readingSize": {
+    "reportPageCssPixels": [
+      {
+        "width": 793.6875,
+        "height": 1122.515625,
+        "overflow": []
+      },
+      {
+        "width": 793.6875,
+        "height": 1122.515625,
+        "overflow": []
+      }
+    ],
+    "chartCssWidth": 680.3125,
+    "minimumTableNoteFooterFontPx": 13,
+    "deviceScaleFactor": 1
+  },
+  "chart": {
+    "points": [
+      {
+        "month": "2026-01",
+        "people": 10,
+        "x": 78,
+        "y": 148
+      },
+      {
+        "month": "2026-03",
+        "people": 18,
+        "x": 422,
+        "y": 76
+      },
+      {
+        "month": "2026-04",
+        "people": 16,
+        "x": 594,
+        "y": 94
+      }
+    ],
+    "paths": [
+      "M 422 76 L 594 94"
+    ],
+    "labels": [
+      {
+        "month": "2026-01",
+        "value": "10"
+      },
+      {
+        "month": "2026-03",
+        "value": "18"
+      },
+      {
+        "month": "2026-04",
+        "value": "16"
+      }
+    ],
+    "textBounds": [
+      {
+        "text": "Monthly enrolment, Jan–Apr 2026",
+        "x": 18,
+        "y": 6,
+        "width": 304.078125,
+        "height": 21
+      },
+      {
+        "text": "Registrations",
+        "x": 18,
+        "y": 34,
+        "width": 81.703125,
+        "height": 16
+      },
+      {
+        "text": "20",
+        "x": 36.421875,
+        "y": 50,
+        "width": 15.578125,
+        "height": 16
+      },
+      {
+        "text": "15",
+        "x": 36.421875,
+        "y": 95,
+        "width": 15.578125,
+        "height": 16
+      },
+      {
+        "text": "10",
+        "x": 36.421875,
+        "y": 140,
+        "width": 15.578125,
+        "height": 16
+      },
+      {
+        "text": "5",
+        "x": 44.203125,
+        "y": 185,
+        "width": 7.796875,
+        "height": 16
+      },
+      {
+        "text": "0",
+        "x": 44.203125,
+        "y": 230,
+        "width": 7.796875,
+        "height": 16
+      },
+      {
+        "text": "Jan",
+        "x": 65.90625,
+        "y": 251,
+        "width": 24.1875,
+        "height": 17
+      },
+      {
+        "text": "Feb*",
+        "x": 234.15625,
+        "y": 251,
+        "width": 31.6875,
+        "height": 17
+      },
+      {
+        "text": "Mar",
+        "x": 409.078125,
+        "y": 251,
+        "width": 26.03759765625,
+        "height": 17
+      },
+      {
+        "text": "Apr",
+        "x": 582.30615234375,
+        "y": 251,
+        "width": 23.5693359375,
+        "height": 17
+      },
+      {
+        "text": "* Not recorded",
+        "x": 204.859375,
+        "y": 273,
+        "width": 90.28125,
+        "height": 16
+      },
+      {
+        "text": "10",
+        "x": 68.5390625,
+        "y": 117,
+        "width": 18.921875,
+        "height": 19
+      },
+      {
+        "text": "18",
+        "x": 412.5390625,
+        "y": 45,
+        "width": 18.921875,
+        "height": 19
+      },
+      {
+        "text": "16",
+        "x": 584.5390625,
+        "y": 63,
+        "width": 18.921875,
+        "height": 19
+      },
+      {
+        "text": "No line bridges the missing February value. Months are equally spaced.",
+        "x": 18,
+        "y": 304,
+        "width": 412.609375,
+        "height": 15
+      }
+    ],
+    "description": "Registrations: January 10, February not recorded, March 18, April 16. February is missing, not zero. January is an isolated point; only March and April are connected. Vertical scale starts at zero and ends at 20. Source: Synthetic curriculum and enrolment register, 2026; not real participant data. Counts are registrations, not completions."
+  },
+  "visualInspection": {
+    "complete": true,
+    "surfaces": ["report-page-1.png at 96 dpi A4 reading size", "report-page-2.png at 96 dpi A4 reading size", "monthly-enrolment.png at native 680 x 330 px"],
+    "result": "No clipping, overlapping labels, split rows, illegible notes, or visual/data mismatch observed. Chart geometry, labels and missing-value gap match across the SVG rendered in the report and the independent Inkscape PNG.",
+    "repairVerified": "Replaced white-stroked data labels with white backing rectangles after PDF text extraction duplicated the outlined label text. Final text extraction has one label per point; final images re-inspected."
+  },
+  "contrastOnWhite": {
+    "ink182b3b": "14.51:1",
+    "muted425466": "7.80:1",
+    "accent165d7b": "7.28:1",
+    "method": "Computed sRGB relative luminance contrast; visual inspection also performed"
+  },
+  "pdfProof": {"pages":2,"pageSizePoints":[594.96,841.92],"tagged":false,"role":"Supplemental rendering proof; semantic HTML is the accessible primary artifact"},
+  "limitations": [
+    "No original participant records exist in supplied synthetic evidence.",
+    "No independent source audit or assistive-technology screen-reader session performed.",
+    "No deck integration was requested or tested.",
+    "Supplemental PDF is untagged; PDF accessibility conformance is not claimed.",
+    "Header repetition and avoid-row-split CSS were checked, but no table crosses a page in this short report.",
+    "SVG/PNG parity was visually checked, not tested for pixel identity."
+  ]
+}

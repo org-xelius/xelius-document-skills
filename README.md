@@ -1,134 +1,139 @@
-# Xelius Document Skills
+# Document Production Skills
 
 [![skills.sh](https://skills.sh/b/org-xelius/xelius-document-skills)](https://skills.sh/org-xelius/xelius-document-skills)
 
-Fourteen portable Agent Skills for evidence-led reports, editable presentations, charts, diagrams, PDF export, and visual review. Reports and presentations share evidence and design tokens while retaining composition suited to each medium.
+Make professional documents with your agent: research reports, consulting and communications briefs, education manuals, organisational reports, editable presentations, charts, tables, diagrams, and reviewed PDF deliverables.
 
-## Install
+Maintained by **Xelius**. Designed for any organisation, audience, and brand—not an Xelius house style.
 
-Requires Node.js 22.20 or later for the current Skills CLI. No Xelius npm package is required.
+## What better quality looks like
+
+A useful document has a coherent structure, accurate evidence, readable typography, and visuals that help readers understand. It also needs editable sources, inspected exports, and an honest account of anything that could not be checked.
+
+These ten skills connect those decisions into a workflow. They help your agent preserve caveats and citations, fit content without tiny text, check every rendered page or slide, and repair defects at source. They do not guarantee factual accuracy or accessibility certification without the relevant evidence and review.
+
+Supported outputs: **PDF, editable HTML/CSS, PPTX, SVG, and associated assets**. This collection does not provide native Word or Google Docs production.
+
+## Install for your agent
+
+With Node.js 22.20 or later, discover the collection first:
 
 ```sh
-# Explore without installing
 npx skills add org-xelius/xelius-document-skills --list
-
-# Install all skills globally for these agents
-npx skills add org-xelius/xelius-document-skills --global --skill '*' --agent codex hermes-agent claude-code
-
-# Pin this release for reproducible installation
-npx skills add org-xelius/xelius-document-skills@v0.2.0 --global --skill '*' --agent codex hermes-agent claude-code
 ```
 
-Omit `--global` for a project installation. The CLI normally links each agent to a canonical copy; use `--copy` when your environment requires independent copies. Use `--yes` for an unattended install after choosing the source and agents.
-
-| Agent | CLI selector | Global skill directory |
-| --- | --- | --- |
-| Codex | `codex` | `~/.agents/skills/` |
-| Hermes | `hermes-agent` | `~/.hermes/skills/` |
-| Claude Code | `claude-code` | `~/.claude/skills/` |
-
-Some older Codex installations also contain `~/.codex/skills/`. Check for stale duplicate copies when upgrading; do not delete unrelated skills. Manual installation copies a complete folder from `skills/`, including its license and resources, to the directory your agent scans.
+Install all ten for Codex, Hermes, and Claude Code:
 
 ```sh
-npx skills list --global
-npx skills check
-npx skills update --global
-npx skills find publication --owner org-xelius
+npx skills add org-xelius/xelius-document-skills@v0.2.1 --global --skill '*' --agent codex hermes-agent claude-code
 ```
 
-See the [catalogue on skills.sh](https://skills.sh/org-xelius/xelius-document-skills) and the [official CLI reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) for update, removal, and agent options. skills.sh visibility and install rankings are external services; installation does not guarantee a particular search ranking.
+Keep only your agent's selector if preferred: `codex`, `hermes-agent`, or `claude-code`. Omit `--global` to install for one project. To install one specialist, replace `'*'` with its catalogue name. No Xelius npm package is needed.
 
-## Choose a workflow
+Start a fresh agent session after installation. Rendering programs are separate from the skills; ask your agent to check available tools before production. See [installation and tools](docs/installation.md) for dependencies, manual installation, updates, and agent locations.
 
-The source is `org-xelius/xelius-document-skills`; actual skill names have no slash prefix. For example, use `--skill professional-publication` when installing, and `$professional-publication` in a supporting agent or ask it to use that skill by name.
+**Upgrading from v0.2.0?** Four identifiers have deliberately been merged. Ordinary installation does not remove old copies. Use the [backed-up migration guide](docs/migration.md) to avoid duplicate instructions.
 
-| Skill | Responsibility |
+## Prompts to start with
+
+Attach your sources or give the agent their paths, then adapt one of these.
+
+### Create a report
+
+```text
+Use document-production-orchestrator to create a research report from the
+attached notes, data, and references. The audience is programme leaders
+deciding next year's priorities. Preserve the supplied brand and all
+methodological caveats. Choose a useful length from the evidence.
+Deliver editable HTML/CSS, a PDF, assets, page previews, and a QA summary.
+Test a representative spread before completing the report.
+```
+
+### Improve an existing report
+
+```text
+Use professional-publication in revise mode on this report and its sources.
+Preserve approved facts, caveats, citations, and branding. Improve hierarchy,
+page pacing, table readability, and figure labels. Identify changes before
+applying them; do not introduce unsupported claims. Re-render the final
+document, inspect every page, and report repairs and remaining limitations.
+```
+
+### Produce an editable presentation
+
+```text
+Use professional-presentation to make a 15-minute decision briefing from
+these consulting findings. The audience needs to choose between the options.
+Build a message-led story, not report pages copied onto slides. Preserve
+sources and uncertainty. Deliver an editable PPTX, speaker notes, build
+sources, PDF, and inspected slide previews. If the supplied slide
+specification is already approved, go directly to build mode.
+```
+
+### Review a PDF without changing it
+
+```text
+Use visual-quality-assurance and pdf-production to review this PDF only.
+Inspect every page at full size, check the required PDF properties, and
+give page-specific findings with severity and suggested repairs.
+Do not edit the document. Distinguish visual inspection from automated
+checks, and mark anything unavailable or unverifiable as limited.
+```
+
+For a small job, ask directly: “Use content-information-architecture to fit this caption without losing its caveat,” or “Use data-visualisation in table mode to make this course-comparison table readable.”
+
+## Give your agent a useful brief
+
+Supply what you have; ask it to identify consequential gaps before filling them.
+
+- **Sources:** notes, datasets with definitions, existing reports, citations, images, and any restrictions. Identify authoritative versions.
+- **Reader and purpose:** who will use it, what they need to understand or decide, and whether it is read closely, presented live, or both.
+- **Brand:** logos, colours, licensed fonts, templates, protected wording, and what may change. Your branding takes priority.
+- **References:** examples of useful structure or design, plus what to borrow—not an instruction to copy their claims or identity.
+- **Output requirements:** formats, approximate length, page/slide size, print or screen use, editable-source needs, language, accessibility targets, and deadlines.
+- **Working preference:** review representative pages first, or work uninterrupted and record decisions.
+
+A policy team might provide legislation and interview notes; a research team might provide study data and methods; an educator might provide learning objectives and course material. The same quality principles apply.
+
+## A simple workflow
+
+1. **Understand the material.** Inventory evidence and agree the report structure or presentation story where needed.
+2. **Set the design.** Preserve the brand and test real content in representative pages or slides.
+3. **Build the document.** Compose for the medium, keeping text, tables, charts, and sources editable where supported.
+4. **Inspect and repair.** Export, render, inspect every page/slide, repair the source, and repeat affected checks.
+5. **Deliver with evidence.** Include sources, assets, exports, previews, and a clear QA summary.
+
+Local edits and approved-deck builds skip stages they do not need. Reports and presentations can share evidence and design tokens, but should not share the same composition.
+
+Your QA result means:
+
+- **pass:** all agreed checks and current full-size surface reviews are complete, with no unresolved issues.
+- **repair-required:** a known defect still needs attention.
+- **limited:** a required tool, check, or inspection could not be completed; the result names the gap.
+
+A technical preflight pass is not a claim of full visual quality or PDF accessibility conformance.
+
+## The ten skills
+
+| Skill | Use it for |
 | --- | --- |
-| `document-production-orchestrator` | Coordinate stages and outputs |
-| `professional-publication` | Compose and revise reports for close reading |
-| `professional-presentation` | Develop narrative, slides, and speaker notes |
-| `publication-design-system` | Set typography, layout, component, and output contracts |
-| `content-information-architecture` | Inventory sources and plan evidence-led structure |
-| `data-visualisation` | Produce accurate analytical visuals |
-| `svg-illustration` | Create and inspect vector diagrams |
-| `pptx-production` | Build editable PowerPoint files |
-| `pdf-production` | Export, inspect, and compare PDFs |
-| `visual-quality-assurance` | Review rendered surfaces and verify repairs |
-| `editorial-copy-fitting` | Fit copy while preserving meaning |
-| `table-design` | Make exact lookup and comparison legible |
-| `image-art-direction` | Select, crop, and credit raster imagery |
-| `citation-and-references` | Maintain citations and traceability |
+| `document-production-orchestrator` | Coordinating new reports, major revisions, or multiple outputs |
+| `professional-publication` | Composing and revising reports, briefs, and manuals |
+| `professional-presentation` | Developing, building, repairing, and exporting editable decks |
+| `publication-design-system` | Typography, colour, layout, and reusable component contracts |
+| `content-information-architecture` | Planning content, fitting copy, and auditing references |
+| `data-visualisation` | Choosing visual forms, producing charts, and designing tables |
+| `svg-illustration` | Editable diagrams, icons, timelines, and measured SVG verification |
+| `image-art-direction` | Authentic imagery, crops, resolution, rights, and credits |
+| `pdf-production` | PDF export, expectations, preflight, and transformation integrity |
+| `visual-quality-assurance` | Full-size surface inspection, defect records, and verified repairs |
 
-Install an individual specialist for a focused task. A report workflow usually also needs content architecture, design system, PDF production, and visual QA; presentation work additionally needs PPTX production. The orchestrator checks available specialists and reports missing capabilities. Installing the full collection is the easiest starting point.
+Use names without a slash prefix: `--skill professional-publication` when installing, or `$professional-publication` in agents that support that invocation syntax. Each skill is independently installable; full workflows benefit from the collection.
 
-```text
-Use document-production-orchestrator to turn the supplied knowledge base into
-a report and an editable partner deck. Share one evidence register, preserve
-the supplied brand, and deliver sources, exports, renders, and validated QA.
-```
+Browse the [skills.sh catalogue](https://skills.sh/org-xelius/xelius-document-skills). Historical listings and search rankings are controlled by that service, not this repository.
 
-```text
-Use professional-publication in revise mode on this existing report.
-Preserve the approved content and design. Repair the identified layout defects,
-re-render affected pages, and produce QA against the current renders.
-```
+## More information
 
-For review-only work, report findings without modifying the artifact. For export-only work, use the relevant production specialist. Load only the instructions and references needed for the selected mode.
+[Installation and tools](docs/installation.md) · [Migration from v0.2.0](docs/migration.md) · [Development and release checks](docs/development.md) · [Evaluation evidence](evals/README.md) · [Release notes](CHANGELOG.md)
 
-## Production dependencies
-
-Skill installation does not install production programs. Install capabilities in the document project when needed:
-
-```sh
-npm add --save-dev playwright pptxgenjs
-npx playwright install chromium
-python3 -m pip install pypdf
-```
-
-The render/build scripts accept `--project-root` so globally installed scripts can resolve the project's dependencies. Use `--help` on a helper to see its options. In restricted environments, use approved existing tools and report unavailable checks as limited.
-
-On macOS:
-
-```sh
-brew install poppler imagemagick ghostscript
-brew install --cask inkscape libreoffice
-```
-
-Poppler supplies PDF inspection and rendering. Inkscape supplies SVG geometry and previews; its macOS cask executable may be inside `/Applications/Inkscape.app/Contents/MacOS/inkscape`. LibreOffice exports PPTX to PDF. Browser, office, and accessibility capabilities vary by host.
-
-## Quality and QA
-
-V0.2.0 separates schema validity, technical preflight, and actual visual review. A successful export or a matching raw/final PDF does not prove that a publication meets its requirements.
-
-- Define audience, typography minima, placed visual sizes, contrast, language, and required PDF features in an output contract.
-- Keep facts, caveats, sources, credits, and protected status wording traceable.
-- Create QA using the bundled helper and schema version `2.0`; see the installed `visual-quality-assurance` skill for exact commands.
-- Review every surface in final-delivery QA. Render hashes tie reviews to the artifact version; records document coverage but cannot prove that someone viewed an image.
-- Derive Markdown summaries and delivery status from canonical QA JSON. Schema `1.0` reports require explicit migration and fresh review evidence; do not silently relabel old reports as current.
-- Use `repair-required` for known defects and `limited` for missing required checks. Respect accepted deviations with attribution and rationale.
-
-## Develop and verify
-
-```sh
-npm ci
-npm run sync:portable
-npm run validate
-npm test
-npm run test:install
-npx playwright install chromium
-npm run test:artifacts
-```
-
-`test:install` uses the pinned Skills CLI in a temporary project and verifies installed files for Codex, Hermes, and Claude Code. `test:artifacts` produces real PDF/PPTX output, renders every page, and writes technical evidence; it does not fabricate a visual-review pass. Set `PYTHON` to a Python executable with `pypdf` and optionally `CHROME_PATH` to an installed Chromium executable. LibreOffice and Poppler must be runnable for the complete artifact test.
-
-`npm run render:examples` stages synthetic source projects; add `-- --render` for binary output. `npm run eval:prepare` prepares isolated v0.1.1/v0.2.0 evaluation workspaces. See [evals/README.md](evals/README.md) for prompts, expected behavior, and how to record actual results without invented benchmark scores.
-
-## Release
-
-`npm run release` validates, tests, inspects all fourteen archives, and writes a manifest containing versions, source commit, and SHA-256 checksums. CI additionally performs installation and rendered-artifact checks before creating a tagged GitHub release. Tag and package versions must agree. Each installed skill includes MIT licensing and author/version/source metadata.
-
-The repository retains the standard `skills/<name>/SKILL.md` layout for Skills CLI discovery. A separate npm CLI and optional skills.sh packs are future distribution options, not dependencies of this release.
-
-## Contributing and license
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md). The repository and skill instructions are [MIT licensed](LICENSE). Third-party tools and assets retain their own licenses; documentary or proprietary source material must not be redistributed as public evaluation fixtures.
+Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). The instructions and helpers are [MIT licensed](LICENSE). Third-party tools, fonts, images, and source documents retain their own rights.

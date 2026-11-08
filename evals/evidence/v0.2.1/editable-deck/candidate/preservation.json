@@ -1,0 +1,857 @@
+{
+  "status": "pass",
+  "sourceSpecSha256": "2590f3770d841bd7fbc4e751799b44044373aca4009dc8c2031761ea86694fac",
+  "slides": 11,
+  "actualSlideSizeEmu": {
+    "width": 12192000,
+    "height": 6858000
+  },
+  "actualSlideSizeInches": {
+    "width": 13.333333333333334,
+    "height": 7.5
+  },
+  "nativeEditableTextObjects": 26,
+  "nativeEditableShapeObjects": 2,
+  "checksCount": 204,
+  "checks": [
+    {
+      "check": "Copied build specification is byte-identical to approved input",
+      "status": "pass"
+    },
+    {
+      "check": "PPTX has the approved 11 slides",
+      "status": "pass"
+    },
+    {
+      "check": "16:9 wide slide dimensions preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Approved Arial major and minor theme fonts preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1: approved background color",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 1: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 2: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 3: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 2: native shape preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 2: shape colors preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 3: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 3: native shape preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 3: shape colors preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 4: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 4: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 4: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 4: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 4: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 4: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 5: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 5: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 5: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 5: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 5: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 5: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 6: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 6: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 6: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 6: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 6: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4, item 6: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 4: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 3: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 3: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 3: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 3: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 3: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5, item 3: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 5: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 6: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7: approved background color",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 7: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 3: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 3: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 3: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 3: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 3: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8, item 3: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 8: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 9: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 10: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11: native object count and order",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11: no flattened slide image",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11: approved background color",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 1: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 1: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 1: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 1: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 1: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 1: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 2: geometry unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 2: exact editable text preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 2: font size preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 2: text color preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 2: bold style preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11, item 2: Arial declaration preserved (inherited theme or explicit run font)",
+      "status": "pass"
+    },
+    {
+      "check": "Slide 11: speaker notes unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "All overlaps are approved labels inside slide 4 bar shapes",
+      "status": "pass"
+    },
+    {
+      "check": "No raster slide media embedded",
+      "status": "pass"
+    }
+  ],
+  "issues": [],
+  "overlaps": [
+    {
+      "slide": 4,
+      "items": [
+        2,
+        4
+      ],
+      "intentional": true
+    },
+    {
+      "slide": 4,
+      "items": [
+        3,
+        5
+      ],
+      "intentional": true
+    }
+  ],
+  "limitations": [
+    "PPTX structure and source preservation checks do not replace target-app visual review."
+  ],
+  "tokens": null
+}

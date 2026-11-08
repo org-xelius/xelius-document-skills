@@ -1,0 +1,1118 @@
+{
+  "status": "pass",
+  "nativeSizeEmu": {
+    "cx": 12192000,
+    "cy": 6858000
+  },
+  "nativeSizeInches": {
+    "width": 13.333333333333334,
+    "height": 7.5
+  },
+  "nativeTextObjects": 26,
+  "nativeShapeObjects": 2,
+  "checks": [
+    {
+      "id": "zip-integrity",
+      "status": "pass",
+      "detail": "All ZIP members pass CRC verification."
+    },
+    {
+      "id": "slide-count",
+      "status": "pass",
+      "detail": "Expected 11 slides."
+    },
+    {
+      "id": "no-flattening",
+      "status": "pass",
+      "detail": "No slide images or media objects; content consists of native editable shapes and text. The empty ZIP directory is not a media asset."
+    },
+    {
+      "id": "slide-1.object-count",
+      "status": "pass",
+      "detail": "2 native objects."
+    },
+    {
+      "id": "slide-1.background",
+      "status": "pass",
+      "detail": "Approved background colour preserved."
+    },
+    {
+      "id": "slide-1.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 1097280, 6583680, 1463040]; expected [731520, 1097280, 6583680, 1463040]."
+    },
+    {
+      "id": "slide-1.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-1.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-1.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 42 pt text."
+    },
+    {
+      "id": "slide-1.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-1.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-1.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 2834640, 4572000, 365760]; expected [731520, 2834640, 4572000, 365760]."
+    },
+    {
+      "id": "slide-1.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-1.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-1.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 18 pt text."
+    },
+    {
+      "id": "slide-1.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour D95D39."
+    },
+    {
+      "id": "slide-1.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-2.object-count",
+      "status": "pass",
+      "detail": "2 native objects."
+    },
+    {
+      "id": "slide-2.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 594360, 10698480, 914400]; expected [731520, 594360, 10698480, 914400]."
+    },
+    {
+      "id": "slide-2.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-2.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-2.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 32 pt text."
+    },
+    {
+      "id": "slide-2.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-2.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-2.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [914400, 2834640, 10332720, 731520]; expected [914400, 2834640, 10332720, 731520]."
+    },
+    {
+      "id": "slide-2.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-2.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-2.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 24 pt text."
+    },
+    {
+      "id": "slide-2.item-2.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-2.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour 0B5D57."
+    },
+    {
+      "id": "slide-2.item-2.alignment",
+      "status": "pass",
+      "detail": "Approved paragraph alignment preserved."
+    },
+    {
+      "id": "slide-2.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-3.object-count",
+      "status": "pass",
+      "detail": "2 native objects."
+    },
+    {
+      "id": "slide-3.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 594360, 10698480, 914400]; expected [731520, 594360, 10698480, 914400]."
+    },
+    {
+      "id": "slide-3.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-3.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-3.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 32 pt text."
+    },
+    {
+      "id": "slide-3.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-3.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-3.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [822960, 2011680, 4572000, 1828800]; expected [822960, 2011680, 4572000, 1828800]."
+    },
+    {
+      "id": "slide-3.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-3.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-3.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 92 pt text."
+    },
+    {
+      "id": "slide-3.item-2.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-3.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour D95D39."
+    },
+    {
+      "id": "slide-3.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-4.object-count",
+      "status": "pass",
+      "detail": "6 native objects."
+    },
+    {
+      "id": "slide-4.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 594360, 10698480, 914400]; expected [731520, 594360, 10698480, 914400]."
+    },
+    {
+      "id": "slide-4.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-4.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-4.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 32 pt text."
+    },
+    {
+      "id": "slide-4.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-4.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-4.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [914400, 2011680, 8229600, 685800]; expected [914400, 2011680, 8229600, 685800]."
+    },
+    {
+      "id": "slide-4.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-4.item-2.shape-type",
+      "status": "pass",
+      "detail": "Native rectangular shape retained."
+    },
+    {
+      "id": "slide-4.item-2.fill",
+      "status": "pass",
+      "detail": "Approved fill colour retained."
+    },
+    {
+      "id": "slide-4.item-2.line",
+      "status": "pass",
+      "detail": "Approved line colour retained."
+    },
+    {
+      "id": "slide-4.item-3.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [914400, 3291840, 1234440, 685800]; expected [914400, 3291840, 1234440, 685800]."
+    },
+    {
+      "id": "slide-4.item-3.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-4.item-3.shape-type",
+      "status": "pass",
+      "detail": "Native rectangular shape retained."
+    },
+    {
+      "id": "slide-4.item-3.fill",
+      "status": "pass",
+      "detail": "Approved fill colour retained."
+    },
+    {
+      "id": "slide-4.item-3.line",
+      "status": "pass",
+      "detail": "Approved line colour retained."
+    },
+    {
+      "id": "slide-4.item-4.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [1051560, 2157984, 7315200, 411480]; expected [1051560, 2157984, 7315200, 411480]."
+    },
+    {
+      "id": "slide-4.item-4.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-4.item-4.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-4.item-4.font-size",
+      "status": "pass",
+      "detail": "Approved 22 pt text."
+    },
+    {
+      "id": "slide-4.item-4.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-4.item-4.colour",
+      "status": "pass",
+      "detail": "Approved text colour FFFFFF."
+    },
+    {
+      "id": "slide-4.item-5.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [1051560, 3438144, 914400, 411480]; expected [1051560, 3438144, 914400, 411480]."
+    },
+    {
+      "id": "slide-4.item-5.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-4.item-5.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-4.item-5.font-size",
+      "status": "pass",
+      "detail": "Approved 22 pt text."
+    },
+    {
+      "id": "slide-4.item-5.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-4.item-5.colour",
+      "status": "pass",
+      "detail": "Approved text colour FFFFFF."
+    },
+    {
+      "id": "slide-4.item-6.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [2377440, 3438144, 7315200, 411480]; expected [2377440, 3438144, 7315200, 411480]."
+    },
+    {
+      "id": "slide-4.item-6.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-4.item-6.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-4.item-6.font-size",
+      "status": "pass",
+      "detail": "Approved 22 pt text."
+    },
+    {
+      "id": "slide-4.item-6.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-4.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-5.object-count",
+      "status": "pass",
+      "detail": "3 native objects."
+    },
+    {
+      "id": "slide-5.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 594360, 10698480, 914400]; expected [731520, 594360, 10698480, 914400]."
+    },
+    {
+      "id": "slide-5.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-5.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-5.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 32 pt text."
+    },
+    {
+      "id": "slide-5.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-5.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-5.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [822960, 2011680, 5486400, 1828800]; expected [822960, 2011680, 5486400, 1828800]."
+    },
+    {
+      "id": "slide-5.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-5.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-5.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 88 pt text."
+    },
+    {
+      "id": "slide-5.item-2.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-5.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour 0B5D57."
+    },
+    {
+      "id": "slide-5.item-3.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [822960, 4937760, 6858000, 457200]; expected [822960, 4937760, 6858000, 457200]."
+    },
+    {
+      "id": "slide-5.item-3.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-5.item-3.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-5.item-3.font-size",
+      "status": "pass",
+      "detail": "Approved 16 pt text."
+    },
+    {
+      "id": "slide-5.item-3.colour",
+      "status": "pass",
+      "detail": "Approved text colour 52606D."
+    },
+    {
+      "id": "slide-5.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-6.object-count",
+      "status": "pass",
+      "detail": "2 native objects."
+    },
+    {
+      "id": "slide-6.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 594360, 10698480, 914400]; expected [731520, 594360, 10698480, 914400]."
+    },
+    {
+      "id": "slide-6.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-6.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-6.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 32 pt text."
+    },
+    {
+      "id": "slide-6.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-6.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-6.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [914400, 2011680, 7772400, 2286000]; expected [914400, 2011680, 7772400, 2286000]."
+    },
+    {
+      "id": "slide-6.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-6.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-6.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 26 pt text."
+    },
+    {
+      "id": "slide-6.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-6.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-7.object-count",
+      "status": "pass",
+      "detail": "2 native objects."
+    },
+    {
+      "id": "slide-7.background",
+      "status": "pass",
+      "detail": "Approved background colour preserved."
+    },
+    {
+      "id": "slide-7.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [822960, 1280160, 10332720, 1645920]; expected [822960, 1280160, 10332720, 1645920]."
+    },
+    {
+      "id": "slide-7.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-7.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-7.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 38 pt text."
+    },
+    {
+      "id": "slide-7.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-7.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour FFFFFF."
+    },
+    {
+      "id": "slide-7.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [822960, 3840480, 9875520, 731520]; expected [822960, 3840480, 9875520, 731520]."
+    },
+    {
+      "id": "slide-7.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-7.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-7.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 20 pt text."
+    },
+    {
+      "id": "slide-7.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour DDEFE8."
+    },
+    {
+      "id": "slide-7.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-8.object-count",
+      "status": "pass",
+      "detail": "3 native objects."
+    },
+    {
+      "id": "slide-8.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 594360, 10698480, 914400]; expected [731520, 594360, 10698480, 914400]."
+    },
+    {
+      "id": "slide-8.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-8.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-8.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 32 pt text."
+    },
+    {
+      "id": "slide-8.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-8.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-8.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [914400, 2286000, 4389120, 640080]; expected [914400, 2286000, 4389120, 640080]."
+    },
+    {
+      "id": "slide-8.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-8.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-8.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 28 pt text."
+    },
+    {
+      "id": "slide-8.item-2.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-8.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour D95D39."
+    },
+    {
+      "id": "slide-8.item-3.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [6400800, 2286000, 4389120, 640080]; expected [6400800, 2286000, 4389120, 640080]."
+    },
+    {
+      "id": "slide-8.item-3.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-8.item-3.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-8.item-3.font-size",
+      "status": "pass",
+      "detail": "Approved 28 pt text."
+    },
+    {
+      "id": "slide-8.item-3.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-8.item-3.colour",
+      "status": "pass",
+      "detail": "Approved text colour 0B5D57."
+    },
+    {
+      "id": "slide-8.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-9.object-count",
+      "status": "pass",
+      "detail": "2 native objects."
+    },
+    {
+      "id": "slide-9.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 594360, 10698480, 914400]; expected [731520, 594360, 10698480, 914400]."
+    },
+    {
+      "id": "slide-9.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-9.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-9.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 32 pt text."
+    },
+    {
+      "id": "slide-9.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-9.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-9.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [914400, 1920240, 8686800, 2743200]; expected [914400, 1920240, 8686800, 2743200]."
+    },
+    {
+      "id": "slide-9.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-9.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-9.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 26 pt text."
+    },
+    {
+      "id": "slide-9.item-2.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-9.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour 0B5D57."
+    },
+    {
+      "id": "slide-9.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-10.object-count",
+      "status": "pass",
+      "detail": "2 native objects."
+    },
+    {
+      "id": "slide-10.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [731520, 594360, 10698480, 914400]; expected [731520, 594360, 10698480, 914400]."
+    },
+    {
+      "id": "slide-10.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-10.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-10.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 32 pt text."
+    },
+    {
+      "id": "slide-10.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-10.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour 16324F."
+    },
+    {
+      "id": "slide-10.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [914400, 2743200, 10058400, 731520]; expected [914400, 2743200, 10058400, 731520]."
+    },
+    {
+      "id": "slide-10.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-10.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-10.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 32 pt text."
+    },
+    {
+      "id": "slide-10.item-2.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-10.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour D95D39."
+    },
+    {
+      "id": "slide-10.item-2.alignment",
+      "status": "pass",
+      "detail": "Approved paragraph alignment preserved."
+    },
+    {
+      "id": "slide-10.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "slide-11.object-count",
+      "status": "pass",
+      "detail": "2 native objects."
+    },
+    {
+      "id": "slide-11.background",
+      "status": "pass",
+      "detail": "Approved background colour preserved."
+    },
+    {
+      "id": "slide-11.item-1.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [822960, 1280160, 10241280, 1645920]; expected [822960, 1280160, 10241280, 1645920]."
+    },
+    {
+      "id": "slide-11.item-1.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-11.item-1.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-11.item-1.font-size",
+      "status": "pass",
+      "detail": "Approved 38 pt text."
+    },
+    {
+      "id": "slide-11.item-1.bold",
+      "status": "pass",
+      "detail": "Bold preserved."
+    },
+    {
+      "id": "slide-11.item-1.colour",
+      "status": "pass",
+      "detail": "Approved text colour FFFFFF."
+    },
+    {
+      "id": "slide-11.item-2.geometry",
+      "status": "pass",
+      "detail": "Native EMU bounds [822960, 4023360, 9692640, 640080]; expected [822960, 4023360, 9692640, 640080]."
+    },
+    {
+      "id": "slide-11.item-2.bounds",
+      "status": "pass",
+      "detail": "Native object lies inside slide."
+    },
+    {
+      "id": "slide-11.item-2.copy",
+      "status": "pass",
+      "detail": "Native text matches approved copy exactly, including line breaks and spaces."
+    },
+    {
+      "id": "slide-11.item-2.font-size",
+      "status": "pass",
+      "detail": "Approved 22 pt text."
+    },
+    {
+      "id": "slide-11.item-2.colour",
+      "status": "pass",
+      "detail": "Approved text colour FFF3D6."
+    },
+    {
+      "id": "slide-11.notes",
+      "status": "pass",
+      "detail": "Approved speaker notes attached to the matching slide."
+    },
+    {
+      "id": "theme-fonts",
+      "status": "pass",
+      "detail": "Arial theme preserved."
+    },
+    {
+      "id": "pdf-page-count",
+      "status": "pass",
+      "detail": "11 preview pages."
+    },
+    {
+      "id": "pdf-page-1.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-2.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-3.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-4.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-5.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-6.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-7.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-8.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-9.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-10.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "pdf-page-11.copy-parity",
+      "status": "pass",
+      "detail": "All approved visible text survives PDF export; only layout whitespace is normalized."
+    },
+    {
+      "id": "spec-byte-parity",
+      "status": "pass",
+      "detail": "Delivered specification is byte-for-byte identical to approved input."
+    }
+  ],
+  "slides": [
+    {
+      "slide": 1,
+      "nativeObjects": 2,
+      "notes": [
+        "Open with the proposition. This fixture contains no real participants or outcomes."
+      ]
+    },
+    {
+      "slide": 2,
+      "nativeObjects": 2,
+      "notes": [
+        "Explain why the intervention is a system rather than an infrastructure-only project."
+      ]
+    },
+    {
+      "slide": 3,
+      "nativeObjects": 2,
+      "notes": [
+        "Synthetic evidence EV-002. Distinguish completions from long-term capability."
+      ]
+    },
+    {
+      "slide": 4,
+      "nativeObjects": 6,
+      "notes": [
+        "120 introductory and 18 advanced completions. Bars share a zero baseline."
+      ]
+    },
+    {
+      "slide": 5,
+      "nativeObjects": 3,
+      "notes": [
+        "Synthetic evidence EV-003. State the caveat aloud."
+      ]
+    },
+    {
+      "slide": 6,
+      "nativeObjects": 2,
+      "notes": [
+        "Synthetic evidence EV-004, n=80. Multiple responses were allowed."
+      ]
+    },
+    {
+      "slide": 7,
+      "nativeObjects": 2,
+      "notes": [
+        "Pause on the evidence boundary before recommending expansion."
+      ]
+    },
+    {
+      "slide": 8,
+      "nativeObjects": 3,
+      "notes": [
+        "These are reported implementation barriers in the synthetic narrative, not quantified outcome estimates."
+      ]
+    },
+    {
+      "slide": 9,
+      "nativeObjects": 2,
+      "notes": [
+        "Present the three workstreams as one coordinated extension."
+      ]
+    },
+    {
+      "slide": 10,
+      "nativeObjects": 2,
+      "notes": [
+        "Describe the measurement plan before the closing decision."
+      ]
+    },
+    {
+      "slide": 11,
+      "nativeObjects": 2,
+      "notes": [
+        "Ask for the specific decision and name the immediate design outputs."
+      ]
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Native XML editability was verified. Microsoft PowerPoint interactive editing was not exercised."
+  ]
+}

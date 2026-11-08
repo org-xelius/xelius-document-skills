@@ -1,0 +1,14 @@
+# Offline reference audit
+
+The supplied reference file has unresolved citation problems:
+
+- **R4 is missing** from the bibliography. This breaks one in-text citation and the Figure 1 credit.
+- **R2 is ambiguous:** two different records share this ID, including a revised edition. The supplied citation cannot distinguish them. The original survey record also lacks a year and contains the malformed DOI `not-a-doi`.
+- **R3 is uncited** and matches R1 on author, year, title, and DOI: a duplicate-source candidate on the supplied metadata. Both IDs were preserved.
+- **R5 is intentional further reading**, so it is not an uncited-entry error. Its sparse metadata does not reliably identify the source.
+
+Figure 2 uniquely resolves to R1. The three supplied URLs are syntactically valid absolute HTTPS URLs. The bare DOI on R1 and R3 can be represented as `https://doi.org/10.1234/learn.2025`; this normalization is recorded separately, with every original field retained. No records were merged or renumbered, and no bibliographic details were invented.
+
+The snapshot validator ran and returned exit code 1, reporting R4 missing, R3 uncited, R2 duplicated, and R2's invalid DOI. Additional offline checks cover figure references, ambiguous matches, duplicate-source metadata and field preservation. See `validation-result.json` for the executed supplementary check results.
+
+No links or DOIs were checked online. Source existence, source accuracy, claim support, rights, complete publication coverage, and rendered source-line placement or legibility remain unverified. No publication rewrite or plan is included.

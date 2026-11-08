@@ -1,4 +1,0 @@
-interface:
-  display_name: "Citation and References"
-  short_description: "Validate citations, sources, and credits"
-  default_prompt: "Use $citation-and-references to audit and normalize the references."

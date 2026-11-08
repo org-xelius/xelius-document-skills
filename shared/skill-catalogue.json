@@ -1,16 +1,12 @@
 {
-  "document-production-orchestrator": "Coordinate reports, presentations, or combined deliverables that need several production stages. Use for a new publication, major revision, or shared evidence across formats; route a narrow edit or export directly to its specialist.",
-  "professional-publication": "Create or revise reports, briefs, annual reports, and manuals for close reading. Use for publication architecture, page composition, representative spreads, and editable report sources; use PDF production for export-only tasks.",
-  "professional-presentation": "Create or revise executive, partner, pitch, conference, and training presentations. Use for audience decisions, narrative, slide composition, and speaker notes; use PPTX production for file-building or export-only tasks.",
-  "publication-design-system": "Define typography, colour, layout, and component contracts for reports and presentations. Use to preserve a supplied template, extend a brand, or establish a reusable publication system.",
-  "content-information-architecture": "Turn mixed research, notes, documents, and datasets into a source inventory, evidence register, report plan, or presentation storyline. Use before composition when the evidence or structure needs organizing.",
-  "data-visualisation": "Choose and produce accurate charts, maps, and analytical visuals for reports or presentations. Use when evidence needs a defensible comparison with scales, units, uncertainty, sources, and accessible data.",
-  "svg-illustration": "Create or repair editable SVG diagrams, icons, timelines, and conceptual illustrations. Use for XML validity, label fit, rendered bounds, and integration into PDF or PPTX; use data visualisation for quantitative charts.",
-  "pptx-production": "Build, edit, and export editable PowerPoint files with native text, shapes, charts, and speaker notes. Use for an approved deck specification, bounds checks, rendering, or focused PPTX repair.",
-  "pdf-production": "Export and preflight PDFs, inspect fonts and document structure, and compare transformed files. Use for PDF rendering, metadata, tagging, links, selectable text, or export repair after the source composition is defined.",
-  "visual-quality-assurance": "Review rendered reports, slides, diagrams, and visual packs; record defects and verify repairs. Use for complete visual inspection or a requested review, with schema-validated QA and evidence for every reviewed surface.",
-  "editorial-copy-fitting": "Fit headings, paragraphs, captions, tables, and slide copy to real layout constraints. Use to shorten or standardize evidence-based text while preserving meaning, qualifications, citations, and uncertainty.",
-  "table-design": "Design readable tables for exact lookup and comparison in reports or presentations. Use for headers, column widths, numeric alignment, notes, repeated headers, or tables that do not fit the available space.",
-  "image-art-direction": "Inventory, select, crop, and credit photographs or raster imagery for reports and presentations. Use for resolution, focal points, authenticity, protected crop areas, rights, and output-specific image variants.",
-  "citation-and-references": "Normalize and check citations, bibliographies, figure sources, table notes, and image credits. Use for missing entries, duplicate sources, numbering, DOI formatting, and link validation while preserving source traceability."
+  "document-production-orchestrator": "Coordinate multi-stage reports, presentations, and combined deliverables. Route narrow edits, exports, or reviews to the needed specialist.",
+  "professional-publication": "Compose or revise reports, briefs, and manuals with editable sources and inspected pages. Use PDF production for export-only work.",
+  "professional-presentation": "Develop, build, repair, or export editable presentations. Use narrative mode for new decks and build mode for approved slide specifications.",
+  "publication-design-system": "Define typography, colour, layout, and component contracts for documents. Preserve templates, extend brands, or establish a reusable system.",
+  "content-information-architecture": "Plan evidence-led content, fit copy without losing meaning, or audit citations and credits. Select a focused mode for local edits or reference checks.",
+  "data-visualisation": "Choose and produce charts, maps, or readable tables for evidence-led documents. Use table mode for exact lookup without a chart workflow.",
+  "svg-illustration": "Create and verify editable SVG diagrams, icons, and timelines, including measured label fit and target rendering. Use data visualisation for charts.",
+  "pdf-production": "Export and preflight PDFs; check expected properties and transformed-file integrity. Use after composition or for focused PDF inspection.",
+  "visual-quality-assurance": "Inspect every rendered page, slide, or visual; record defects and verify repairs with current render evidence and schema-validated QA.",
+  "image-art-direction": "Select, crop, and credit report or presentation imagery. Check placed resolution, focal protection, authenticity, rights, and destination variants."
 }

@@ -1,13 +1,25 @@
 {
   "name": "xelius-document-skills",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "type": "module",
   "description": "Portable Agent Skills for professional reports, presentations, visual assets, and render-based QA.",
   "license": "MIT",
-  "repository": {"type": "git", "url": "git+https://github.com/org-xelius/xelius-document-skills.git"},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/org-xelius/xelius-document-skills.git"
+  },
   "homepage": "https://skills.sh/org-xelius/xelius-document-skills",
-  "keywords": ["agent-skills", "reports", "presentations", "pdf", "pptx", "hermes", "codex", "claude-code"],
+  "keywords": [
+    "agent-skills",
+    "reports",
+    "presentations",
+    "pdf",
+    "pptx",
+    "hermes",
+    "codex",
+    "claude-code"
+  ],
   "scripts": {
     "sync:portable": "node scripts/sync-portable-assets.mjs",
     "validate": "node scripts/validate-all-skills.mjs",
@@ -18,7 +30,9 @@
     "check:environment": "node shared/validation/detect-environment.mjs",
     "render:examples": "node scripts/render-examples.mjs",
     "package:skill": "node scripts/package-skill.mjs",
-    "release": "node scripts/create-release.mjs"
+    "release": "node scripts/create-release.mjs",
+    "measure:footprint": "node scripts/measure-footprint.mjs",
+    "migrate": "node scripts/migrate-installations.mjs"
   },
   "engines": {
     "node": ">=22.20.0"
@@ -30,6 +44,8 @@
     "yaml": "2.9.1"
   },
   "overrides": {
-    "pptxgenjs": {"image-size": "2.1.0"}
+    "pptxgenjs": {
+      "image-size": "2.1.0"
+    }
   }
 }

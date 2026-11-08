@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-11-08T18:45:46.763Z",
+  "expectedSlides": 11,
+  "pdfPageCount": 11,
+  "renderedSlideCount": 11,
+  "pdfInfo": "Title:           Riverbend Community Network - Synthetic Partner Briefing\nSubject:         Synthetic production fixture\nCreator:         Impress\nProducer:        LibreOfficeDev 26.8.0.0.alpha0 (AARCH64)\nCreationDate:    Sun Nov  8 21:43:29 2026 EAT\nCustom Metadata: no\nMetadata Stream: yes\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           11\nEncrypted:       no\nPage size:       960.009 x 540 pts\nPage rot:        0\nFile size:       116693 bytes\nOptimized:       no\nPDF version:     1.7\n",
+  "pdfFonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBAAAAA+LiberationSans-Bold           TrueType          WinAnsi          yes yes yes     97  0\nCAAAAA+LiberationSans                TrueType          WinAnsi          yes yes yes    147  0\nDAAAAA+LiberationSans-Bold           TrueType          WinAnsi          yes yes yes    107  0\nEAAAAA+LiberationSans-Bold           TrueType          WinAnsi          yes yes yes    132  0\nFAAAAA+LiberationSans-Bold           TrueType          WinAnsi          yes yes yes    112  0\nGAAAAA+LiberationSans-Bold           TrueType          WinAnsi          yes yes yes    137  0\nHAAAAA+LiberationSans                TrueType          WinAnsi          yes yes yes    162  0\nIAAAAA+LiberationSans-Bold           TrueType          WinAnsi          yes yes yes    117  0\nJAAAAA+LiberationSans                TrueType          WinAnsi          yes yes yes    152  0\nKAAAAA+LiberationSans                TrueType          WinAnsi          yes yes yes    157  0\nLAAAAA+LiberationSans-Bold           TrueType          WinAnsi          yes yes yes    102  0\nMAAAAA+LiberationSans                TrueType          WinAnsi          yes yes yes    142  0\nNAAAAA+LiberationSans-Bold           TrueType          WinAnsi          yes yes yes    122  0\nOAAAAA+LiberationSans-Bold           TrueType          WinAnsi          yes yes yes    127  0\n",
+  "fontSubstitutionObserved": true,
+  "fontLimitation": "The PPTX specifies Arial. LibreOffice PDF previews embed Liberation Sans instead; native PowerPoint rendering was not tested.",
+  "pages": [
+    {
+      "slide": 1,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 2,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 3,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 4,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 5,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 6,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 7,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 8,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 9,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 10,
+      "visibleTextPreservedIgnoringWhitespace": true
+    },
+    {
+      "slide": 11,
+      "visibleTextPreservedIgnoringWhitespace": true
+    }
+  ],
+  "images": [
+    {
+      "path": "previews/slide-01.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-02.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-03.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-04.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-05.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-06.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-07.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-08.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-09.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-10.png",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-11.png",
+      "width": 1921,
+      "height": 1080
+    }
+  ],
+  "failures": [],
+  "status": "pass-with-font-limitation"
+}

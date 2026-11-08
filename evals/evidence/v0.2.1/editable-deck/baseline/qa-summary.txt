@@ -1,0 +1,38 @@
+# QA report
+
+Status: **pass**
+
+Artifact: ../riverbend-briefing.pptx
+Reviewed: 11/11; rendered: 11/11.
+
+## Surface reviews
+
+- slide-001: clear — The two-line navy title is fully visible on the pale background. Orange subtitle is clear and separated; no edge collision or clipped text. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:29.129Z)
+- slide-002: clear — The headline wraps to two lines without clipping. All four uppercase system labels remain on one centered line with readable spacing. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:29.543Z)
+- slide-003: clear — The full introductory-training headline fits on one line. Large orange 120 is intact with ample whitespace and no clipping. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:29.976Z)
+- slide-004: clear — The headline wraps cleanly. The teal and orange bars share a left baseline; white 120 and 18 labels remain readable, with the maintenance label beside the smaller bar. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:30.373Z)
+- slide-005: clear — The headline and teal 4,800 are intact. The unique-people caveat remains clearly visible near the lower left with no footer collision. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:30.808Z)
+- slide-006: clear — Education 62, Services 55 and Income-related 41 are all visible on separate lines, below the intact headline. No missing glyph or clipped count. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:31.230Z)
+- slide-007: clear — White headline and pale-green caveat are readable on navy. The self-reported phrase wraps after the hyphen without losing any characters; the full caveat remains inside its box. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:31.707Z)
+- slide-008: clear — The two-line headline is intact. Orange AFFORDABILITY and teal DEVICE ACCESS have clear separation and consistent vertical alignment. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:32.160Z)
+- slide-009: clear — The two-line title and all three teal numbered workstreams are fully visible. The long twelve-month measurement line does not collide with the slide edge. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:32.703Z)
+- slide-010: clear — The two-line title is intact. DESIGN, TEST and MEASURE, including both arrow glyphs, remain centered on one orange line without clipping. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:33.215Z)
+- slide-011: clear — The white closing decision wraps to two complete lines on teal. The pale-yellow next-steps line is readable and unobstructed. (Codex /root/v021_deck_baseline, 2026-11-08T18:47:33.639Z)
+
+## Issues
+
+No issues recorded.
+
+## Checks
+
+- technical/technical.native-preservation: pass — reports/pptx-verification.json: 204 checks pass. Eleven slides; 26 native text objects and 2 native rectangles; exact copy, colours, font sizes, geometry, order and matching notes preserved.
+- technical/technical.pdf-preflight: pass — reports/pdf-preflight.json: 11 pages, correct page dimensions, embedded fonts, selectable text, expected title and subject, no encryption. Each page text also matches the approved visible text after whitespace normalization.
+- technical/technical.fonts: pass — reports/pdf-fonts.log contains only embedded ArialMT and Arial-BoldMT fonts in the final preview. The diagnostic Liberation Sans substitution was resolved through local renderer fontconfig, not by changing the deck.
+- visual/visual.full-deck: pass — The contact sheet was viewed for sequence and colour consistency, then all eleven 1921 by 1080 PNGs were individually viewed with the image-viewing tool. Surface-specific observations are recorded above.
+- editorial/editorial.preservation: pass — The approved specification was copied byte-for-byte. Visible copy and attached notes were checked in PPTX XML; no narrative, copy, order or supplied evidence caveats were revised.
+- accessibility/accessibility.full-audit: not-requested — A complete accessibility or PDF/UA audit was not part of the brief. Selectable text and tagged PDF presence were detected; reading order was not certified.
+- technical/technical.powerpoint-interactive: not-requested — Direct Microsoft PowerPoint rendering and interactive editing were not requested and were not performed. Editability was checked from native OOXML objects; previews use LibreOfficeDev 26.8.0.0.alpha0 and Poppler.
+
+## Limitations
+
+None recorded.

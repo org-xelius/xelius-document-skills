@@ -1,0 +1,43 @@
+# Course options and monthly enrolment
+
+Open `report.html` for the complete, editable one-page report. `course-options.html` and `monthly-enrolment.html` are standalone semantic HTML assets; `monthly-enrolment.svg` is the editable chart. The SVG keeps labels as text. The PNG and PDFs are preview/fallback exports, not the editable masters.
+
+## Why these forms
+
+- **Exact course-option lookup:** a table puts each course in one row and its hours, fee, delivery and status in stable columns. All three options and all supplied attributes are retained. Source order is retained because no ranking was requested. Numeric values are right-aligned, with integer precision; no additive total is meaningful here.
+- **Monthly enrolment over time:** a simple time-series chart uses evenly spaced calendar months and a zero-based 0–20 scale. Direct labels retain the exact observed counts. February is explicitly shaded and labelled “Not recorded”; no line bridges it. Only March–April are connected. The companion HTML table exposes all four months and the missing value for exact lookup and accessibility.
+
+The one-message finding is: recorded registrations were 10 in January, 18 in March and 16 in April. February is not recorded, so the path from January to March is unknown. The observed March–April change is a decrease of 2 registrations; no complete January–April trend is asserted.
+
+## Source and uncertainty
+
+Source: **Synthetic curriculum and enrolment register, 2026; not real participant data.**
+
+- All values come from the supplied `visual-evidence.json`; a lossless copy is in `source-data.json`.
+- `null` means **not recorded, not zero**. It is never interpolated or included as a zero.
+- Field practice has a null fee and retains the full status **“Provisional; fee not yet set”**. Its fee is displayed as “Not set²”, with the null meaning explained alongside the table. Foundations has an explicitly recorded fee of **USD 0**; Maintenance has **USD 75**.
+- Course hours are planned instructional hours: Foundations 12, Field practice 24, Maintenance 18.
+- Monthly counts are registrations, not completions: January 10, February null, March 18, April 16.
+- No sampling uncertainty, enrolment denominator, or explanation for the missing month was supplied. None is invented.
+
+## Validation actually performed
+
+- Ran the snapshot's chart-specification validator successfully. It checks required specification fields and baseline disclosure; it does not prove chart correctness.
+- Compared every course field and all monthly values in the rendered HTML against the source, including both null values. Checked the three plotted points against the 0–20 coordinate mapping and confirmed the sole line segment is March–April.
+- Printed all three HTML files in Chrome to A4 PDFs. `pdfinfo` confirms that each is one A4 page. The combined report body is 642.52 × 962.41 CSS pixels: **170 mm wide**, within the 267 mm-high page content area. No horizontal text overflow was detected.
+- Visually inspected the combined report rasterized from its PDF at approximately 96 dpi (794 × 1123 pixels), plus the chart raster. At the intended 170 mm width, table text is 9.75 pt, source notes 8.25 pt, and the smallest chart text approximately 8.5 pt. Labels, source notes, zero/null distinction, February gap and the full table status are legible and unclipped.
+- Checked semantic row/column header markup and SVG title/description. The visible monthly data table preserves accessible exact values. This is a markup check, not a screen-reader test.
+- Exported and visually checked the 1360 × 700 PNG against the SVG as placed in the report; values, gap, labels and notes agree. The SVG is embedded directly in the HTML report.
+
+The first Chrome launch was denied by local access controls; the approved rerun succeeded. Inkscape also failed to start (exit 134), so the verified PNG fallback was exported from Chrome instead. No Inkscape-render parity is claimed. The PDFs are untagged preview files; use the semantic HTML for the accessible version. No external source verification or assistive-technology user test was performed.
+
+## Files
+
+- `report.html`, `report.pdf`, `report-a4.png`: combined report and reading-size preview.
+- `course-options.html`, `course-options.pdf`: exact course lookup.
+- `monthly-enrolment.html`, `monthly-enrolment.svg`, `monthly-enrolment.png`, `monthly-enrolment.pdf`: time-series visual, data table and exports.
+- `chart-spec.json`, `table-spec.json`: form and layout decisions.
+- `source-data.json`: preserved input data.
+- `validation-results.json`: automated checks.
+- `instruction-load.json`: exact instruction/reference load record and script-execution distinction.
+- `build.mjs`, `render-validate.mjs`: local production and validation scripts used for this delivery.

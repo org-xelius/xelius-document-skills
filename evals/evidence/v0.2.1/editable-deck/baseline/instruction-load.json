@@ -1,0 +1,299 @@
+{
+  "evaluation": "v021-deck-baseline-a",
+  "tokens": null,
+  "tokenNote": "The host did not expose model token usage. Tool-output size estimates are not model usage.",
+  "snapshotRoot": "evaluation-snapshots/baseline/skills",
+  "instructionTextLoads": [
+    {
+      "sequence": 1,
+      "file": "pptx-production/SKILL.md",
+      "requestedLines": [
+        1,
+        240
+      ],
+      "actualLines": [
+        1,
+        76
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/SKILL.md"
+    },
+    {
+      "sequence": 2,
+      "file": "pptx-production/references/PPTX-PRODUCTION.md",
+      "requestedLines": [
+        1,
+        300
+      ],
+      "actualLines": [
+        1,
+        21
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/references/PPTX-PRODUCTION.md"
+    },
+    {
+      "sequence": 3,
+      "file": "visual-quality-assurance/SKILL.md",
+      "requestedLines": [
+        1,
+        260
+      ],
+      "actualLines": [
+        1,
+        97
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/visual-quality-assurance/SKILL.md"
+    },
+    {
+      "sequence": 4,
+      "file": "visual-quality-assurance/references/VISUAL-QA.md",
+      "requestedLines": [
+        1,
+        300
+      ],
+      "actualLines": [
+        1,
+        48
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/visual-quality-assurance/references/VISUAL-QA.md"
+    },
+    {
+      "sequence": 5,
+      "file": "pdf-production/SKILL.md",
+      "requestedLines": [
+        1,
+        260
+      ],
+      "actualLines": [
+        1,
+        84
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pdf-production/SKILL.md"
+    },
+    {
+      "sequence": 6,
+      "file": "pdf-production/references/PDF-PREFLIGHT.md",
+      "requestedLines": [
+        1,
+        300
+      ],
+      "actualLines": [
+        1,
+        43
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pdf-production/references/PDF-PREFLIGHT.md"
+    },
+    {
+      "sequence": 7,
+      "file": "pdf-production/assets/pdf-expectations.template.json",
+      "requestedLines": [
+        1,
+        200
+      ],
+      "actualLines": [
+        1,
+        10
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pdf-production/assets/pdf-expectations.template.json"
+    },
+    {
+      "sequence": 8,
+      "file": "visual-quality-assurance/assets/schemas/qa-report.schema.json",
+      "requestedLines": [
+        1,
+        260
+      ],
+      "actualLines": [
+        1,
+        94
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/visual-quality-assurance/assets/schemas/qa-report.schema.json"
+    }
+  ],
+  "helpTextLoads": [
+    {
+      "file": "visual-quality-assurance/scripts/qa-report.mjs",
+      "invocation": "node qa-report.mjs --help",
+      "coverage": "complete help output",
+      "absolutePath": "evaluation-snapshots/baseline/skills/visual-quality-assurance/scripts/qa-report.mjs"
+    }
+  ],
+  "scriptSourceTextLoads": [
+    {
+      "file": "pptx-production/scripts/build-pptx.mjs",
+      "requestedLines": [
+        1,
+        300
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/scripts/build-pptx.mjs"
+    },
+    {
+      "file": "pptx-production/scripts/render-pptx.mjs",
+      "requestedLines": [
+        1,
+        280
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/scripts/render-pptx.mjs"
+    },
+    {
+      "file": "pptx-production/scripts/check-slide-bounds.mjs",
+      "requestedLines": [
+        1,
+        280
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/scripts/check-slide-bounds.mjs"
+    },
+    {
+      "file": "pptx-production/scripts/create-contact-sheet.mjs",
+      "requestedLines": [
+        1,
+        280
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/scripts/create-contact-sheet.mjs"
+    },
+    {
+      "file": "pdf-production/scripts/render-pdf-pages.mjs",
+      "requestedLines": [
+        1,
+        280
+      ],
+      "coverage": "complete",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pdf-production/scripts/render-pdf-pages.mjs"
+    }
+  ],
+  "inputTextLoads": [
+    {
+      "file": "evaluation-snapshots/baseline/inputs/deck-spec.json",
+      "requestedLines": [
+        1,
+        260
+      ],
+      "coverage": "partial"
+    },
+    {
+      "file": "evaluation-snapshots/baseline/inputs/deck-spec.json",
+      "requestedLines": [
+        261,
+        620
+      ],
+      "coverage": "remaining file through EOF"
+    }
+  ],
+  "failedTextLoadAttempts": [
+    {
+      "reason": "A command attempted to start in the output folder before that folder existed. Process creation failed; no file text was loaded."
+    }
+  ],
+  "executedSnapshotScripts": [
+    {
+      "file": "pptx-production/scripts/build-pptx.mjs",
+      "count": 2,
+      "detail": "Unmodified delivered copy: representative sequence once, full approved deck once; --project-root supplied on both.",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/scripts/build-pptx.mjs"
+    },
+    {
+      "file": "pptx-production/scripts/check-slide-bounds.mjs",
+      "count": 4,
+      "detail": "Initial check plus three run-checks executions. All completed with exit code 0.",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/scripts/check-slide-bounds.mjs"
+    },
+    {
+      "file": "pptx-production/scripts/render-pptx.mjs",
+      "count": 3,
+      "detail": "Representative default-font diagnostic; representative with explicit Arial fontconfig; final with explicit Arial fontconfig. All export processes succeeded. Initial font substitution was detected and resolved.",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/scripts/render-pptx.mjs"
+    },
+    {
+      "file": "pdf-production/scripts/render-pdf-pages.mjs",
+      "count": 3,
+      "detail": "Diagnostic representative, Arial representative, and all 11 final pages. All completed with exit code 0.",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pdf-production/scripts/render-pdf-pages.mjs"
+    },
+    {
+      "file": "pptx-production/scripts/create-contact-sheet.mjs",
+      "count": 3,
+      "detail": "Diagnostic representative, Arial representative, and full final sequence. All completed with exit code 0.",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pptx-production/scripts/create-contact-sheet.mjs"
+    },
+    {
+      "file": "pdf-production/scripts/preflight-pdf.mjs",
+      "count": 5,
+      "detail": "Final direct check, two earlier final checks via run-checks, then representative and final via the completed run-checks. All exit code 0. Python pypdf selected from the bundled runtime.",
+      "absolutePath": "evaluation-snapshots/baseline/skills/pdf-production/scripts/preflight-pdf.mjs"
+    },
+    {
+      "file": "visual-quality-assurance/scripts/qa-report.mjs",
+      "count": 42,
+      "detail": "One --help, two init, fifteen record-render, fifteen record-review, seven record-check, two report actions. All exit code 0. See reports/qa-executions.json for complete canonical invocation records.",
+      "absolutePath": "evaluation-snapshots/baseline/skills/visual-quality-assurance/scripts/qa-report.mjs"
+    },
+    {
+      "file": "visual-quality-assurance/scripts/validate-qa-report.mjs",
+      "count": 2,
+      "detail": "Final and representative reports checked with --verify-files; both exit code 0.",
+      "absolutePath": "evaluation-snapshots/baseline/skills/visual-quality-assurance/scripts/validate-qa-report.mjs"
+    }
+  ],
+  "notes": [
+    "Instruction files were not re-read or partially omitted. Runtime script imports and execution are tracked separately from instruction text loaded into context."
+  ],
+  "runtimeSourceTextLoads": [
+    {
+      "absolutePath": "user-home/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+      "requestedLines": [
+        1,
+        240
+      ],
+      "coverage": "complete shell wrapper; runtime detection only, not a document skill instruction"
+    }
+  ],
+  "localScriptsExecuted": [
+    {
+      "file": "prepare.mjs",
+      "count": 1
+    },
+    {
+      "file": "sources/rebuild.mjs",
+      "count": 1
+    },
+    {
+      "file": "sources/run-checks.mjs",
+      "count": 3
+    },
+    {
+      "file": "sources/verify-pptx.py",
+      "count": 3,
+      "detail": "First check falsely treated an empty ppt/media/ ZIP directory as a media file; checker corrected to exclude directories, then rerun successfully. No deck content was changed."
+    },
+    {
+      "file": "sources/record-qa.mjs",
+      "count": 1
+    },
+    {
+      "file": "sources/finalize-delivery.mjs",
+      "count": 1
+    }
+  ],
+  "scriptExecutionNote": "Direct snapshot entry points are listed separately from instruction text. Runtime module imports and preflight subprocesses are execution dependencies, not instruction-text loads.",
+  "dependencyResolution": {
+    "projectRoot": "dependency-project",
+    "projectAccess": "read/execute only",
+    "pptxgenjs": "4.0.1",
+    "python": "user-home/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "pypdf": "6.10.0",
+    "workspaceDependenciesTool": "mcp__codex_app__load_workspace_dependencies",
+    "globalDocumentSkillsLoaded": false
+  },
+  "completedAt": "2026-11-08T18:49:11.519Z"
+}

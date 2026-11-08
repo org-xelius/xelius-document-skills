@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course options — lookup table</title>
+  <style>
+    @page { size: A4 portrait; margin: 18mm; }
+    :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #17212b; background: #fff; }
+    * { box-sizing: border-box; }
+    body { max-width: 174mm; margin: 18mm auto; padding: 0; font-size: 11pt; line-height: 1.4; }
+    table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+    caption { text-align: left; font-weight: 700; font-size: 14pt; margin-bottom: 3mm; }
+    col.course { width: 23%; }
+    col.hours { width: 13%; }
+    col.fee { width: 14%; }
+    col.delivery { width: 18%; }
+    col.status { width: 32%; }
+    th, td { padding: 3mm 2.2mm; vertical-align: top; overflow-wrap: break-word; border-bottom: 0.25mm solid #c7cdd3; }
+    thead th { background: #eef1f4; border-top: 0.5mm solid #354454; border-bottom: 0.4mm solid #687584; font-weight: 700; }
+    th { text-align: left; }
+    .number { text-align: right; font-variant-numeric: tabular-nums; }
+    .missing { text-align: left; }
+    tbody th { font-weight: 600; }
+    .notes { margin-top: 3mm; font-size: 9.5pt; line-height: 1.45; }
+    .notes p { margin: 1.5mm 0 0; }
+    [contenteditable="true"]:focus-visible { outline: 2px solid #355f85; outline-offset: -2px; background: #f3f8fc; }
+    @media screen and (max-width: 720px) { body { margin: 16px; max-width: none; } }
+    @media print {
+      body { max-width: none; margin: 0; }
+      thead { display: table-header-group; }
+      tr { break-inside: avoid; page-break-inside: avoid; }
+      table, .notes { break-inside: avoid; page-break-inside: avoid; }
+      table { break-after: avoid; }
+      .notes { break-before: avoid; }
+      [contenteditable="true"]:focus-visible { outline: none; background: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Self-contained lookup table. Edit the HTML or focus individual data cells to edit in a browser. -->
+  <table aria-describedby="course-options-notes">
+    <caption>Course options</caption>
+    <colgroup>
+      <col class="course"><col class="hours"><col class="fee"><col class="delivery"><col class="status">
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col">Course</th>
+        <th scope="col" class="number">Planned hours</th>
+        <th scope="col" class="number">Fee (USD)</th>
+        <th scope="col">Delivery</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" contenteditable="true">Foundations</th>
+        <td class="number" contenteditable="true">12</td>
+        <td class="number" contenteditable="true">0</td>
+        <td contenteditable="true">In person</td>
+        <td contenteditable="true">Confirmed</td>
+      </tr>
+      <tr>
+        <th scope="row" contenteditable="true">Field practice</th>
+        <td class="number" contenteditable="true">24</td>
+        <td class="missing" contenteditable="true">Not recorded</td>
+        <td contenteditable="true">Blended</td>
+        <td contenteditable="true">Provisional; fee not yet set</td>
+      </tr>
+      <tr>
+        <th scope="row" contenteditable="true">Maintenance</th>
+        <td class="number" contenteditable="true">18</td>
+        <td class="number" contenteditable="true">75</td>
+        <td contenteditable="true">In person</td>
+        <td contenteditable="true">Confirmed</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="notes" id="course-options-notes">
+    <p><strong>Units:</strong> Course hours are planned instructional hours. All fees are in USD.</p>
+    <p><strong>Missing-value key:</strong> “Not recorded” represents null in the source, not zero. A fee of 0 is a recorded zero.</p>
+    <p><strong>Source:</strong> Synthetic curriculum and enrolment register, 2026; not real participant data.</p>
+  </div>
+</body>
+</html>

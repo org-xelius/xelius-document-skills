@@ -27,7 +27,7 @@ test("global render and build scripts resolve dependencies from explicit project
     fs.writeFileSync(path.join(project, "package.json"), '{"private":true}');
     fs.writeFileSync(path.join(project, "node_modules", "playwright", "index.js"), `const fs=require('node:fs');module.exports={chromium:{launch:async(options)=>({newPage:async()=>({goto:async()=>{},emulateMedia:async()=>{},evaluate:async()=>{},pdf:async(value)=>fs.writeFileSync(value.path,JSON.stringify({launch:options,pdf:value}))}),close:async()=>{}})}};`);
     fs.writeFileSync(path.join(project, "node_modules", "pptxgenjs", "index.js"), `module.exports=class {static ShapeType={};addSlide(){return {addText(){},addNotes(){}}}async writeFile({fileName}){require('node:fs').writeFileSync(fileName,'editable test deck')}};`);
-    for (const [source, target] of [["skills/pdf-production/scripts/render-html-to-pdf.mjs", "render.mjs"], ["skills/pptx-production/scripts/build-pptx.mjs", "build.mjs"]]) fs.copyFileSync(path.join(root, source), path.join(installed, target));
+    for (const [source, target] of [["skills/pdf-production/scripts/render-html-to-pdf.mjs", "render.mjs"], ["skills/professional-presentation/scripts/build-pptx.mjs", "build.mjs"]]) fs.copyFileSync(path.join(root, source), path.join(installed, target));
     const html = path.join(project, "report.html");
     fs.writeFileSync(html, "<h1>Project local dependencies</h1>");
     const pdf = path.join(temp, "render.pdf");

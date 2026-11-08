@@ -1,0 +1,66 @@
+{
+  "tokens": null,
+  "scope": "Only this snapshot's citation-and-references skill resources were used. No global document skills were read. No agents were spawned.",
+  "instructionReads": [
+    {
+      "path": "evaluation-snapshots/baseline/skills/citation-and-references/SKILL.md",
+      "kind": "skill_instructions",
+      "readCount": 1,
+      "reads": [{"method": "sed", "requestedLines": "1-260", "actualLines": "1-74", "coverage": "full", "truncated": false}],
+      "repeatedReads": false,
+      "partialReads": false
+    },
+    {
+      "path": "evaluation-snapshots/baseline/skills/citation-and-references/references/CITATIONS.md",
+      "kind": "citation_reference_instructions",
+      "readCount": 1,
+      "reads": [{"method": "sed", "requestedLines": "1-320", "actualLines": "1-18", "coverage": "full", "truncated": false}],
+      "repeatedReads": false,
+      "partialReads": false
+    }
+  ],
+  "dataReads": [
+    {
+      "path": "evaluation-snapshots/baseline/inputs/references.json",
+      "kind": "audit_input_not_instruction_text",
+      "modelVisibleReads": [{"method": "sed", "requestedLines": "1-360", "actualLines": "1-53", "coverage": "full", "truncated": false}],
+      "programmaticFullReads": ["snapshot validate-references.mjs", "local verify-audit.mjs"],
+      "repeatedReads": true,
+      "partialReads": false
+    }
+  ],
+  "scriptSourceInspections": [
+    {
+      "path": "evaluation-snapshots/baseline/skills/citation-and-references/scripts/validate-references.mjs",
+      "kind": "code_inspection_not_loaded_instruction_text",
+      "readCount": 1,
+      "reads": [{"method": "sed", "requestedLines": "1-360", "actualLines": "1-20", "coverage": "full", "truncated": false}],
+      "repeatedReads": false,
+      "partialReads": false
+    }
+  ],
+  "executedScripts": [
+    {
+      "path": "evaluation-snapshots/baseline/skills/citation-and-references/scripts/validate-references.mjs",
+      "runtime": "node",
+      "arguments": ["evaluation-snapshots/baseline/inputs/references.json"],
+      "exitCode": 1,
+      "resultRecordedIn": "audit.json#/validation/snapshotValidator"
+    },
+    {
+      "path": "evaluation-output/cite-a/verify-audit.mjs",
+      "runtime": "node",
+      "origin": "Authored for output validation, not a snapshot instruction resource",
+      "arguments": [],
+      "exitCode": 0,
+      "executionCount": 1,
+      "resultRecordedIn": "validation-result.json"
+    }
+  ],
+  "metadataOnlyOperations": [
+    "rg --files listed the citation-and-references snapshot resources without loading their contents.",
+    "wc -l counted lines in the two instruction files, the validator script, and the input; these were not additional instruction-text loads."
+  ],
+  "notRead": ["LICENSE", "agents/openai.yaml", "all global document skill resources"],
+  "externalVerification": "None; the request required an offline audit."
+}

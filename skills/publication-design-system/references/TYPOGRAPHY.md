@@ -25,4 +25,4 @@
 
 ## Fit rules
 
-Do not orphan headings, split a figure from its caption, or allow one-line title boxes to wrap accidentally. Record any material copy changes through `editorial-copy-fitting`.
+Do not orphan headings, split a figure from its caption, or allow one-line title boxes to wrap accidentally. Record any material copy changes through `content-information-architecture`.

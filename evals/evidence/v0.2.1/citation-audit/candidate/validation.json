@@ -1,0 +1,25 @@
+{
+  "validatedAt": "2026-11-08T18:43:05.261Z",
+  "commandExitCode": 0,
+  "checkCount": 13,
+  "checks": [
+    {"name": "all three JSON artifacts parse", "passed": true},
+    {"name": "preserved source is byte-for-byte identical", "passed": true},
+    {"name": "all source fields, IDs, values, records, and ordering are unchanged", "passed": true},
+    {"name": "missing R4 and both occurrence locations match source", "passed": true},
+    {"name": "R2 ambiguity has two distinct source records", "passed": true},
+    {"name": "R3 is uncited and R5 has further-reading exemption", "passed": true},
+    {"name": "R1/R3 duplicate metadata claim matches exact supplied fields", "passed": true},
+    {"name": "canonical DOI representations are derived only from valid supplied identifiers", "passed": true},
+    {"name": "invalid DOI remains unmodified and has no invented replacement", "passed": true},
+    {"name": "helper findings are recorded exactly", "passed": true},
+    {"name": "offline scope, no publication rewrite, and unavailable token usage are explicit", "passed": true},
+    {"name": "instruction log records only two complete instruction reads", "passed": true},
+    {"name": "readable summary is present and nonempty", "passed": true}
+  ],
+  "inputSha256": "5d68e15cb4e7d48fb70bed18dafe6b07e3a3a9197a72f4b965038433fcf1711b",
+  "preservedSha256": "5d68e15cb4e7d48fb70bed18dafe6b07e3a3a9197a72f4b965038433fcf1711b",
+  "schemaValidationPerformed": false,
+  "networkRequests": 0,
+  "tokens": null
+}

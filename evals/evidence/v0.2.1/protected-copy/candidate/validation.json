@@ -1,0 +1,32 @@
+{
+  "word_count_whitespace": 53,
+  "word_count_with_em_dash_boundary": 54,
+  "word_limit": 60,
+  "within_limit": true,
+  "protected_phrase_exact": true,
+  "numerals_preserved_in_order": true,
+  "source_ids_preserved_in_order": true,
+  "source_log_matches_input": true,
+  "fitted_log_matches_artifact": true,
+  "artifact_json_parse_valid_at_check": true,
+  "manual_meaning_comparison": {
+    "six_month_pilot_period": "preserved",
+    "120_introductory_completions": "preserved",
+    "18_advanced_maintenance_completions": "preserved",
+    "80_follow_up_survey_respondents": "preserved",
+    "intentionally_non_random_sampling": "preserved",
+    "62_education_41_income_related_55_service_uses": "preserved",
+    "multiple_uses_per_respondent": "preserved",
+    "pilot_without_comparison_group": "preserved",
+    "uses_self_reported": "preserved",
+    "no_established_training_causation": "preserved",
+    "preliminary_not_causal_status": "preserved",
+    "source_attribution_scope": "preserved"
+  },
+  "limits": [
+    "Meaning comparison was performed by the same agent that edited the caption, not by an independent reviewer.",
+    "Underlying SRC-001 and SRC-002 documents were not provided or checked.",
+    "No rendered caption layout was available for visual fit validation."
+  ],
+  "token_usage": null
+}

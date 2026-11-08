@@ -1,0 +1,11 @@
+# Offline reference audit
+
+The supplied records contain one missing reference ID (R4), affecting both the citation list and Figure 1. R2 is assigned to two different survey records, so its citation is ambiguous. The first R2 record also has the malformed DOI `not-a-doi` and no supplied year.
+
+R3 is uncited and shares R1's author, year, title, and DOI: a high-confidence metadata duplicate, though source identity has not been externally verified. R5 is explicitly further reading, so its uncited status is exempt; it lacks author, year, and a retrieval locator.
+
+All original IDs, records, and fields are retained in `references-preserved.json`. The structured audit separately supplies the supported DOI representation `https://doi.org/10.1234/learn.2025` for R1 and R3. No duplicates were merged, no edition was chosen, and no missing metadata were invented.
+
+The supplied validator completed with exit code 1 and reported R4 missing, R3 uncited, R2 duplicated, and R2's DOI invalid. Supplementary offline checks covered same-source metadata, figure-credit matching, and URL syntax. No network verification, factual/source-content verification, or rights verification was performed. Figure 2's R1 match does not establish permission or credit correctness; no publication body or renders were available.
+
+See `reference-audit.json` for record-specific findings and limitations, `validation.json` for artifact checks, and `instruction-load.json` for the exact instructions used. No publication was rewritten or planned. Token usage is unavailable and recorded as null.

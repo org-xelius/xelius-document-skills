@@ -1,38 +1,18 @@
 # Routing
 
-## Production-mode routes
+| Request | Route |
+| --- | --- |
+| Report, brief, manual, annual/research report | content architecture (if unresolved) → design system → professional publication → PDF → visual QA |
+| New executive, partner, pitch, conference, or training deck | content architecture (if needed) → design system → professional presentation → PDF (if requested) → visual QA |
+| Approved deck build, repair, export | professional presentation, appropriate mode; no narrative restart |
+| Local caption/copy edit | content-information-architecture, edit/fit mode only |
+| Citation/bibliography/credit audit | content-information-architecture, reference mode only |
+| Exact lookup table or analytical chart/map | data-visualisation, table/chart/selection mode |
+| Conceptual diagram/icon/timeline | svg-illustration |
+| Raster selection/crops/rights | image-art-direction |
+| PDF export/preflight only | pdf-production |
+| Review only | visual-quality-assurance plus relevant craft checks; findings, no mutation |
 
-| Request | Default route | Conditional specialists |
-| --- | --- | --- |
-| Report, annual report, research report, case study, policy brief, white paper, toolkit, manual | content architecture -> design system -> professional publication -> PDF production -> visual QA | copy, data, table, SVG, image, citations |
-| Executive, pitch, partner, conference, training, or data deck | content architecture -> design system -> professional presentation -> PPTX production -> PDF production -> visual QA | copy, data, table, SVG, image, citations |
-| Presentation plus report | shared inventory and evidence register -> separate publication plan and deck storyline -> one semantic design system with medium-specific scales -> both production routes | all relevant specialists |
-| Visual asset pack | evidence register -> design system -> data, table, SVG, or image route -> target integration -> visual QA | PDF or PPTX production for integration tests |
-| Export or preflight only | PPTX or PDF production -> visual QA | citations or accessibility if requested |
-| Review only | visual QA plus the specialist that owns the suspected defect | no mutation unless requested |
+For combined report/deck work, share inventory/evidence and semantic tokens but create separate plans and composition. Preserve existing templates unless the authorized brand mode permits change. Route every final PDF through preflight and every rendered sequence through full visual inspection.
 
-## Decision logic
-
-1. If the task has more than one deliverable or crosses architecture, design, production, and QA, keep the orchestrator active.
-2. If the evidence base is not inventoried, route to content architecture first.
-3. If a supplied template or brand exists, preserve it until the manifest authorizes another brand mode.
-4. If the artifact is read closely, route to publication logic. If it is narrated or viewed at distance, route to presentation logic.
-5. If the same evidence produces both, share claims and sources but create two plans.
-6. If precise values matter more than pattern, route to table design; otherwise route analytical relationships to data visualisation.
-7. Route conceptual vector explanation to SVG illustration and authentic raster evidence to image art direction.
-8. Route every final PDF through PDF production and every rendered sequence through visual QA.
-
-For revision work, reuse approved evidence, plans, and design contracts; open only the stages affected by the edit. Review mode returns findings without editing. Export mode does not reopen composition unless a defect requires source repair. Check that a named specialist exists before attempting to invoke it.
-
-## Handoff contract
-
-Each handoff states:
-
-- Input files and schema versions
-- Decisions already approved
-- Protected content, brand elements, and caveats
-- Expected outputs and destinations
-- Validation already completed
-- Open blockers and fallback limits
-
-Specialists may return a blocker instead of silently changing scope.
+Handoffs identify input files/schema versions, approved decisions, protected content/brand/caveats, outputs/destinations, validation performed, and remaining limitations. Invoke only installed specialists; missing capability must be explicit. A narrow task does not require the orchestrator or full collection.

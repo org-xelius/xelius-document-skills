@@ -1,0 +1,24 @@
+# Approved deck check summary
+
+Build complete: 11 editable slides, preserving the approved copy, order, colours, geometry, Arial theme, and all speaker notes. No design or narrative changes were made.
+
+## Passed checks
+
+- 11 source slides = 11 PowerPoint slides = 11 PDF pages = 11 PNG previews.
+- 26 native editable text boxes and 2 native editable rectangles; slides are not flattened images.
+- Visible text and notes match the approved specification exactly in PowerPoint XML.
+- All element coordinates/dimensions and specified colours match the approved specification.
+- Bounds/placeholder check passes for all 28 elements.
+- Selectable PDF text matches all approved slide text, ignoring whitespace only.
+- Contact sheet reviewed, then every slide individually viewed at its original 1921x1080 size. No clipping, missing text, accidental overlap, or obscured values was observed.
+- The canonical QA file records each current render's hash, reviewer, timestamp, and surface-specific observation. File verification is run before delivery.
+
+## Limitations — overall QA status: limited
+
+LibreOffice previews substitute embedded Liberation Sans for Arial. The editable PPTX still specifies Arial; its exact appearance with that font is not verified by this preview set. LibreOffice also emitted Fontconfig cache warnings, but successfully exported all pages.
+
+Microsoft PowerPoint rendering and live edit interactions were not tested. Before using the deck as target-renderer final, open `deck.pptx` in PowerPoint on a machine with Arial, inspect all 11 slides, and export a fresh PDF. A formal screen-reader audit was not requested or performed. Synthetic claims were preserved, not externally fact-checked.
+
+## Build environment
+
+pptxgenjs 4.0.1, resolved from the specified read-only project dependency root. LibreOfficeDev 26.8.0.0.alpha0 exported the PDF; Poppler rendered the slide PNGs at 144 dpi. The build specification and production helpers are retained under `sources/`. Exact instruction/reference loads and script runs are recorded in `instruction-load.json`; unavailable token counts are null.

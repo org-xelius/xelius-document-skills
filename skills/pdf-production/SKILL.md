@@ -1,84 +1,26 @@
 ---
 name: pdf-production
-description: Export and preflight PDFs, inspect fonts and document structure, and compare
-  transformed files. Use for PDF rendering, metadata, tagging, links, selectable text, or export
-  repair after the source composition is defined.
+description: Export and preflight PDFs; check expected properties and transformed-file integrity.
+  Use after composition or for focused PDF inspection.
 license: MIT
 metadata:
   author: org-xelius
-  version: 0.2.0
+  version: 0.2.1
   source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # PDF Production
 
-Treat export as the start of preflight, not completion.
+Export success starts preflight; it does not establish publication quality.
 
-## When to use
+Use after composition for PDF export, inspection, or focused export repair. Preserve editable sources. Read [PDF-PREFLIGHT.md](references/PDF-PREFLIGHT.md) for commands, dependencies, expectations, and status semantics.
 
-Use for final report and presentation PDF outputs or for preflighting existing PDFs.
+Derive metadata, dimensions/count, tags, language, fonts, links/outlines, and selectable-text requirements from the output contract. Adapt `assets/pdf-expectations.template.json`; do not invent universal requirements.
 
-## When not to use
+Export through the approved browser/office path, then run `scripts/preflight-pdf.mjs` with expectations. After any optimizer, split/merge, sanitizer, converter, or print driver changes the PDF, run `scripts/compare-pdf-properties.mjs` on raw/final files. Explain intended page/text changes; reject unexplained loss of tags, metadata, links, outlines, text, or geometry. Identical raw/final files may both fail publication requirements.
 
-Do not redesign content or pages unless a detected defect requires returning to the owning skill.
+Render every page, compare expected/rendered counts, review contact sheet and all full-size pages, then repair at source. Check glyphs, clipping, black boxes, soft imagery, pagination, fonts, links, furniture, and source readability. Do not conceal blank-page/overflow defects with transformations that strip properties.
 
-## Inputs
+Retain preflight JSON, transformation comparisons, renders, and limitations. Technical success proves only listed checks—not reading order, link reachability, appearance, or full accessibility conformance. Type 3 fonts need review unless the brief rejects them; avoid uncalibrated replacement.
 
-Source artifact, target page dimensions, print or digital profile, bleed, accessibility requirements, metadata, expected page count, and available PDF tools.
-
-## Outputs
-
-Final PDF, preflight report, page renders, contact sheet, link report, and explicit validation limitations.
-
-## Required workflow
-
-1. Read [PDF-PREFLIGHT.md](references/PDF-PREFLIGHT.md).
-2. Detect browser, office, Poppler, Ghostscript, and PDF inspection tools.
-3. Export through the approved source path. For HTML, run `node scripts/render-html-to-pdf.mjs input.html output.pdf --project-root <workspace>`; use `--browser-executable <path>` or `CHROME_PATH` for an existing Chromium installation.
-4. Derive required properties from the publication contract and run `node scripts/preflight-pdf.mjs output.pdf --expect expectations.json --json`. Adapt `assets/pdf-expectations.template.json`; do not invent mandatory bookmarks, language, page count, or font policy.
-5. When any optimizer, splitter, merger, sanitizer, print driver, or converter changes the exported PDF, run `node scripts/compare-pdf-properties.mjs raw.pdf final.pdf --expect expectations.json --json`. Use `--strict` to block unresolved warnings; record a reason for intended page or text changes.
-6. Render every page to PNG at an inspection resolution.
-7. Create a contact sheet, invoke visual QA, repair the source, and repeat.
-
-## Hard rules
-
-- Do not declare completion because export succeeded.
-- Do not claim a check passed when its required tool was unavailable.
-- Preserve readable source lines, live links, selectable text, page numbers, and accurate dimensions.
-- Fix accidental blank pages, overflow, or pagination at the editable source; do not hide them with a PDF transformation that removes tags, metadata, outlines, links, or text.
-- Reject unexplained regressions between raw and final PDF properties.
-- Distinguish transformation integrity from publication requirements: identical raw and final files can both lack required metadata or navigation.
-- Treat Type 3 fonts as a review condition unless the output contract rejects them; never switch fonts solely to satisfy an uncalibrated blanket rule.
-- Repair at the editable source when possible.
-
-## Checkpoints
-
-Run preflight on representative output and final output. Report remaining warnings, print dependencies, and accessibility coverage.
-
-## Files to read by phase
-
-Read PDF preflight before export and the visual QA reference before inspection.
-
-## Script dependencies and results
-
-Install Playwright in the production project for HTML export. The renderer resolves it from `--project-root` (default: the current directory), waits for fonts and images, and requests tagged PDF and outlines. Confirm the exported properties rather than assuming the browser created them.
-
-Preflight uses Poppler plus Python `pypdf` for tags, language, links, bookmarks, and every page's dimensions. Select Python with `--python <executable>` or `XELIUS_PYTHON`. Missing required inspection tools produce `limited` with exit code 3; detected failures use exit code 1; invalid arguments use 2. JSON output includes stable check IDs and captured tool warnings. Technical success does not establish visual quality or full accessibility conformance.
-
-## Quality checks
-
-Check every requested technical property plus raw-to-final parity, render parity, missing glyphs, font warnings, clipping, black boxes, soft images, broken links, incorrect page numbers, and output size.
-
-## Failure and fallback behaviour
-
-Use available inspection subsets and mark the report `limited`. Provide exact manual checks for unavailable tools; never issue a false pass.
-
-## Example invocations
-
-- "Export and preflight this paged HTML report."
-- "Check whether this presentation PDF matches the PPTX."
-- "Render all pages and repair any PDF defects."
-
-## Adjacent skills
-
-Receive editable sources from publication or PPTX production and return source-level repairs before final visual QA.
+Missing required checks produce `limited`; known failures need repair. Never pass unavailable checks. Use documented fallbacks and exact manual checks when validation is incomplete.

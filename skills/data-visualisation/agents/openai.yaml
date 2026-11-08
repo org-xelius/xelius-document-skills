@@ -1,4 +1,4 @@
 interface:
-  display_name: "Data Visualisation"
-  short_description: "Turn evidence into accurate visual stories"
-  default_prompt: "Use $data-visualisation to choose and produce the right chart."
+  display_name: "Charts & Tables"
+  short_description: "Choose and produce accurate charts and tables"
+  default_prompt: "Use $data-visualisation to choose a readable form for this evidence."

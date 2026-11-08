@@ -1,0 +1,202 @@
+{
+  "auditVersion": "1.0",
+  "source": "evaluation-snapshots/candidate/inputs/references.json",
+  "mode": "offline_reference_audit",
+  "recordLocatorConvention": "JSON Pointers; array indexes are zero-based because duplicate IDs cannot uniquely identify records.",
+  "preservation": {
+    "artifact": "references-preserved.json",
+    "policy": "Preserve all supplied IDs, fields, values, ordering, and records. Do not merge duplicates or infer missing bibliographic data.",
+    "normalizationDelivery": "Supported canonical DOI representations are provided separately below; original DOI values remain untouched."
+  },
+  "summary": {
+    "bibliographyRecords": 5,
+    "uniqueBibliographyIds": 4,
+    "citationListEntries": 3,
+    "figureCredits": 2,
+    "missingReferenceIds": 1,
+    "missingReferenceOccurrences": 2,
+    "uncitedNonFurtherReadingRecords": 1,
+    "furtherReadingExemptRecords": 1,
+    "duplicateIdGroups": 1,
+    "metadataDuplicateSourceGroups": 1,
+    "malformedDoiFields": 1,
+    "ambiguousCitationMatches": 1
+  },
+  "missingReferences": [
+    {
+      "id": "R4",
+      "occurrences": ["/citations/2", "/figureCredits/0/citation"],
+      "finding": "No bibliography record has this ID; both the citation-list reference and Figure 1 credit are unresolved.",
+      "status": "confirmed_from_supplied_records"
+    }
+  ],
+  "uncitedEntries": [
+    {
+      "id": "R3",
+      "record": "/bibliography/2",
+      "finding": "This ID occurs in neither the citations array nor the supplied figure credits and is not marked furtherReading.",
+      "status": "confirmed_within_supplied_reference_usage_only"
+    }
+  ],
+  "furtherReadingExemptions": [
+    {
+      "id": "R5",
+      "record": "/bibliography/4",
+      "reason": "furtherReading is explicitly true; absence from citations is intentional under the supplied flag, not an uncited-entry error."
+    }
+  ],
+  "duplicateIds": [
+    {
+      "id": "R2",
+      "records": ["/bibliography/1", "/bibliography/3"],
+      "finding": "The same stable ID identifies Follow-up Survey and Follow-up Survey: Revised Edition. The latter supplies year 2026; the former supplies no year.",
+      "disposition": "Retain both records and the original ID values. Do not merge distinct edition metadata or decide which record the citation means."
+    }
+  ],
+  "duplicateSources": [
+    {
+      "ids": ["R1", "R3"],
+      "records": ["/bibliography/0", "/bibliography/2"],
+      "matchingFields": ["author", "year", "title", "doi"],
+      "difference": "R1 supplies a URL; R3 has no URL field.",
+      "finding": "High-confidence metadata duplicate: the supplied author, year, title, and DOI are identical. This is not a byte-identical record pair.",
+      "sourceIdentityExternallyVerified": false,
+      "disposition": "Flag without consolidating, changing IDs, transferring fields, or replacing R3 usage with R1."
+    }
+  ],
+  "malformedIdentifiers": [
+    {
+      "id": "R2",
+      "field": "/bibliography/1/doi",
+      "suppliedValue": "not-a-doi",
+      "finding": "Fails DOI syntax validation.",
+      "normalizedValue": null,
+      "disposition": "Retain the supplied value as evidence and flag it. No replacement DOI can be inferred."
+    }
+  ],
+  "ambiguousMatches": [
+    {
+      "citation": "/citations/1",
+      "id": "R2",
+      "candidates": ["/bibliography/1", "/bibliography/3"],
+      "finding": "An ID-only citation cannot choose between the original-title record and the revised-edition record.",
+      "resolution": "unresolved; requires the intended source or citation context"
+    }
+  ],
+  "citationResolution": [
+    {
+      "citation": "/citations/0",
+      "id": "R1",
+      "matches": ["/bibliography/0"],
+      "status": "unique_id_match_not_factual_verification"
+    },
+    {
+      "citation": "/citations/1",
+      "id": "R2",
+      "matches": ["/bibliography/1", "/bibliography/3"],
+      "status": "ambiguous"
+    },
+    {
+      "citation": "/citations/2",
+      "id": "R4",
+      "matches": [],
+      "status": "missing"
+    }
+  ],
+  "figureCredits": [
+    {
+      "record": "/figureCredits/0",
+      "figure": "Figure 1",
+      "citation": "R4",
+      "referenceMatches": [],
+      "referenceStatus": "missing",
+      "rightsStatus": "not_supplied_or_verified"
+    },
+    {
+      "record": "/figureCredits/1",
+      "figure": "Figure 2",
+      "citation": "R1",
+      "referenceMatches": ["/bibliography/0"],
+      "referenceStatus": "unique_id_match_only",
+      "rightsStatus": "not_supplied_or_verified"
+    }
+  ],
+  "metadataWarnings": [
+    {
+      "id": "R2",
+      "record": "/bibliography/1",
+      "missingSuppliedFields": ["year"],
+      "finding": "No year is supplied for Follow-up Survey. Do not copy 2026 from the revised-edition record."
+    },
+    {
+      "id": "R5",
+      "record": "/bibliography/4",
+      "missingSuppliedFields": ["author", "year"],
+      "finding": "Only the ID, title, and furtherReading flag are supplied. No DOI, URL, or other retrieval locator is supplied, so the source cannot be identified from this record alone."
+    },
+    {
+      "scope": "all_records",
+      "finding": "The citation style and source types are not specified. These are metadata-completeness warnings, not claims that every omitted optional field is mandatory. Publisher, page/section locators, and any style-required accessed dates cannot be checked or invented."
+    },
+    {
+      "scope": "both_figure_credits",
+      "finding": "Ownership, license, permission, and full attribution wording are not supplied. A resolving citation alone cannot establish that a credit or rights status is correct."
+    }
+  ],
+  "supportedNormalizations": [
+    {
+      "record": "/bibliography/0",
+      "id": "R1",
+      "field": "doi",
+      "suppliedValue": "10.1234/learn.2025",
+      "canonicalRepresentation": "https://doi.org/10.1234/learn.2025",
+      "basis": "Supplied identifier passes local DOI syntax check; prefix with the DOI resolver URL without changing identifier content.",
+      "resolutionOrRegistrationVerified": false
+    },
+    {
+      "record": "/bibliography/2",
+      "id": "R3",
+      "field": "doi",
+      "suppliedValue": "10.1234/learn.2025",
+      "canonicalRepresentation": "https://doi.org/10.1234/learn.2025",
+      "basis": "Supplied identifier passes local DOI syntax check; prefix with the DOI resolver URL without changing identifier content.",
+      "resolutionOrRegistrationVerified": false
+    }
+  ],
+  "localUrlSyntaxChecks": [
+    {"field": "/bibliography/0/url", "value": "https://example.org/methods", "syntaxValid": true},
+    {"field": "/bibliography/1/url", "value": "https://example.org/survey", "syntaxValid": true},
+    {"field": "/bibliography/3/url", "value": "https://example.org/survey-revised", "syntaxValid": true}
+  ],
+  "validationPerformed": {
+    "snapshotValidator": {
+      "script": "evaluation-snapshots/candidate/skills/content-information-architecture/scripts/validate-references.mjs",
+      "input": "original supplied references.json",
+      "exitCode": 1,
+      "exitInterpretation": "Completed and reported findings, not a clean reference audit.",
+      "output": {"missing": ["R4"], "uncited": ["R3"], "duplicates": ["R2"], "invalidDois": ["R2"]},
+      "coverageLimit": "Does not detect same-source records under different IDs, inspect figure credits, check network links, verify truth/rights, or resolve the duplicate R2 edition ambiguity."
+    },
+    "supplementaryChecks": [
+      "Parsed the source JSON and counted supplied records.",
+      "Checked three supplied URLs with the local URL parser; syntax only.",
+      "Checked three supplied DOI fields locally; two pass syntax, one fails.",
+      "Compared R1/R3 source metadata and inspected R2 candidate edition records.",
+      "Matched the supplied figure-credit IDs against bibliography IDs."
+    ],
+    "networkRequests": 0,
+    "networkLinksChecked": false,
+    "citationAuditSchemaValidation": "not_performed; no citation-audit schema was specified or loaded"
+  },
+  "cannotVerify": [
+    "Whether the supplied sources exist, their metadata are authoritative, or any source supports a factual claim; source documents and manuscript claims were not supplied.",
+    "DOI registration, resolution, destination, or correspondence to the named work; local syntax is not registration verification.",
+    "URL availability, HTTP status, redirects, content, or authenticity; no network requests were made.",
+    "Which R2 edition the citation intends, or missing years/authors/locators without additional source evidence.",
+    "Figure ownership, copyright, licenses, permissions, and full credit correctness; no images or rights evidence were supplied.",
+    "Uncited factual claims elsewhere in the publication, chart/table source coverage, or bibliography usage outside the supplied citation/credit lists; no publication body was supplied.",
+    "Rendered source-line legibility, placement of credits, and publication numbering sequence; no renders or citation-style specification were supplied. R-prefixed stable IDs have not been renumbered."
+  ],
+  "publicationRewrittenOrPlanned": false,
+  "tokens": null
+}

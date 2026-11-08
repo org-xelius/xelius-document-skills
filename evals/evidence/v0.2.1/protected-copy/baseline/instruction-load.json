@@ -1,0 +1,58 @@
+{
+  "instruction_text_loads": [
+    {
+      "sequence": 1,
+      "path": "evaluation-snapshots/baseline/skills/editorial-copy-fitting/SKILL.md",
+      "read_occurrence": 1,
+      "extent": "entire file",
+      "partial": false,
+      "truncated": false,
+      "method": "exec_command: cat"
+    },
+    {
+      "sequence": 2,
+      "path": "evaluation-snapshots/baseline/skills/editorial-copy-fitting/references/EDITORIAL-COPY-FITTING.md",
+      "read_occurrence": 1,
+      "extent": "entire file",
+      "partial": false,
+      "truncated": false,
+      "method": "exec_command: cat"
+    }
+  ],
+  "input_file_loads": [
+    {
+      "sequence": 3,
+      "path": "evaluation-snapshots/baseline/inputs/protected-copy.txt",
+      "read_occurrence": 1,
+      "extent": "entire file",
+      "partial": false,
+      "truncated": false,
+      "method": "exec_command: cat"
+    },
+    {
+      "sequence": 4,
+      "path": "evaluation-snapshots/baseline/inputs/protected-copy.txt",
+      "read_occurrence": 2,
+      "extent": "entire file",
+      "partial": false,
+      "truncated": false,
+      "method": "Inline Node.js validation: fs.readFileSync"
+    }
+  ],
+  "discovery_only": [
+    {
+      "path": "evaluation-snapshots/baseline/inputs",
+      "method": "rg --files",
+      "note": "Listed input filenames to check for an evidence register; did not read deck-spec.json, visual-evidence.json, or references.json."
+    }
+  ],
+  "scripts_executed": [],
+  "inline_validation": [
+    "JavaScript word counts in functions.exec; no instruction text loaded by execution.",
+    "Inline Node.js validation checks saved caption, transformation record, and instruction-load JSON; this is execution rather than loading an instruction resource."
+  ],
+  "repeated_instruction_reads": [],
+  "partial_instruction_reads": [],
+  "global_document_skills_loaded": false,
+  "actual_token_usage": null
+}

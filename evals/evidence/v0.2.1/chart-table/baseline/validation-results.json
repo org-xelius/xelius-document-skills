@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "dataChecks": "All course fields and monthly values, including nulls, match source; displayed point coordinates match the zero-based 0–20 scale; only March–April connected.",
+  "htmlDimensions": [
+    {
+      "file": "report.html",
+      "widthPx": 642.515625,
+      "heightPx": 962.40625,
+      "overflow": []
+    },
+    {
+      "file": "course-options.html",
+      "widthPx": 642.515625,
+      "heightPx": 296.921875,
+      "overflow": []
+    },
+    {
+      "file": "monthly-enrolment.html",
+      "widthPx": 642.515625,
+      "heightPx": 596.09375,
+      "overflow": []
+    }
+  ],
+  "semantics": "Course column and row headers have scope; monthly data table has column and row headers. SVG has title and description.",
+  "performed": [
+    "Printed all three HTML assets to A4 PDF using Chrome",
+    "Captured 170 mm report-width screenshots",
+    "Exported a 1360 × 700 PNG chart from the SVG using Chrome at 2× density",
+    "Checked DOM text overflow and A4 body height",
+    "Compared every course field and monthly value to source",
+    "Checked line path and chart coordinate mapping",
+    "Checked semantic table headers and source presence"
+  ],
+  "notPerformed": [
+    "No assistive-technology user test",
+    "No external source verification: supplied data is synthetic",
+    "No sampling-uncertainty calculation: not supplied"
+  ]
+}

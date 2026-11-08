@@ -1,0 +1,21 @@
+{
+  "task": "Exact course-option lookup",
+  "form": "Semantic HTML table",
+  "comparisonDirection": "Scan rows by course; compare attributes across columns.",
+  "order": "Source order: Foundations; Field practice; Maintenance. No unsupported ranking implied.",
+  "columns": [
+    "Course",
+    "Planned hours",
+    "Fee (USD)",
+    "Delivery",
+    "Status"
+  ],
+  "numericAlignment": "Right aligned with tabular numerals; integer precision retained.",
+  "missingFee": "Not set² represents null, not recorded and not zero; provisional status retained verbatim.",
+  "zeroFee": "Foundations explicitly displays 0 in USD fee column.",
+  "totals": "None: course-option attributes are not an additive total.",
+  "printedWidthMm": 170,
+  "tableTypePt": 9.75,
+  "sourceTypePt": 8.25,
+  "printBehavior": "Repeated table header; rows avoid page breaks. Short table fits on one portrait page without annex."
+}

@@ -1,0 +1,52 @@
+{
+  "source": "Synthetic curriculum and enrolment register, 2026; not real participant data.",
+  "courseOptions": [
+    {
+      "course": "Foundations",
+      "hours": 12,
+      "fee": 0,
+      "currency": "USD",
+      "delivery": "In person",
+      "status": "Confirmed"
+    },
+    {
+      "course": "Field practice",
+      "hours": 24,
+      "fee": null,
+      "currency": "USD",
+      "delivery": "Blended",
+      "status": "Provisional; fee not yet set"
+    },
+    {
+      "course": "Maintenance",
+      "hours": 18,
+      "fee": 75,
+      "currency": "USD",
+      "delivery": "In person",
+      "status": "Confirmed"
+    }
+  ],
+  "monthlyEnrolment": [
+    {
+      "month": "2026-01",
+      "people": 10
+    },
+    {
+      "month": "2026-02",
+      "people": null
+    },
+    {
+      "month": "2026-03",
+      "people": 18
+    },
+    {
+      "month": "2026-04",
+      "people": 16
+    }
+  ],
+  "notes": [
+    "Null means not recorded, not zero.",
+    "Course hours are planned instructional hours.",
+    "Monthly enrolment counts are registrations, not completions."
+  ]
+}

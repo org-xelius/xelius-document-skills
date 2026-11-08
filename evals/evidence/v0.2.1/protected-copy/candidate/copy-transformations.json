@@ -1,0 +1,31 @@
+{
+  "component": "report caption",
+  "maximum_words": 60,
+  "source_text": "In a six-month pilot, 120 people completed introductory training and 18 completed advanced maintenance training (SRC-001). An intentionally non-random follow-up survey of 80 respondents recorded 62 reporting education use, 41 income-related use, and 55 service use (SRC-002); respondents could report more than one use. The pilot had no comparison group, and these self-reported uses cannot establish that the training caused the outcomes. Preliminary findings—not a causal estimate.",
+  "fitted_text": "Six-month pilot: 120 people completed introductory training; 18 completed advanced maintenance training (SRC-001). Intentionally non-random follow-up survey of 80 respondents: 62 reported education use, 41 income-related use, 55 service use; respondents could report multiple uses (SRC-002). Pilot had no comparison group; self-reported uses cannot establish training caused outcomes. Preliminary findings—not a causal estimate.",
+  "reason": "Fit the existing paragraph into a caption of at most 60 words without changing evidence or qualifications.",
+  "evidence_ids": ["SRC-001", "SRC-002"],
+  "protected_phrase": "Preliminary findings—not a causal estimate.",
+  "preserved_caveats": [
+    "The follow-up survey was intentionally non-random.",
+    "Respondents could report more than one use.",
+    "The pilot had no comparison group.",
+    "Uses were self-reported and cannot establish that training caused the outcomes.",
+    "Findings are preliminary, not a causal estimate."
+  ],
+  "changes": [
+    "Removed introductory articles and compressed sentence openings into caption-style labels.",
+    "Replaced 'recorded 62 reporting' with '62 reported' and removed redundant conjunctions.",
+    "Replaced 'more than one use' with 'multiple uses'.",
+    "Removed grammatical filler from the causal caveat without changing its meaning.",
+    "Kept SRC-001 with training counts and SRC-002 with survey results and the multiple-use qualification."
+  ],
+  "substantive_change": false,
+  "reviewer_status": "Agent comparison completed; no independent human review.",
+  "scope_change": false,
+  "details_moved_elsewhere": false,
+  "validation_limits": [
+    "Facts were checked against the supplied paragraph, not against underlying SRC-001 or SRC-002 documents, which were not supplied.",
+    "No report layout or dimensions were provided; validation covers the word limit and meaning, not rendered line or page fit."
+  ]
+}

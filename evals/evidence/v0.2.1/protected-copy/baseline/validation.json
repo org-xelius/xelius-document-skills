@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "word_count": 50,
+  "conservative_word_count": 59,
+  "checks": {
+    "within_60_words": true,
+    "within_60_with_hyphens_and_dashes_split": true,
+    "exact_protected_phrase": true,
+    "source_log_exact": true,
+    "fitted_log_exact": true,
+    "counts_and_source_ids_unchanged": true,
+    "six_month_period": true,
+    "training_counts_and_levels": true,
+    "survey_scope_and_self_report": true,
+    "category_count_mapping": true,
+    "overlap_caveat": true,
+    "no_comparison_group": true,
+    "causal_limitation": true,
+    "recorded_word_count": true,
+    "recorded_conservative_word_count": true,
+    "instruction_load_count": true,
+    "actual_token_usage_unavailable": true
+  },
+  "validation_limits": [
+    "Checked fidelity to the supplied paragraph only; underlying SRC-001 and SRC-002 documents were not supplied or independently verified.",
+    "No separate evidence register was present among the supplied input filenames.",
+    "Validated the requested word capacity, not typographic or rendered caption fit; no report layout was supplied or redesigned."
+  ],
+  "actual_token_usage": null
+}

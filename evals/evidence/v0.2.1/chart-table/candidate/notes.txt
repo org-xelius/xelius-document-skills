@@ -1,0 +1,29 @@
+# Sources and form selection
+
+## Evidence
+
+Only `visual-evidence.json` from the supplied candidate snapshot was used as evidence. The source describes itself as: “Synthetic curriculum and enrolment register, 2026; not real participant data.” No external evidence was added.
+
+`source-data.json` is a verbatim local copy of that input; `report.html` contains all source values in semantic tables. `monthly-enrolment.svg` is editable XML with native text and vector elements. Source precision is unchanged.
+
+## Exact course-option lookup → table
+
+Readers need exact values across several attributes, not a magnitude ranking. A semantic table makes course, planned instructional hours, USD fee, delivery and status available in one row. The common currency moves to the column header without changing any value. Numeric hours and fees are right-aligned. The unrecorded fee is labelled “Not set” with a cell-specific note explaining the null and the source status. It remains distinct from the confirmed recorded zero fee for Foundations. Full provisional status is retained.
+
+## Monthly enrolment over time → gapped line chart plus data table
+
+Chronological position makes the time pattern visible; point labels retain exact counts. January is an isolated point and only March–April are connected. February remains on the axis and is explicitly marked not recorded, with no zero, imputation or bridge line. The linear vertical axis begins at zero. There are three observed monthly counts across four calendar months; the numbers measure registrations, not completions or necessarily unique people. A full four-month trajectory cannot be established. No uncertainty intervals were supplied.
+
+## Reading-size treatment
+
+The HTML has two A4 portrait report pages, one per reader question, with 15 mm margins. It does not compress either question to fit a crowded shared page. The chart is approximately 180 mm wide with 14–19 px labels; source and note text is 14 px (10.5 pt). Table row splits are prohibited and headers are set to repeat if the table flows onto another page. The actual three-row table fits on one page, so no repeated-header event occurs.
+
+## Files
+
+- `report.html`: editable report and semantic lookup/data tables.
+- `monthly-enrolment.svg`: editable standalone chart with title and descriptive alternative.
+- `chart-spec.json`: scales, supported finding, gaps, units, period and source.
+- `source-data.json`: original evidence, copied verbatim.
+- `report.pdf`, page images and chart PNG: rendering evidence, not replacements for the editable sources.
+- `validation.json` and `validation-notes.md`: checks actually performed and limitations.
+- `instruction-load.json`: instruction/reference reads and script-use record.

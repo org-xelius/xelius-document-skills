@@ -5,6 +5,7 @@ import process from "node:process";
 import { fileURLToPath } from "node:url";
 import { validateJsonFile } from "../shared/validation/schema-utils.mjs";
 import { parse } from "yaml";
+import { measure, gates } from "./measure-footprint.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const errors = [];
@@ -46,6 +47,9 @@ function validateLinks(file, text) {
 
 const skillRoot = path.join(root, "skills");
 const skillDirs = fs.readdirSync(skillRoot, { withFileTypes: true }).filter((entry) => entry.isDirectory());
+const catalogue = Object.keys(JSON.parse(fs.readFileSync(path.join(root, "shared", "skill-catalogue.json"), "utf8"))).sort();
+if (skillDirs.length !== 10 || JSON.stringify(skillDirs.map((entry) => entry.name).sort()) !== JSON.stringify(catalogue)) errors.push("Expected exactly ten current catalogue identifiers.");
+if (!gates(measure(skillRoot))) errors.push("Installed collection exceeds v0.2.1 footprint limits; run npm run measure:footprint.");
 const names = new Map();
 
 for (const entry of skillDirs) {

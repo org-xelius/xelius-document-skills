@@ -1,4 +1,4 @@
 interface:
   display_name: "Professional Presentation"
-  short_description: "Design clear, audience-led presentations"
-  default_prompt: "Use $professional-presentation to develop an audience-led presentation."
+  short_description: "Develop and build editable presentations"
+  default_prompt: "Use $professional-presentation to build this approved specification as an editable deck."

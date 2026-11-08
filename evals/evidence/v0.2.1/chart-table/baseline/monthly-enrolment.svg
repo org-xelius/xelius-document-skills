@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="350" viewBox="0 0 680 350" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">Monthly enrolment, January–April 2026</title>
+<desc id="chart-desc">Recorded registrations: January 10, February not recorded, March 18, April 16. No line crosses the missing February value. A line connects only March and April. Counts are registrations, not completions. Source: Synthetic curriculum and enrolment register, 2026; not real participant data.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#111111}.heading{font-size:20px;font-weight:700}.unit,.month,.tick,.gap-label{font-size:15px}.value{font-size:17px;font-weight:700;fill:#0B3C5D}.source{font-size:12px;fill:#555555}.grid{stroke:#D6D6D6;stroke-width:1}.baseline{stroke:#555555;stroke-width:1.2}.series{fill:none;stroke:#0B3C5D;stroke-width:3;stroke-linecap:round}.point{fill:#0B3C5D;stroke:#FFFFFF;stroke-width:2}.gap-label{fill:#555555}</style>
+<rect width="680" height="350" fill="#FFFFFF"/>
+<text x="0" y="23" class="heading">Monthly enrolment, January–April 2026</text>
+<text x="0" y="51" class="unit">Registrations (people)</text>
+<line x1="60" y1="253" x2="636" y2="253" class="baseline"/><text x="46" y="258" text-anchor="end" class="tick">0</text>
+<line x1="60" y1="213" x2="636" y2="213" class="grid"/><text x="46" y="218" text-anchor="end" class="tick">5</text>
+<line x1="60" y1="173" x2="636" y2="173" class="grid"/><text x="46" y="178" text-anchor="end" class="tick">10</text>
+<line x1="60" y1="133" x2="636" y2="133" class="grid"/><text x="46" y="138" text-anchor="end" class="tick">15</text>
+<line x1="60" y1="93" x2="636" y2="93" class="grid"/><text x="46" y="98" text-anchor="end" class="tick">20</text>
+<rect x="202" y="86" width="96" height="167" fill="#F5F5F5"/>
+<text x="250" y="157" text-anchor="middle" class="gap-label"><tspan x="250">Not</tspan><tspan x="250" dy="20">recorded</tspan></text>
+<path d="M 428 109 L 606 125" class="series" data-segment="2026-03:2026-04"/>
+<circle cx="72" cy="173" r="5.5" class="point" data-month="2026-01" data-value="10"/><text x="72" y="158" text-anchor="middle" class="value">10</text>
+
+<circle cx="428" cy="109" r="5.5" class="point" data-month="2026-03" data-value="18"/><text x="428" y="94" text-anchor="middle" class="value">18</text>
+<circle cx="606" cy="125" r="5.5" class="point" data-month="2026-04" data-value="16"/><text x="606" y="110" text-anchor="middle" class="value">16</text>
+<text x="72" y="281" text-anchor="middle" class="month">January</text>
+<text x="250" y="281" text-anchor="middle" class="month">February</text>
+<text x="428" y="281" text-anchor="middle" class="month">March</text>
+<text x="606" y="281" text-anchor="middle" class="month">April</text>
+<text x="0" y="312" class="source">February is not recorded, not zero. No values have been interpolated.</text>
+<text x="0" y="331" class="source">Source: Synthetic curriculum and enrolment register, 2026; not real participant data.</text>
+</svg>

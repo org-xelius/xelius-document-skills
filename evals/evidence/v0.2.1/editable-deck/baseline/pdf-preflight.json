@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "preflight",
+  "artifact": "evaluation-output/deck-a/previews/riverbend-briefing.pdf",
+  "status": "pass",
+  "scope": "Technical preflight; visual quality, reading order, and PDF/UA conformance require separate review.",
+  "checks": [
+    {
+      "id": "tool.info",
+      "status": "pass",
+      "detail": "pdfinfo completed."
+    },
+    {
+      "id": "tool.fonts",
+      "status": "pass",
+      "detail": "pdffonts completed."
+    },
+    {
+      "id": "tool.text",
+      "status": "pass",
+      "detail": "pdftotext completed."
+    },
+    {
+      "id": "tool.links",
+      "status": "pass",
+      "detail": "pdfinfo completed."
+    },
+    {
+      "id": "pdf.structure",
+      "status": "pass",
+      "detail": "Structural inspection completed; this is not a PDF/UA conformance assessment."
+    },
+    {
+      "id": "pdf.unencrypted",
+      "status": "pass",
+      "detail": "Encrypted: no"
+    },
+    {
+      "id": "pdf.page-count",
+      "status": "pass",
+      "detail": "Found 11 pages; expected 11."
+    },
+    {
+      "id": "pdf.embedded-fonts",
+      "status": "pass",
+      "detail": "0 unembedded fonts."
+    },
+    {
+      "id": "pdf.selectable-text",
+      "status": "pass",
+      "detail": "Extracted 974 non-whitespace characters."
+    },
+    {
+      "id": "pdf.metadata.title",
+      "status": "pass",
+      "detail": "Riverbend Community Network - Synthetic Partner Briefing"
+    },
+    {
+      "id": "pdf.metadata.subject",
+      "status": "pass",
+      "detail": "Synthetic production fixture"
+    },
+    {
+      "id": "pdf.page-geometry",
+      "status": "pass",
+      "detail": "0 pages outside expected 960 x 540 pt ±1."
+    }
+  ],
+  "properties": {
+    "Title": "Riverbend Community Network - Synthetic Partner Briefing",
+    "Subject": "Synthetic production fixture",
+    "Creator": "Impress",
+    "Producer": "LibreOfficeDev 26.8.0.0.alpha0 (AARCH64)",
+    "CreationDate": "Sun Nov  8 21:43:55 2026 EAT",
+    "Custom Metadata": "no",
+    "Metadata Stream": "yes",
+    "Tagged": "yes",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "11",
+    "Encrypted": "no",
+    "Page size": "960.009 x 540 pts",
+    "Page rot": "0",
+    "File size": "256083 bytes",
+    "Optimized": "no",
+    "PDF version": "1.7"
+  },
+  "structure": {
+    "available": true,
+    "encrypted": false,
+    "metadata": {
+      "title": "Riverbend Community Network - Synthetic Partner Briefing",
+      "subject": "Synthetic production fixture",
+      "creator": "Impress",
+      "producer": "LibreOfficeDev 26.8.0.0.alpha0 (AARCH64)",
+      "creationdate": "D:20261108214355+03'00'"
+    },
+    "language": "en-US",
+    "tagged": true,
+    "bookmarkCount": 11,
+    "bookmarks": [
+      {
+        "title": "Slide 1",
+        "page": 1
+      },
+      {
+        "title": "Slide 2",
+        "page": 2
+      },
+      {
+        "title": "Slide 3",
+        "page": 3
+      },
+      {
+        "title": "Slide 4",
+        "page": 4
+      },
+      {
+        "title": "Slide 5",
+        "page": 5
+      },
+      {
+        "title": "Slide 6",
+        "page": 6
+      },
+      {
+        "title": "Slide 7",
+        "page": 7
+      },
+      {
+        "title": "Slide 8",
+        "page": 8
+      },
+      {
+        "title": "Slide 9",
+        "page": 9
+      },
+      {
+        "title": "Slide 10",
+        "page": 10
+      },
+      {
+        "title": "Slide 11",
+        "page": 11
+      }
+    ],
+    "links": [],
+    "pages": [
+      {
+        "page": 1,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 2,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 3,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 4,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 5,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 6,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 7,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 8,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 9,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 10,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      },
+      {
+        "page": 11,
+        "width": 960.009,
+        "height": 540,
+        "rotation": 0
+      }
+    ],
+    "textLength": 975,
+    "textHash": "3625242ea84b26c81e5789ef3956e4e258bd0be993525b010f29fd569cece00b"
+  },
+  "limitations": []
+}

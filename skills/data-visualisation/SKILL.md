@@ -1,76 +1,28 @@
 ---
 name: data-visualisation
-description: Choose and produce accurate charts, maps, and analytical visuals for reports or
-  presentations. Use when evidence needs a defensible comparison with scales, units, uncertainty,
-  sources, and accessible data.
+description: Choose and produce charts, maps, or readable tables for evidence-led documents. Use
+  table mode for exact lookup without a chart workflow.
 license: MIT
 metadata:
   author: org-xelius
-  version: 0.2.0
+  version: 0.2.1
   source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Data Visualisation
 
-Choose the visual form from the analytical relationship and audience decision.
+Start with the reader's question, not a preferred visual style.
 
-## When to use
+## Modes
 
-Use for quantitative or structured qualitative evidence that benefits materially from a visual form.
+- **Choose a form:** use prose for a simple point, tables for exact lookup/multiple attributes, and charts/maps for patterns, trends, distribution, or magnitude.
+- **Produce charts:** read [CHART-SELECTION.md](references/CHART-SELECTION.md). State the supported finding; specify scales, order, baseline, labels, units, period, sample, sources, and uncertainty. Deliver editable source, appropriate SVG/PNG, alt text, and accessible data.
+- **Design tables:** read [TABLE-DESIGN.md](references/TABLE-DESIGN.md) only. Deliver an editable table with semantic headers, units, consistent precision, numeric alignment, missing-value keys, notes, and sources. No chart specification or exports are required for table-only work.
 
-## When not to use
+Validate source values, denominators, totals, ordering, and transformations. Never invent, interpolate, or silently impute missing data. Distinguish zero, missing, not applicable, and suppressed values; avoid false precision.
 
-Keep the information as prose or a table when precise lookup, not pattern recognition, is the job.
+Use the simplest defensible form, non-colour encodings, direct labels where practical, and consistent comparison scales. Disclose non-zero baselines; avoid misleading truncation and decorative 3D. Slides need fewer variables and larger labels, not unchanged report figures.
 
-## Inputs
+Test at actual placed size. Repeat table headers after page breaks and avoid split rows. Remove redundant fields, split by question, use landscape, or provide an annex before shrinking type. Preserve notes and full data in abbreviated display versions.
 
-Clean data, data dictionary, evidence IDs, analytical question, audience, output medium, design tokens, units, periods, sample and source notes.
-
-## Outputs
-
-Chart specification, accessible data table, editable source, SVG, PNG, alt text, and validation notes.
-
-## Required workflow
-
-1. Validate the data and intended comparison.
-2. Read [CHART-SELECTION.md](references/CHART-SELECTION.md).
-3. State the one-message finding before selecting a chart.
-4. Choose the simplest valid form; define scales, order, baseline, labels, annotations, units, and notes.
-5. Apply the chart theme and output-specific density.
-6. Export SVG and PNG; render and inspect both in the target report or PPTX.
-7. Verify visual values against source data and provide an accessible table.
-
-## Hard rules
-
-- Never invent, interpolate, or silently impute missing data.
-- Use no 3D or decorative forms that obscure magnitude.
-- Do not truncate scales in ways that mislead; disclose non-zero baselines.
-- Use direct labels where practical and consistent scales when comparison is intended.
-- State units, periods, sources, samples, and relevant uncertainty.
-- Give presentation charts larger labels, fewer variables, stronger focus, and simpler annotation.
-
-## Checkpoints
-
-Approve chart intent and form before producing a large chart set. Escalate transformations that change interpretation.
-
-## Files to read by phase
-
-Read chart selection before specification, then the design-system chart theme and the target medium's composition reference.
-
-## Quality checks
-
-Check totals, denominators, ordering, scales, ticks, colour meaning, legibility, annotation accuracy, source notes, SVG and PNG parity, and accessible-table parity.
-
-## Failure and fallback behaviour
-
-If data is insufficient, produce a data-gap note or an annotated table. If SVG cannot render in the target, preserve the SVG source and use a verified high-resolution PNG fallback.
-
-## Example invocations
-
-- "Choose the right form for changes across five regions over time."
-- "Simplify this report chart for a presentation."
-- "Create an accessible map and table from this dataset."
-
-## Adjacent skills
-
-Use table design for lookup-heavy evidence, SVG illustration for diagrams, and visual QA for rendered inspection.
+Inspect inside the target report/deck. Check visual/data parity, contrast, labels, source readability, row breaks, and SVG/PNG parity when both exist. Escalate interpretation-changing transformations. Insufficient evidence yields a qualified table or data-gap note, not an invented visual.

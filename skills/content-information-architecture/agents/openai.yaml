@@ -1,4 +1,4 @@
 interface:
-  display_name: "Content Information Architecture"
-  short_description: "Structure source material for publication"
-  default_prompt: "Use $content-information-architecture to structure this evidence base."
+  display_name: "Content, Copy & References"
+  short_description: "Plan content, fit copy, and audit references"
+  default_prompt: "Use $content-information-architecture to fit this caption while preserving its caveats."

@@ -1,0 +1,25 @@
+{
+  "layout": "LAYOUT_WIDE",
+  "metadata": {
+    "title": "Synthetic example deck",
+    "author": "",
+    "language": "en-US"
+  },
+  "theme": {
+    "headFontFace": "Arial",
+    "bodyFontFace": "Arial",
+    "lang": "en-US"
+  },
+  "slides": [
+    {
+      "items": [
+        {
+          "type": "text",
+          "text": "Message-led headline",
+          "options": {"x": 0.8, "y": 0.7, "w": 11.7, "h": 0.8, "fontSize": 32, "bold": true, "margin": 0}
+        }
+      ],
+      "notes": ["Explain the evidence and transition to the next claim."]
+    }
+  ]
+}

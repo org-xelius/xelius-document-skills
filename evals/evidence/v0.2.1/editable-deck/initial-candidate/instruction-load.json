@@ -1,0 +1,727 @@
+{
+  "task": "candidate v0.2.1 approved deck build",
+  "tokens": null,
+  "tokenNote": "Exact instruction token usage was not exposed by the host; no estimate is reported.",
+  "instructionLoads": [
+    {
+      "sequence": 1,
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/SKILL.md",
+      "extent": "full",
+      "readCount": 1,
+      "tokens": null,
+      "bytes": 2262,
+      "sha256": "ae482bff39b0208b00716a3fcc9f1b273fc666ffc36fb761c6cbdff8be5e168b"
+    },
+    {
+      "sequence": 2,
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/references/PPTX-PRODUCTION.md",
+      "extent": "full",
+      "readCount": 1,
+      "tokens": null,
+      "bytes": 2375,
+      "sha256": "a0031b842805e6028888f28edaa4a8b4a92738424b961d243b1add11b49346e3"
+    },
+    {
+      "sequence": 3,
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/SKILL.md",
+      "extent": "full",
+      "readCount": 1,
+      "tokens": null,
+      "bytes": 2287,
+      "sha256": "b4832557d3afb4393e2b313042842c37709400d9035e0956c0501a8e4d7eef94"
+    },
+    {
+      "sequence": 4,
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/references/VISUAL-QA.md",
+      "extent": "full",
+      "readCount": 1,
+      "tokens": null,
+      "bytes": 4307,
+      "sha256": "36e52d5d9801863478eba74738f1108ffad5bcabf2d8a6c0f446db3e10978c01"
+    },
+    {
+      "sequence": 5,
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/assets/schemas/qa-report.schema.json",
+      "extent": "full",
+      "readCount": 1,
+      "tokens": null,
+      "bytes": 4355,
+      "sha256": "08912eee6c2d8d5a1ad165881a32eb6d406a20afcd23108732171be9f6755210"
+    }
+  ],
+  "taskDataLoads": [
+    {
+      "path": "evaluation-snapshots/candidate/inputs/deck-spec.json",
+      "extent": "full",
+      "purpose": "approved build specification",
+      "tokens": null
+    }
+  ],
+  "scriptSourceLoads": [
+    {
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/scripts/build-pptx.mjs",
+      "extent": "full",
+      "readCount": 1,
+      "bytes": 2417,
+      "sha256": "615defdfe807ae2aab18f53155780f6923bdcd22f84451465f494c2d334c3392"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/scripts/render-pptx.mjs",
+      "extent": "full",
+      "readCount": 1,
+      "bytes": 1256,
+      "sha256": "0534d61e3a94c6562b67d95872a7fc1513198f076ac1d0116493ba25ba543fad"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/scripts/check-slide-bounds.mjs",
+      "extent": "full",
+      "readCount": 1,
+      "bytes": 1140,
+      "sha256": "f49fd65d895d37616829a1aad9c1cf61ca8b86c1679f732a17070d4f371fc734"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/scripts/create-contact-sheet.mjs",
+      "extent": "full",
+      "readCount": 1,
+      "bytes": 1066,
+      "sha256": "93a638f996ac9cd764828cb033dad0b1a74fb9c78d3c0b51fb7c691e1fd12fba"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "extent": "full",
+      "readCount": 1,
+      "purpose": "Inspect supported CLI behavior; code, not instruction-reference text",
+      "bytes": 9188,
+      "sha256": "3a99fda84f2c70d37977a12ff42b632b9a3de00fc14f259605f42637eea1a565"
+    }
+  ],
+  "scriptExecutions": [
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "--help"
+      ],
+      "result": "success",
+      "purpose": "command documentation; not script source loaded"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/scripts/build-pptx.mjs",
+      "args": [
+        "evaluation-output/deck-b/sources/deck-spec.json",
+        "evaluation-output/deck-b/deck.pptx",
+        "--project-root",
+        "dependency-project"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-output/deck-b/sources/check-build.mjs",
+      "args": [],
+      "result": "success",
+      "run": 1
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/scripts/check-slide-bounds.mjs",
+      "args": [
+        "evaluation-output/deck-b/layout-manifest.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/scripts/render-pptx.mjs",
+      "args": [
+        "evaluation-output/deck-b/deck.pptx",
+        "evaluation-output/deck-b/previews"
+      ],
+      "result": "success",
+      "notes": "No escalation required. Fontconfig warnings; PDF produced."
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/professional-presentation/scripts/create-contact-sheet.mjs",
+      "args": [
+        "evaluation-output/deck-b/previews",
+        "evaluation-output/deck-b/contact-sheet.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-output/deck-b/sources/check-build.mjs",
+      "args": [],
+      "result": "success",
+      "run": 2
+    },
+    {
+      "path": "evaluation-output/deck-b/sources/check-pdf.mjs",
+      "args": [],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "init",
+        "--artifact",
+        "evaluation-output/deck-b/deck.pptx",
+        "--type",
+        "pptx",
+        "--total",
+        "11",
+        "--out",
+        "evaluation-output/deck-b/qa/qa-report.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-01",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-01.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-01",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. Navy opening headline wraps over two complete lines on the pale background; orange subtitle is separate and unclipped. Large open area follows the approved geometry."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-02",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-02.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-02",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. The complete two-line headline fits above the centred ACCESS, SKILLS, DEVICES, GOVERNANCE row; the four labels are distinct and do not collide."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-03",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-03.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-03",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. The single-line training headline is complete inside the right margin. The large orange 120 is fully visible and visually separate."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-04",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-04.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-04",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. The two-line heading fits. The 120 label is fully contained in the long teal bar; the 18 label is contained in the shorter orange bar. Both bars share a left edge, and the external advanced-maintenance label is unobstructed."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-05",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-05.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-05",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. The one-line visits heading and large teal 4,800 are complete. The lower caveat that visits are not unique people is legible and stays inside the slide."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-06",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-06.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-06",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. Education 62, Services 55, and Income-related 41 are all visible on three separate lines under the full headline. No values or labels are cropped."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-07",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-07.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-07",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. The white evidence-boundary statement is readable on navy. The pale caveat wraps after self- onto a second line ending reported, with all four qualifications present and no clipping."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-08",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-08.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-08",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. The complete two-line headline sits above separate orange AFFORDABILITY and teal DEVICE ACCESS labels. Both columns fit with substantial separation."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-09",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-09.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-09",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. The two-line next-phase heading is complete. All three numbered workstreams remain visible, including the long TWELVE-MONTH MEASUREMENT line, without wrapping or clipping."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-10",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-10.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-10",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. The complete two-line extension headline sits above the centred orange DESIGN to TEST to MEASURE sequence. Both arrow glyphs render correctly with clear spacing."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-render",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-11",
+        "--render",
+        "evaluation-output/deck-b/previews/slide-11.png"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-review",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--location",
+        "slide-11",
+        "--method",
+        "full-size-render",
+        "--result",
+        "clear",
+        "--reviewer",
+        "Codex candidate evaluation agent",
+        "--observation",
+        "Viewed original 1921x1080 render. The closing white approval request wraps over two complete lines on teal. The pale next-steps line is fully visible, including safeguards, costing, partner roles, and measurement plan."
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-check",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--check",
+        "evaluation-output/deck-b/qa/check-technical.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-check",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--check",
+        "evaluation-output/deck-b/qa/check-bounds.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-check",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--check",
+        "evaluation-output/deck-b/qa/check-parity.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-check",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--check",
+        "evaluation-output/deck-b/qa/check-fonts.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-check",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--check",
+        "evaluation-output/deck-b/qa/check-visual.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-check",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--check",
+        "evaluation-output/deck-b/qa/check-editorial.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "record-check",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--check",
+        "evaluation-output/deck-b/qa/check-accessibility.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/qa-report.mjs",
+      "args": [
+        "report",
+        "--report",
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--out",
+        "evaluation-output/deck-b/qa/summary.md",
+        "--manifest",
+        "evaluation-output/deck-b/qa/manifest.json"
+      ],
+      "result": "success"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/skills/visual-quality-assurance/scripts/validate-qa-report.mjs",
+      "args": [
+        "evaluation-output/deck-b/qa/qa-report.json",
+        "--verify-files"
+      ],
+      "result": "success"
+    }
+  ],
+  "notes": [
+    "No global document skills were loaded.",
+    "No SLIDE-COMPOSITION.md or narrative-mode reference was loaded.",
+    "No applicable AGENTS.md was found in checked workspace ancestors.",
+    "Repeated and partial reads, if any, are recorded as separate load events."
+  ],
+  "instructionFileLoadEvents": 5,
+  "instructionTextTokens": null,
+  "externalCommands": [
+    {
+      "command": "pdftoppm -png -r 144 previews/deck.pdf previews/slide",
+      "result": "success"
+    },
+    {
+      "command": "pdfinfo / pdffonts",
+      "purpose": "PDF page count and embedded-font inspection",
+      "runsEach": 2,
+      "result": "success"
+    },
+    {
+      "command": "pdftotext -f N -l N -layout previews/deck.pdf -",
+      "runs": 22,
+      "purpose": "Two passes over all 11 pages",
+      "result": "success"
+    },
+    {
+      "command": "cmp original-deck-spec.json sources/deck-spec.json",
+      "result": "byte-identical"
+    }
+  ],
+  "imageInspections": [
+    {
+      "path": "contact-sheet.png",
+      "method": "view_image original",
+      "purpose": "sequence overview"
+    },
+    {
+      "path": "previews/slide-01.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-02.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-03.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-04.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-05.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-06.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-07.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-08.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-09.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-10.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    },
+    {
+      "path": "previews/slide-11.png",
+      "method": "view_image original",
+      "width": 1921,
+      "height": 1080
+    }
+  ]
+}

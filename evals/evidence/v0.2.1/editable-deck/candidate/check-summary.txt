@@ -1,0 +1,49 @@
+# Approved deck build — check summary
+
+Built the 11-slide Riverbend synthetic partner briefing as an editable PPTX from the approved specification. No copy, slide order, colours, geometry, or notes were intentionally changed. Narrative strategy was not revisited.
+
+## Results
+
+- Approved input and delivered build specification are byte-identical (SHA-256 `2590f3770d841bd7fbc4e751799b44044373aca4009dc8c2031761ea86694fac`).
+- PPTX contains 11 slides, 26 editable native text objects, and 2 editable native rectangle shapes. No slide was flattened into a picture.
+- All 204 source/structure checks pass, including exact text, item order, coordinates, dimensions, text size/style/colour, shape fill/line colours, backgrounds, theme fonts, and all 11 speaker notes.
+- The supplied bounds/placeholder checker passes all 11 slides. The only overlaps are the two approved white labels inside the slide 4 bar shapes.
+- PDF/PPTX/render parity is 11 / 11 / 11.
+- Every final slide PNG was actually opened and visually inspected at 1600 × 900, plus the contact sheet. No clipping, missing text, broken arrows, unintended overlap, or unreadable crops were observed. There are no photographic/image assets in this specification.
+- The initial PDF substituted Liberation Sans despite Arial being installed. A project-local font configuration recovered the installed Arial files, without changing the PPTX font declarations. The re-exported final PDF contains Arial / Arial Bold; the supplied family-comparison checker passes and Poppler reports those fonts embedded.
+
+## Visual review evidence
+
+| Slide | Evidence file | Observation |
+| --- | --- | --- |
+| 1 | `previews/slide-01.png` | Two-line headline and orange subtitle intact on the approved pale background. |
+| 2 | `previews/slide-02.png` | Two-line headline fits; all four pillars are present and separated. |
+| 3 | `previews/slide-03.png` | Full training headline and orange 120 visible without clipping. |
+| 4 | `previews/slide-04.png` | Approved 120/18 bars and inside labels align; outside advanced-pathway label is clear. |
+| 5 | `previews/slide-05.png` | 4,800 value and unique-people caveat intact. |
+| 6 | `previews/slide-06.png` | Education 62, Services 55, and Income-related 41 all present. |
+| 7 | `previews/slide-07.png` | White headline and pale caveat readable on navy. Natural wrap at “self-reported” retained. |
+| 8 | `previews/slide-08.png` | Both coloured barrier labels fit with no collision. |
+| 9 | `previews/slide-09.png` | All three workstreams present, with no overflow. |
+| 10 | `previews/slide-10.png` | Full headline, DESIGN → TEST → MEASURE text, and arrow glyphs render correctly. |
+| 11 | `previews/slide-11.png` | Closing ask and next-step line fit on the approved green background. |
+
+## Honest limitations
+
+Visual review covers the final LibreOfficeDev 26.8.0.0.alpha0 PDF export, not Microsoft PowerPoint or a projected presentation. Native editability and notes preservation were checked in the PPTX structure; no live editing/notes-pane test was performed. Font matching is family/style-normalized and does not establish font licensing. No source claims were fact-checked: the approved input is explicitly a synthetic production fixture. Token usage is null because reliable task-level usage was not exposed by the host.
+
+The first local build wrapper failed while looking up an unexported dependency package path; this was fixed only in the local wrapper. The first custom structural check incorrectly assumed every font must be explicit on a text run and treated an empty ZIP directory as media; the checker was corrected to recognise inherited Arial theme fonts and distinguish files from directory entries. These were checking-wrapper issues, not deck edits.
+
+## Files
+
+- `riverbend-partner-briefing.pptx`: editable presentation.
+- `previews/riverbend-partner-briefing.pdf`: final 11-page PDF preview.
+- `previews/slide-01.png` through `slide-11.png`: final per-slide PNGs.
+- `contact-sheet.png`: overview, also visually inspected.
+- `sources/deck-spec.json`: byte-identical approved build specification.
+- `sources/*.mjs`: unmodified copied helper scripts from the requested snapshot.
+- `build.mjs`, `render-and-check.mjs`, `verify-pptx.py`, `finalize.mjs`: local build/check sources.
+- `build-manifest.json`, `layout-manifest.json`, `source-checks.json`, `visual-review.json`, `font-check.json`, `font-check-before-recovery.json`, `instruction-load.json`: build, validation, and instruction-load evidence.
+- `renderer-fonts.conf`, `pdfinfo.txt`, `pdffonts.txt`, `rendered-text.txt`, `render-log.txt`: rendering configuration and inspection evidence.
+
+No repository or installed-skill files were edited. No subagents were spawned.

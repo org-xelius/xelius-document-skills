@@ -1,0 +1,60 @@
+{
+  "instruction_reads": [
+    {
+      "sequence": 1,
+      "path": "evaluation-snapshots/candidate/skills/content-information-architecture/SKILL.md",
+      "read_method": "exec_command: cat",
+      "read_scope": "complete file",
+      "partial": false,
+      "repeat_of": null
+    },
+    {
+      "sequence": 2,
+      "path": "evaluation-snapshots/candidate/skills/content-information-architecture/references/EDITORIAL-COPY-FITTING.md",
+      "read_method": "exec_command: cat",
+      "read_scope": "complete file",
+      "partial": false,
+      "repeat_of": null
+    }
+  ],
+  "task_input_reads": [
+    {
+      "path": "evaluation-snapshots/candidate/inputs/protected-copy.txt",
+      "read_method": "exec_command: cat",
+      "read_scope": "complete file"
+    },
+    {
+      "path": "evaluation-snapshots/candidate/inputs/protected-copy.txt",
+      "read_method": "inline Node.js validation: fs.readFileSync",
+      "read_scope": "complete file",
+      "repeat_of": "task_input_reads[0]"
+    }
+  ],
+  "scripts_executed": [
+    {
+      "path": null,
+      "kind": "inline JavaScript in functions.exec",
+      "purpose": "Counted whitespace-separated words and checked the alternative em-dash boundary count in the proposed caption.",
+      "loaded_as_instruction_text": false
+    },
+    {
+      "path": null,
+      "kind": "inline Node.js via exec_command",
+      "purpose": "Read saved artifacts and supplied input; checked JSON parsing, word counts, exact protected phrase, ordered numerals and source IDs, and transformation-log equality.",
+      "loaded_as_instruction_text": false
+    },
+    {
+      "path": null,
+      "kind": "inline Node.js via exec_command: node -e",
+      "purpose": "Parsed copy-transformations.json, instruction-load.json, and validation.json after the validation report and execution record were added.",
+      "loaded_as_instruction_text": false
+    }
+  ],
+  "snapshot_scripts_executed": [],
+  "other_execution": [
+    "mkdir created the assigned output directory.",
+    "apply_patch created and updated the deliverable files."
+  ],
+  "token_usage": null,
+  "token_usage_reason": "Actual model token usage was not exposed by the host; no estimate was made."
+}

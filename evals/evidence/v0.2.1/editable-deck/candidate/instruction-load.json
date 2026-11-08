@@ -1,0 +1,295 @@
+{
+  "task": "v0.2.1 independent approved-deck forward evaluation",
+  "scope": "evaluation-output/deck-c",
+  "tokens": null,
+  "token_note": "Host did not expose reliable task-level token usage.",
+  "instruction_text_loads": [
+    {
+      "sequence": 1,
+      "path": "candidate-final-snapshot/skills/professional-presentation/SKILL.md",
+      "method": "sed -n '1,240p'",
+      "requested_lines": [
+        1,
+        240
+      ],
+      "coverage": "full file; reached EOF",
+      "repeated": false
+    },
+    {
+      "sequence": 2,
+      "path": "candidate-final-snapshot/skills/professional-presentation/references/PPTX-PRODUCTION.md",
+      "method": "sed -n '1,280p'",
+      "requested_lines": [
+        1,
+        280
+      ],
+      "coverage": "full file; reached EOF",
+      "repeated": false
+    }
+  ],
+  "source_code_loads_not_instruction_text": [
+    {
+      "path": "candidate-final-snapshot/skills/professional-presentation/scripts/build-pptx.mjs",
+      "method": "sed -n '1,280p'",
+      "coverage": "full file; reached EOF"
+    },
+    {
+      "path": "candidate-final-snapshot/skills/professional-presentation/scripts/render-pptx.mjs",
+      "method": "sed -n '1,280p'",
+      "coverage": "full file; reached EOF"
+    },
+    {
+      "path": "candidate-final-snapshot/skills/professional-presentation/scripts/check-slide-bounds.mjs",
+      "method": "sed -n '1,260p'",
+      "coverage": "full file; reached EOF"
+    },
+    {
+      "path": "candidate-final-snapshot/skills/professional-presentation/scripts/check-pptx-fonts.mjs",
+      "method": "sed -n '1,260p'",
+      "coverage": "full file; reached EOF"
+    },
+    {
+      "path": "candidate-final-snapshot/skills/professional-presentation/scripts/create-contact-sheet.mjs",
+      "method": "sed -n '1,240p'",
+      "coverage": "full file; reached EOF"
+    },
+    {
+      "path": "user-home/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+      "method": "sed -n '1,260p'",
+      "coverage": "full wrapper script; reached EOF",
+      "reason": "Investigated renderer font discovery; no additional instruction/reference text loaded."
+    }
+  ],
+  "data_and_dependency_metadata_loads": [
+    {
+      "path": "candidate-final-snapshot/inputs/deck-spec.json",
+      "reads": [
+        {
+          "method": "sed -n '1,280p'",
+          "coverage": "partial"
+        },
+        {
+          "method": "sed -n '281,620p'",
+          "coverage": "remainder through EOF"
+        }
+      ]
+    },
+    {
+      "path": "dependency-project/package.json",
+      "method": "sed -n '1,200p'",
+      "coverage": "full file; reached EOF"
+    }
+  ],
+  "executed_scripts": [
+    {
+      "path": "evaluation-output/deck-c/build.mjs",
+      "args": [],
+      "exitCode": 1,
+      "purpose": "First build attempt; package version lookup failed because pptxgenjs does not export package.json. Fixed local wrapper only; no skill or repository edit."
+    },
+    {
+      "path": "evaluation-output/deck-c/sources/build-pptx.mjs",
+      "original": "candidate-final-snapshot/skills/professional-presentation/scripts/build-pptx.mjs",
+      "args": [
+        "evaluation-output/deck-c/sources/deck-spec.json",
+        "evaluation-output/deck-c/riverbend-partner-briefing.pptx",
+        "--project-root",
+        "dependency-project"
+      ],
+      "startedAt": "2026-11-08T18:52:30.312Z",
+      "exitCode": 0,
+      "stdout": "evaluation-output/deck-c/riverbend-partner-briefing.pptx\n",
+      "stderr": "",
+      "purpose": "execution only; source reads recorded separately"
+    },
+    {
+      "path": "evaluation-output/deck-c/sources/check-slide-bounds.mjs",
+      "original": "candidate-final-snapshot/skills/professional-presentation/scripts/check-slide-bounds.mjs",
+      "args": [
+        "evaluation-output/deck-c/layout-manifest.json"
+      ],
+      "startedAt": "2026-11-08T18:52:30.892Z",
+      "exitCode": 0,
+      "stdout": "Checked 11 slides for bounds and placeholders.\n",
+      "stderr": "",
+      "purpose": "execution only; source reads recorded separately"
+    },
+    {
+      "command": "/opt/homebrew/Cellar/node/26.13.0_2/bin/node",
+      "args": [
+        "evaluation-output/deck-c/sources/check-pptx-fonts.mjs",
+        "evaluation-output/deck-c/sources/deck-spec.json",
+        "evaluation-output/deck-c/previews/riverbend-partner-briefing.pdf"
+      ],
+      "startedAt": "2026-11-08T18:53:28.495Z",
+      "exitCode": 1,
+      "stdout": "{\n  \"status\": \"repair-required\",\n  \"expected\": [\n    \"Arial\"\n  ],\n  \"rendered\": [\n    \"BAAAAA+LiberationSans-Bold\",\n    \"CAAAAA+LiberationSans\",\n    \"DAAAAA+LiberationSans-Bold\",\n    \"EAAAAA+LiberationSans-Bold\",\n    \"FAAAAA+LiberationSans-Bold\",\n    \"GAAAAA+LiberationSans-Bold\",\n    \"HAAAAA+LiberationSans\",\n    \"IAAAAA+LiberationSans-Bold\",\n    \"JAAAAA+LiberationSans\",\n    \"KAAAAA+LiberationSans\",\n    \"LAAAAA+LiberationSans-Bold\",\n    \"MAAAAA+LiberationSans\",\n    \"NAAAAA+LiberationSans-Bold\",\n    \"OAAAAA+LiberationSans-Bold\"\n  ],\n  \"mismatches\": [\n    \"BAAAAA+LiberationSans-Bold\",\n    \"CAAAAA+LiberationSans\",\n    \"DAAAAA+LiberationSans-Bold\",\n    \"EAAAAA+LiberationSans-Bold\",\n    \"FAAAAA+LiberationSans-Bold\",\n    \"GAAAAA+LiberationSans-Bold\",\n    \"HAAAAA+LiberationSans\",\n    \"IAAAAA+LiberationSans-Bold\",\n    \"JAAAAA+LiberationSans\",\n    \"KAAAAA+LiberationSans\",\n    \"LAAAAA+LiberationSans-Bold\",\n    \"MAAAAA+LiberationSans\",\n    \"NAAAAA+LiberationSans-Bold\",\n    \"OAAAAA+LiberationSans-Bold\"\n  ],\n  \"note\": \"Family/style normalization is heuristic; review unusual font naming. A match does not establish visual quality or embedding.\"\n}\n",
+      "stderr": "",
+      "purpose": "Execution only; not an instruction text load."
+    },
+    {
+      "command": "/opt/homebrew/Cellar/node/26.13.0_2/bin/node",
+      "args": [
+        "evaluation-output/deck-c/sources/render-pptx.mjs",
+        "evaluation-output/deck-c/riverbend-partner-briefing.pptx",
+        "evaluation-output/deck-c/previews"
+      ],
+      "startedAt": "2026-11-08T18:53:28.815Z",
+      "exitCode": 0,
+      "stdout": "convert evaluation-output/deck-c/riverbend-partner-briefing.pptx as a Impress document -> evaluation-output/deck-c/previews/riverbend-partner-briefing.pdf using filter : impress_pdf_Export\nOverwriting: evaluation-output/deck-c/previews/riverbend-partner-briefing.pdf\nevaluation-output/deck-c/previews/riverbend-partner-briefing.pdf\n",
+      "stderr": "",
+      "purpose": "Execution only; not an instruction text load."
+    },
+    {
+      "command": "/opt/homebrew/Cellar/node/26.13.0_2/bin/node",
+      "args": [
+        "evaluation-output/deck-c/sources/check-pptx-fonts.mjs",
+        "evaluation-output/deck-c/sources/deck-spec.json",
+        "evaluation-output/deck-c/previews/riverbend-partner-briefing.pdf"
+      ],
+      "startedAt": "2026-11-08T18:53:32.823Z",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"expected\": [\n    \"Arial\"\n  ],\n  \"rendered\": [\n    \"BAAAAA+Arial-BoldMT\",\n    \"CAAAAA+ArialMT\",\n    \"DAAAAA+Arial-BoldMT\",\n    \"EAAAAA+Arial-BoldMT\",\n    \"FAAAAA+Arial-BoldMT\",\n    \"GAAAAA+Arial-BoldMT\",\n    \"HAAAAA+ArialMT\",\n    \"IAAAAA+Arial-BoldMT\",\n    \"JAAAAA+ArialMT\",\n    \"KAAAAA+ArialMT\",\n    \"LAAAAA+Arial-BoldMT\",\n    \"MAAAAA+ArialMT\",\n    \"NAAAAA+Arial-BoldMT\",\n    \"OAAAAA+Arial-BoldMT\"\n  ],\n  \"mismatches\": [],\n  \"note\": \"Family/style normalization is heuristic; review unusual font naming. A match does not establish visual quality or embedding.\"\n}\n",
+      "stderr": "",
+      "purpose": "Execution only; not an instruction text load."
+    },
+    {
+      "command": "pdfinfo",
+      "args": [
+        "evaluation-output/deck-c/previews/riverbend-partner-briefing.pdf"
+      ],
+      "startedAt": "2026-11-08T18:53:33.049Z",
+      "exitCode": 0,
+      "stdout": "Title:           Riverbend Community Network - Synthetic Partner Briefing\nSubject:         Synthetic production fixture\nCreator:         Impress\nProducer:        LibreOfficeDev 26.8.0.0.alpha0 (AARCH64)\nCreationDate:    Sun Nov  8 21:53:31 2026 EAT\nCustom Metadata: no\nMetadata Stream: yes\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           11\nEncrypted:       no\nPage size:       960.009 x 540 pts\nPage rot:        0\nFile size:       256083 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "stderr": "",
+      "purpose": "Execution only; not an instruction text load."
+    },
+    {
+      "command": "pdffonts",
+      "args": [
+        "evaluation-output/deck-c/previews/riverbend-partner-briefing.pdf"
+      ],
+      "startedAt": "2026-11-08T18:53:33.268Z",
+      "exitCode": 0,
+      "stdout": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes     97  0\nCAAAAA+ArialMT                       TrueType          WinAnsi          yes yes yes    147  0\nDAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes    107  0\nEAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes    132  0\nFAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes    112  0\nGAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes    137  0\nHAAAAA+ArialMT                       TrueType          WinAnsi          yes yes yes    162  0\nIAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes    117  0\nJAAAAA+ArialMT                       TrueType          WinAnsi          yes yes yes    152  0\nKAAAAA+ArialMT                       TrueType          WinAnsi          yes yes yes    157  0\nLAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes    102  0\nMAAAAA+ArialMT                       TrueType          WinAnsi          yes yes yes    142  0\nNAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes    122  0\nOAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes    127  0\n",
+      "stderr": "",
+      "purpose": "Execution only; not an instruction text load."
+    },
+    {
+      "command": "pdftotext",
+      "args": [
+        "-layout",
+        "evaluation-output/deck-c/previews/riverbend-partner-briefing.pdf",
+        "evaluation-output/deck-c/rendered-text.txt"
+      ],
+      "startedAt": "2026-11-08T18:53:33.321Z",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "purpose": "Execution only; not an instruction text load."
+    },
+    {
+      "command": "pdftoppm",
+      "args": [
+        "-png",
+        "-scale-to",
+        "1600",
+        "evaluation-output/deck-c/previews/riverbend-partner-briefing.pdf",
+        "evaluation-output/deck-c/previews/slide"
+      ],
+      "startedAt": "2026-11-08T18:53:33.379Z",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "purpose": "Execution only; not an instruction text load."
+    },
+    {
+      "command": "/opt/homebrew/Cellar/node/26.13.0_2/bin/node",
+      "args": [
+        "evaluation-output/deck-c/sources/create-contact-sheet.mjs",
+        "evaluation-output/deck-c/previews",
+        "evaluation-output/deck-c/contact-sheet.png"
+      ],
+      "startedAt": "2026-11-08T18:53:34.702Z",
+      "exitCode": 0,
+      "stdout": "evaluation-output/deck-c/contact-sheet.png\n",
+      "stderr": "",
+      "purpose": "Execution only; not an instruction text load."
+    }
+  ],
+  "notes": [
+    "Approved-spec build mode selected; narrative/composition references were not loaded.",
+    "No global document skills or repository skill resources were loaded.",
+    "No subagents were spawned.",
+    "No AGENTS.md found in project tree or checked workspace ancestors."
+  ],
+  "manual_execution_records": [
+    {
+      "path": "evaluation-output/deck-c/build.mjs",
+      "exitCode": 0,
+      "purpose": "Successful second local wrapper invocation; child builder and bounds executions are logged separately."
+    },
+    {
+      "command": "soffice --version",
+      "exitCode": 0,
+      "result": "LibreOfficeDev 26.8.0.0.alpha0"
+    },
+    {
+      "path": "evaluation-output/deck-c/sources/render-pptx.mjs",
+      "args": [
+        "evaluation-output/deck-c/riverbend-partner-briefing.pptx",
+        "evaluation-output/deck-c/previews"
+      ],
+      "exitCode": 0,
+      "purpose": "Initial default-permission render; fontconfig warning and subsequent Liberation Sans mismatch."
+    },
+    {
+      "path": "evaluation-output/deck-c/sources/check-pptx-fonts.mjs",
+      "args": [
+        "evaluation-output/deck-c/sources/deck-spec.json",
+        "evaluation-output/deck-c/previews/riverbend-partner-briefing.pdf"
+      ],
+      "exitCode": 1,
+      "purpose": "Initial manual font check: expected Arial, rendered Liberation Sans."
+    },
+    {
+      "command": "pdfinfo",
+      "exitCode": 0,
+      "purpose": "Initial PDF showed 11 pages."
+    },
+    {
+      "command": "pdffonts",
+      "exitCode": 0,
+      "purpose": "Initial PDF confirmed embedded Liberation Sans substitution."
+    },
+    {
+      "command": "pdftoppm -png -scale-to 1600",
+      "exitCode": 0,
+      "purpose": "Initial render of 11 slides; replaced after Arial font recovery."
+    },
+    {
+      "path": "evaluation-output/deck-c/render-and-check.mjs",
+      "exitCode": 0,
+      "purpose": "Final font recovery and preview workflow; child command invocations logged in executed_scripts."
+    },
+    {
+      "path": "evaluation-output/deck-c/verify-pptx.py",
+      "exitCode": 1,
+      "purpose": "Initial custom-checker assumptions rejected inherited theme fonts and empty media directory entry. No deck defect or change."
+    },
+    {
+      "path": "evaluation-output/deck-c/verify-pptx.py",
+      "exitCode": 0,
+      "purpose": "Checker corrected; all 204 checks pass."
+    },
+    {
+      "path": "evaluation-output/deck-c/finalize.mjs",
+      "exitCode": 0,
+      "purpose": "Final parity checks, visual evidence manifest, and execution/read log completion."
+    }
+  ],
+  "finalInstructionTextFilesLoaded": 2,
+  "repeatedInstructionTextLoads": 0,
+  "partialInstructionTextLoads": 0,
+  "environmentAndArtifactDataReadsNote": "Font inventory/configuration, own artifact manifests/text/XML, executable locations, and generated images were inspected as data, not instruction text. Automatic file reads by executed helpers are not counted as instruction loads."
+}

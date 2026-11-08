@@ -1,0 +1,53 @@
+{
+  "citations": [
+    "R1",
+    "R2",
+    "R4"
+  ],
+  "bibliography": [
+    {
+      "id": "R1",
+      "author": "A. Patel",
+      "year": 2025,
+      "title": "Community Learning: Pilot Methods",
+      "doi": "10.1234/learn.2025",
+      "url": "https://example.org/methods"
+    },
+    {
+      "id": "R2",
+      "author": "L. Njeri",
+      "title": "Follow-up Survey",
+      "doi": "not-a-doi",
+      "url": "https://example.org/survey"
+    },
+    {
+      "id": "R3",
+      "author": "A. Patel",
+      "year": 2025,
+      "title": "Community Learning: Pilot Methods",
+      "doi": "10.1234/learn.2025"
+    },
+    {
+      "id": "R2",
+      "author": "L. Njeri",
+      "year": 2026,
+      "title": "Follow-up Survey: Revised Edition",
+      "url": "https://example.org/survey-revised"
+    },
+    {
+      "id": "R5",
+      "title": "Background Reading",
+      "furtherReading": true
+    }
+  ],
+  "figureCredits": [
+    {
+      "figure": "Figure 1",
+      "citation": "R4"
+    },
+    {
+      "figure": "Figure 2",
+      "citation": "R1"
+    }
+  ]
+}

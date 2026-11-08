@@ -1,0 +1,16 @@
+{
+  "readerTask": "Understand monthly enrolment over time",
+  "form": "Line chart with observed-point markers and a gap for missing February",
+  "supportedFinding": "Recorded registrations were 10 in January, 18 in March and 16 in April 2026. March to April declined by 2. The full monthly path is unknown because February was not recorded.",
+  "populationAndMeasure": "Monthly enrolment counts are registrations, not completions. Unique-participant counts and a participant denominator are not supplied.",
+  "period": "January–April 2026",
+  "xScale": {"type":"monthly ordinal time, equally spaced calendar months", "order":["2026-01","2026-02","2026-03","2026-04"], "positions":[78,250,422,594]},
+  "yScale": {"unit":"registrations", "type":"linear", "domain":[0,20], "ticks":[0,5,10,15,20], "baseline":0, "pixelZero":238, "pixelsPerRegistration":9},
+  "labels": "All three observed values directly labelled; February explicitly labelled not recorded",
+  "uncertainty": "February null is missing, not zero; no interpolation, no line over the gap. No intervals supplied. No four-month total or rate is inferred.",
+  "transformations": "Raw integer counts retained; month names abbreviated only for axis labels.",
+  "source": "Synthetic curriculum and enrolment register, 2026; not real participant data.",
+  "targetSize": "680 CSS px wide × 330 CSS px high (approximately 180 mm × 87.4 mm) within A4 portrait report content",
+  "editableAsset": "monthly-enrolment.svg",
+  "accessibleData": "report.html#monthly-data; source-data.json"
+}

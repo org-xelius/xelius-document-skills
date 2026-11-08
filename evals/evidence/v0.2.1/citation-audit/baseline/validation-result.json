@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "exitCode": 0,
+  "scope": "Audit consistency and offline metadata checks only; this is not a clean-bibliography or source-verification pass",
+  "inputJsonParsed": true,
+  "auditJsonParsed": true,
+  "instructionLoadJsonParsed": true,
+  "suppliedDataPreservedExactlyAsParsed": true,
+  "citationAndFigureMatchesRecomputed": 5,
+  "missingOccurrences": 2,
+  "ambiguousOccurrences": 1,
+  "uncitedNonExemptIds": ["R3"],
+  "duplicateIds": ["R2"],
+  "malformedDoiIds": ["R2"],
+  "metadataDuplicateSourceGroupsChecked": [["R1", "R3"]],
+  "supportedDoiNormalizationsChecked": 2,
+  "syntacticallyValidHttpsUrlsChecked": 3,
+  "networkRequestsMade": false,
+  "tokens": null
+}

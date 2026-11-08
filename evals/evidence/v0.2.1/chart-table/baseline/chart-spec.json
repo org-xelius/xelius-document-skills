@@ -1,0 +1,24 @@
+{
+  "message": "Recorded registrations were 10 in January, 18 in March and 16 in April; February was not recorded, so the path from January to March is unknown.",
+  "form": "Time-series line chart with explicit gap for February; only adjacent observed months March and April connected.",
+  "dataFile": "source-data.json",
+  "units": "registrations (people), not completions",
+  "period": "January–April 2026",
+  "source": "Synthetic curriculum and enrolment register, 2026; not real participant data.",
+  "accessibleTable": "monthly-enrolment.html: table.enrolment-table",
+  "scale": {
+    "x": "equally spaced monthly dates",
+    "y": {
+      "min": 0,
+      "max": 20,
+      "tickStep": 5
+    }
+  },
+  "zeroBaseline": true,
+  "missingData": "Null is not recorded, not zero. No interpolation or line bridging the missing month.",
+  "uncertainty": "February count unrecorded; source is synthetic. No sampling uncertainty is provided.",
+  "directLabels": true,
+  "figureWidthMm": 170,
+  "minimumPlacedTypePt": 8.5,
+  "altText": "Monthly registrations: January 10, February not recorded, March 18, April 16. Only March and April are connected. Counts are registrations, not completions."
+}

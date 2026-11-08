@@ -1,0 +1,29 @@
+# Validation actually performed
+
+## Data and semantic checks — passed
+
+The task-authored `validate.cjs` compared the rendered HTML against the supplied JSON. All three course names, planned hours, fee values, USD currency, delivery types and statuses match. All four monthly values, including February's null, match. The source copy has the same SHA-256 as the original input: `773f6299a076db0959c86c3235d85361e6570dd0e61076c35ed01f4cda02ca8e`.
+
+The SVG parsed successfully. Its three observed points and direct numeric labels match the input. Each y coordinate matches the declared zero-based linear scale (0–20 registrations); month positions retain February. Only the March–April segment exists, so no line spans the missing value. No total, denominator, unique-person count or completion rate was invented.
+
+The HTML uses table captions, column headers and row headers. Fees and hours are right-aligned. Null and zero are visibly distinct, and the provisional status is retained. Header-repeat and row-split-avoidance CSS were checked; neither table actually crosses a page.
+
+## Reading-size and visual checks — passed
+
+Chrome rendered the HTML as two A4 portrait pages with 15 mm margins. The placed chart width was measured at 680.3125 CSS px, approximately 180 mm. Screenshots were produced at device scale 1. Poppler rendered the final PDF at 96 dpi (approximately 794 × 1123 px per page), and both final page images were visually inspected at their intended report reading size.
+
+The checks covered table column widths, row fit, labels, notes, visible sources, chart gap, axis baseline and clipping. No horizontal content overflow was detected. SVG text bounding boxes all fit its viewBox, with no text/text intersection exceeding 2 px in both dimensions. No clipping, overlapping labels, split rows or unreadable source notes was observed in the final page images.
+
+An independent Inkscape export produced the 680 × 330 px PNG. It was visually compared with the chart rendered in the report: values, marker positions, line segment, February gap and labels agree. This was a visual parity check, not a pixel-identity test.
+
+Computed text/mark contrast against white: main ink 14.51:1, muted text 7.80:1, chart accent 7.28:1. The missing value is signalled by words and a broken line, not colour alone.
+
+## Repair verified
+
+The first PDF text extraction duplicated the data labels because of white-stroked SVG text. The labels were changed to plain editable text over small white backing rectangles. The report, PDF and chart PNG were rerendered. Final PDF text extraction showed one label per point, and both final report pages plus the final PNG were visually reinspected.
+
+## Rendering conditions and limits
+
+Chrome and Inkscape could not launch under the initial execution restrictions. Normal rendering escalation was requested; subsequent rendering succeeded. Inkscape emitted a sandbox-extension warning but returned success and produced the inspected PNG.
+
+The source is synthetic, and no independent participant-level audit was possible or claimed. No assistive-technology screen-reader session, tagged-PDF conformance audit, slide integration or pixel-level SVG/PNG comparison was performed. The supplemental PDF is untagged; the semantic HTML and full data tables are the accessible primary artifacts.

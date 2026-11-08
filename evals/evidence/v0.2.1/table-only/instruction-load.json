@@ -1,0 +1,32 @@
+{
+  "mode": "table-only",
+  "instruction_files_read": [
+    "evaluation-snapshots/candidate/skills/data-visualisation/SKILL.md"
+  ],
+  "reference_files_read": [
+    "evaluation-snapshots/candidate/skills/data-visualisation/references/TABLE-DESIGN.md"
+  ],
+  "input_files_read": [
+    "evaluation-snapshots/candidate/inputs/visual-evidence.json"
+  ],
+  "instruction_read_scope": "Both instruction/reference files read in full. No chart reference or other document-resource instructions loaded.",
+  "checks_completed": [
+    "Parsed course-options.html and compared every displayed value in all 3 rows (15 cells) with courseOptions; passed.",
+    "Verified original row order, integer precision, and verbatim course, delivery, and status text; passed.",
+    "Verified Fee (USD) header matches the currency value in every source course; passed.",
+    "Verified zero fee remains 0 and null fee displays Not recorded with a key distinguishing null from zero; passed.",
+    "Verified source wording and planned-instructional-hours note are present verbatim; passed.",
+    "Verified one HTML table, 5 semantic column headers, 3 row headers, and 15 editable data cells; passed.",
+    "Verified no monthly-enrolment table, chart, SVG, canvas, or script was introduced; passed.",
+    "Verified A4 portrait print CSS, 18 mm margins, 11 pt table type, numeric alignment, repeating header declaration, and no-split row declarations are present; static checks passed.",
+    "Parsed instruction-load.json successfully."
+  ],
+  "validation_limits": [
+    "Headless Chrome print/screenshot attempt exited with code 134 without a diagnostic or proof image/PDF. Standalone visual rendering was not completed.",
+    "No target report was provided. Placement, available report width, pagination, actual header repetition, row breaks, notes/source co-location, and rendered readability inside that report were not validated.",
+    "Browser editing interaction and save behavior were not tested. Cells use native contenteditable attributes; source HTML is editable. Browser edits are not automatically saved to disk.",
+    "Totals and denominators are not applicable: this is an unaggregated lookup table. No numerical transformations were applied."
+  ],
+  "tokens": null,
+  "token_note": "Host did not expose token usage."
+}

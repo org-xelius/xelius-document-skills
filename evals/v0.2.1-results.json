@@ -1,0 +1,781 @@
+{
+  "version": "0.2.1",
+  "date": "2026-11-08",
+  "footprint": {
+    "baseline": {
+      "version": "0.2.0",
+      "skills": 14,
+      "bodyWords": 6581,
+      "descriptionCharacters": 2971,
+      "bytes": 208048
+    },
+    "current": {
+      "skills": 10,
+      "bodyWords": 2185,
+      "descriptionCharacters": 1402,
+      "bytes": 178985,
+      "files": 98
+    },
+    "reductionPercent": {
+      "bodyWords": 66.8,
+      "descriptionCharacters": 52.81,
+      "bytes": 13.97
+    },
+    "method": "UTF-8 installed file bytes; whitespace-delimited SKILL body words excluding YAML; YAML description string characters. Not token estimates."
+  },
+  "localAutomatedChecks": {
+    "unitTests": 33,
+    "failed": 0,
+    "skipped": 0,
+    "skillsCliVersion": "1.7.6",
+    "discoveredSkills": 10,
+    "retiredSelectorsRejected": 4,
+    "independentSingleSkillInstalls": 10,
+    "installationAgents": [
+      "codex",
+      "hermes-agent",
+      "claude-code"
+    ],
+    "installedSkillsPerAgent": 10,
+    "migration": "Real v0.2.0 snapshot; four locations; dry-run/apply/repeat; absent/foreign/symlink/lock cases pass.",
+    "reportPages": 9,
+    "presentationSlides": 11,
+    "nativeTextObjects": 26,
+    "speakerNotesVerified": 11,
+    "dependencyAuditVulnerabilities": 0
+  },
+  "evaluatedCandidateEntrypoints": {
+    "content-information-architecture": "a06af5213a687d5310ea5a15d5f772883a5e2d0655082b63ebf59c9f90c78e50",
+    "data-visualisation": "1808df3998feff5b13c820d2bb33f960babcc1f7aa6ddd1e5acffdf391ed43a3",
+    "professional-presentation": "ae482bff39b0208b00716a3fcc9f1b273fc666ffc36fb761c6cbdff8be5e168b"
+  },
+  "pairedEvaluation": {
+    "baselineRef": "v0.2.0",
+    "baselineCommit": "c74d966cff675072eeaa40785cb6e1b4609ccf37",
+    "agent": "Independent Codex subagents, fresh context per run; same inherited default model configuration, no overrides.",
+    "modelIdentifier": null,
+    "modelIdentifierReason": "Specific model identifier not exposed in run artifacts.",
+    "cases": [
+      {
+        "id": "protected-copy",
+        "completed": true,
+        "inputSha256": "3c82c995bf96958e77816581152e253cf2ed7340774e1ba07ea509cf9d4b3149",
+        "baseline": {
+          "configuration": "baseline",
+          "instructionFiles": [
+            {
+              "file": "skills/editorial-copy-fitting/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 372,
+              "sha256": "6a30b8b28142e9874efa7dd274c28928047b2a0bb0287a257a1aaedc4a9ef129"
+            },
+            {
+              "file": "skills/editorial-copy-fitting/references/EDITORIAL-COPY-FITTING.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 146,
+              "sha256": "b02a03f479fd42352303b8e12ec18d17a8f504ac2e542f77e8ba95efadad3834"
+            }
+          ],
+          "instructionWordsRead": 518,
+          "supportingAssetsRead": [],
+          "supportingAssetWordsRead": 0,
+          "inspectedCodeFiles": [],
+          "inspectedCodeWordsRead": 0,
+          "tokens": null,
+          "durationMs": null,
+          "evidenceDirectory": "evidence/v0.2.1/protected-copy/baseline",
+          "captionWords": 50,
+          "artifactSha256": "99e0587b8c1af2063bd0c7131cfb340a7c6e392311eab2eaccb293d2c0540dc3"
+        },
+        "candidate": {
+          "configuration": "candidate",
+          "instructionFiles": [
+            {
+              "file": "skills/content-information-architecture/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 263,
+              "sha256": "a06af5213a687d5310ea5a15d5f772883a5e2d0655082b63ebf59c9f90c78e50"
+            },
+            {
+              "file": "skills/content-information-architecture/references/EDITORIAL-COPY-FITTING.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 208,
+              "sha256": "1db5fa47feaece555eb8dc2eae3a2f7ddfd8e41740c0a15d248ae905708f95ab"
+            }
+          ],
+          "instructionWordsRead": 471,
+          "supportingAssetsRead": [],
+          "supportingAssetWordsRead": 0,
+          "inspectedCodeFiles": [],
+          "inspectedCodeWordsRead": 0,
+          "tokens": null,
+          "durationMs": null,
+          "evidenceDirectory": "evidence/v0.2.1/protected-copy/candidate",
+          "captionWords": 53,
+          "artifactSha256": "397751e37a4a7d52244721ddab5a99748e59bb6c8540d4126eb86406b3d41426"
+        },
+        "comparison": {
+          "factualIntegrity": "All six counts, period, non-random survey, overlapping responses, sources and exact protected phrase retained.",
+          "scopeAdherence": "Both edited only the caption; no content planning.",
+          "editability": "Plain text and transformation JSON remain editable.",
+          "visualDefects": "No real caption component supplied; rendered fit not assessed.",
+          "validationHonesty": "Both limit validation to supplied text; no underlying-source or rendered-fit claim.",
+          "regressionDetected": false
+        }
+      },
+      {
+        "id": "citation-audit",
+        "completed": true,
+        "inputSha256": "5d68e15cb4e7d48fb70bed18dafe6b07e3a3a9197a72f4b965038433fcf1711b",
+        "baseline": {
+          "configuration": "baseline",
+          "instructionFiles": [
+            {
+              "file": "skills/citation-and-references/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 370,
+              "sha256": "0892943616cf0b2909b5c042446c0adf44138124d92427f72831642a895beab4"
+            },
+            {
+              "file": "skills/citation-and-references/references/CITATIONS.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 125,
+              "sha256": "8dd175420dff49ca0afa423e748fbb3be34541393d9ce45643b8a6806d43e21b"
+            }
+          ],
+          "instructionWordsRead": 495,
+          "supportingAssetsRead": [],
+          "supportingAssetWordsRead": 0,
+          "inspectedCodeFiles": [
+            {
+              "file": "skills/citation-and-references/scripts/validate-references.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 104,
+              "sha256": "5c719bef2bf5c6a7869932fc2371caa4030ac785f585bb3f7e497bc0b1235ecf"
+            }
+          ],
+          "inspectedCodeWordsRead": 104,
+          "tokens": null,
+          "durationMs": null,
+          "evidenceDirectory": "evidence/v0.2.1/citation-audit/baseline"
+        },
+        "candidate": {
+          "configuration": "candidate",
+          "instructionFiles": [
+            {
+              "file": "skills/content-information-architecture/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 263,
+              "sha256": "a06af5213a687d5310ea5a15d5f772883a5e2d0655082b63ebf59c9f90c78e50"
+            },
+            {
+              "file": "skills/content-information-architecture/references/CITATIONS.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 214,
+              "sha256": "77b4d08760bba564fe9af5ad590fa396d2347928ac407af3c3bf3b10a7e7bccd"
+            }
+          ],
+          "instructionWordsRead": 477,
+          "supportingAssetsRead": [],
+          "supportingAssetWordsRead": 0,
+          "inspectedCodeFiles": [],
+          "inspectedCodeWordsRead": 0,
+          "tokens": null,
+          "durationMs": null,
+          "evidenceDirectory": "evidence/v0.2.1/citation-audit/candidate"
+        },
+        "comparison": {
+          "factualIntegrity": "Both found missing R4, ambiguous duplicate R2, malformed DOI, uncited R3, probable R1/R3 duplicate, and exempt R5 further reading. No invented fields or merged editions.",
+          "scopeAdherence": "Both used focused offline audits; no publication rewrite or plan.",
+          "editability": "Structured findings and original supplied records preserved.",
+          "visualDefects": "No publication renders supplied; source-line appearance not assessed.",
+          "validationHonesty": "Both distinguish local identifier/matching checks from unperformed network, truth and rights verification.",
+          "regressionDetected": false
+        }
+      },
+      {
+        "id": "chart-table",
+        "completed": true,
+        "inputSha256": "773f6299a076db0959c86c3235d85361e6570dd0e61076c35ed01f4cda02ca8e",
+        "baseline": {
+          "configuration": "baseline",
+          "instructionFiles": [
+            {
+              "file": "skills/data-visualisation/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 424,
+              "sha256": "2abd48750e741bf3026871046ac1ea749daa240bf9110a0e709c48a15860214e"
+            },
+            {
+              "file": "skills/table-design/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 404,
+              "sha256": "22e18a790058ccef9119d2aabacc2f5a0b68d08fb93fe67e812bc0c88f3e5e66"
+            },
+            {
+              "file": "skills/data-visualisation/references/CHART-SELECTION.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 211,
+              "sha256": "1a02d24fd1cdac4e0b341b31e0637c429737f29cde37fd259fd0a68b0ec19f3d"
+            },
+            {
+              "file": "skills/table-design/references/TABLE-DESIGN.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 136,
+              "sha256": "a1e52cd0d7c09c80d3e0590679b41c55ff8559ccf4ce286b3fa24b47b5f3c650"
+            },
+            {
+              "file": "skills/professional-publication/references/REPORT-COMPOSITION.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 445,
+              "sha256": "cbcd9e322de0893b19c48aeb4e4fa77e648d28d1f8e6fbe8a8f503374c793295"
+            }
+          ],
+          "instructionWordsRead": 1620,
+          "supportingAssetsRead": [
+            {
+              "file": "skills/publication-design-system/assets/design-tokens.template.json",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 128,
+              "sha256": "d6b0f10263489299939e22db6401a158bc7e385605f3481053a8c9281eb04fda"
+            }
+          ],
+          "supportingAssetWordsRead": 128,
+          "inspectedCodeFiles": [
+            {
+              "file": "skills/data-visualisation/scripts/validate-chart-spec.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 75,
+              "sha256": "cc4dd3497ed4109a7a7536adb24995a02e4a7396cfbbff75c901c8dd7bcaa8ef"
+            }
+          ],
+          "inspectedCodeWordsRead": 75,
+          "tokens": null,
+          "durationMs": null,
+          "evidenceDirectory": "evidence/v0.2.1/chart-table/baseline",
+          "reportPages": 1,
+          "placedWidthMm": 170,
+          "htmlSha256": "3fc115c36d48a263d88039f8bd0d8344deb9fcf2c779323cda5c7a7d833bcae9",
+          "svgSha256": "08f03939765b0615340ed62c8582de883719d9256fac347dfb3dc64926bb6c35"
+        },
+        "candidate": {
+          "configuration": "candidate",
+          "instructionFiles": [
+            {
+              "file": "skills/data-visualisation/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 273,
+              "sha256": "1808df3998feff5b13c820d2bb33f960babcc1f7aa6ddd1e5acffdf391ed43a3"
+            },
+            {
+              "file": "skills/data-visualisation/references/CHART-SELECTION.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 211,
+              "sha256": "1a02d24fd1cdac4e0b341b31e0637c429737f29cde37fd259fd0a68b0ec19f3d"
+            },
+            {
+              "file": "skills/data-visualisation/references/TABLE-DESIGN.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 196,
+              "sha256": "12ee67a500f5b1655e3f05cf5ee5f4a25e74ef4fb0c8c729c65c8b8a8a7a7299"
+            }
+          ],
+          "instructionWordsRead": 680,
+          "supportingAssetsRead": [],
+          "supportingAssetWordsRead": 0,
+          "inspectedCodeFiles": [],
+          "inspectedCodeWordsRead": 0,
+          "tokens": null,
+          "durationMs": null,
+          "evidenceDirectory": "evidence/v0.2.1/chart-table/candidate",
+          "reportPages": 2,
+          "placedWidthMm": 180,
+          "htmlSha256": "e28cefed2a34bcd57bfb21937d85e2a41e5ba5056de5903c189b5e4f965f3fd2",
+          "svgSha256": "16cedd4d878880989632a44fb218a5a5e90f114eb4276fc04d74c83b0d9800cf"
+        },
+        "comparison": {
+          "factualIntegrity": "Every course value/status and monthly value preserved. Null fee differs from zero; February is missing, with only March-April connected.",
+          "scopeAdherence": "Both chose an exact-lookup table and gap-aware time-series chart; neither invented a total or full-period trend.",
+          "editability": "Semantic HTML, editable SVG text/geometry and accessible full data retained.",
+          "visualDefects": "Both reading-size outputs inspected; no remaining clipping/label collisions observed. Different page counts and placed widths preclude a controlled density score.",
+          "validationHonesty": "Baseline disclosed failed Inkscape fallback; candidate repaired duplicated extracted SVG labels and re-inspected. Both disclose untagged preview PDFs and unperformed screen-reader audits.",
+          "regressionDetected": false
+        }
+      },
+      {
+        "id": "editable-deck",
+        "completed": true,
+        "inputSha256": "2590f3770d841bd7fbc4e751799b44044373aca4009dc8c2031761ea86694fac",
+        "baseline": {
+          "configuration": "baseline",
+          "instructionFiles": [
+            {
+              "file": "skills/pptx-production/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 461,
+              "sha256": "e6b5b1f5b75515c25314a5844987e1bf43e15bddfb2bab197011788378313f7d"
+            },
+            {
+              "file": "skills/pptx-production/references/PPTX-PRODUCTION.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 158,
+              "sha256": "2260a49c8517fcddc6057dc98b878f8e4129d7fc04cb008d2b4b3b4185bffb15"
+            },
+            {
+              "file": "skills/visual-quality-assurance/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 717,
+              "sha256": "702c2bbff42cbd10abe5ffd51ba1cb0b6a4c8fd5f356d3cdf225620462f60202"
+            },
+            {
+              "file": "skills/visual-quality-assurance/references/VISUAL-QA.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 446,
+              "sha256": "28c7f39248dc2df3217f4c2134b3bd389575c781c0421b4343874c498412b86a"
+            },
+            {
+              "file": "skills/pdf-production/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 642,
+              "sha256": "a5fe334ce9d0836ebf31bc69cef96c9837960d803c2af17cbd0b4d431fee88e2"
+            },
+            {
+              "file": "skills/pdf-production/references/PDF-PREFLIGHT.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 429,
+              "sha256": "908b5050943ea2c90b40eb40a90e13b949a9e0e97124fd750c497b4eb551b785"
+            }
+          ],
+          "instructionWordsRead": 2853,
+          "supportingAssetsRead": [
+            {
+              "file": "skills/pdf-production/assets/pdf-expectations.template.json",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 19,
+              "sha256": "0967fa5f4378ba9b195b5e2899de917ec5483029aca720c7d4b7e56fa484b04b"
+            },
+            {
+              "file": "skills/visual-quality-assurance/assets/schemas/qa-report.schema.json",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 358,
+              "sha256": "08912eee6c2d8d5a1ad165881a32eb6d406a20afcd23108732171be9f6755210"
+            }
+          ],
+          "supportingAssetWordsRead": 377,
+          "inspectedCodeFiles": [
+            {
+              "file": "skills/pptx-production/scripts/build-pptx.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 251,
+              "sha256": "615defdfe807ae2aab18f53155780f6923bdcd22f84451465f494c2d334c3392"
+            },
+            {
+              "file": "skills/pptx-production/scripts/render-pptx.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 132,
+              "sha256": "0534d61e3a94c6562b67d95872a7fc1513198f076ac1d0116493ba25ba543fad"
+            },
+            {
+              "file": "skills/pptx-production/scripts/check-slide-bounds.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 150,
+              "sha256": "f49fd65d895d37616829a1aad9c1cf61ca8b86c1679f732a17070d4f371fc734"
+            },
+            {
+              "file": "skills/pptx-production/scripts/create-contact-sheet.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 108,
+              "sha256": "93a638f996ac9cd764828cb033dad0b1a74fb9c78d3c0b51fb7c691e1fd12fba"
+            },
+            {
+              "file": "skills/pdf-production/scripts/render-pdf-pages.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 80,
+              "sha256": "1e57699cb80eef344998f8bbff375c900671209199c27d5c9d4a22476b2d9823"
+            }
+          ],
+          "inspectedCodeWordsRead": 721,
+          "tokens": null,
+          "durationMs": null,
+          "evidenceDirectory": "evidence/v0.2.1/editable-deck/baseline",
+          "slides": 11,
+          "nativeTextObjects": 26,
+          "nativeShapes": 2,
+          "sourceChecks": 204,
+          "fonts": "Arial; renderer-only recovery",
+          "pptxSha256": "2c5a80bd4a4517a4ccb8f0f1ecacf199a4ca592a575b0367bd5508f15d795e65",
+          "pdfSha256": "73bc87b65b25d7f8c46336e836dd614d2dd21598382552d813db0307308ad576"
+        },
+        "candidate": {
+          "configuration": "candidate",
+          "instructionFiles": [
+            {
+              "file": "skills/professional-presentation/SKILL.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 278,
+              "sha256": "ae482bff39b0208b00716a3fcc9f1b273fc666ffc36fb761c6cbdff8be5e168b"
+            },
+            {
+              "file": "skills/professional-presentation/references/PPTX-PRODUCTION.md",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 436,
+              "sha256": "f185c290e9881639b2a4f71462b9cbf45a96a9ad1fe2d5adb810e1f1b89cb9c7"
+            }
+          ],
+          "instructionWordsRead": 714,
+          "supportingAssetsRead": [],
+          "supportingAssetWordsRead": 0,
+          "inspectedCodeFiles": [
+            {
+              "file": "skills/professional-presentation/scripts/build-pptx.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 251,
+              "sha256": "615defdfe807ae2aab18f53155780f6923bdcd22f84451465f494c2d334c3392"
+            },
+            {
+              "file": "skills/professional-presentation/scripts/render-pptx.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 132,
+              "sha256": "0534d61e3a94c6562b67d95872a7fc1513198f076ac1d0116493ba25ba543fad"
+            },
+            {
+              "file": "skills/professional-presentation/scripts/check-slide-bounds.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 150,
+              "sha256": "f49fd65d895d37616829a1aad9c1cf61ca8b86c1679f732a17070d4f371fc734"
+            },
+            {
+              "file": "skills/professional-presentation/scripts/check-pptx-fonts.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 266,
+              "sha256": "f8007cf3b314965097b629c093c2985cf16b2e7baf908bbc6a7509bdbd40a474"
+            },
+            {
+              "file": "skills/professional-presentation/scripts/create-contact-sheet.mjs",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 108,
+              "sha256": "93a638f996ac9cd764828cb033dad0b1a74fb9c78d3c0b51fb7c691e1fd12fba"
+            },
+            {
+              "file": "external-runtime/soffice",
+              "reads": 1,
+              "complete": true,
+              "wordsPerRead": 42,
+              "sha256": "81c7db1c6dbcdd606d95abef337b4529aeda6a4fa1cf23a5a567f9c5655c8b66"
+            }
+          ],
+          "inspectedCodeWordsRead": 949,
+          "tokens": null,
+          "durationMs": null,
+          "evidenceDirectory": "evidence/v0.2.1/editable-deck/candidate",
+          "slides": 11,
+          "nativeTextObjects": 26,
+          "nativeShapes": 2,
+          "sourceChecks": 204,
+          "fonts": "Arial; renderer-only recovery",
+          "pptxSha256": "0fd67991b912d8eef3505da1709e75989bb0792e9acc3e9db6fdd286028ada84",
+          "pdfSha256": "2fe280957de41c7ef120f3e9804093c5fa4cd4edbfb3cdb24ca88e6f9fa03355"
+        },
+        "attempts": [
+          {
+            "configuration": "initial-candidate",
+            "instructionFiles": [
+              {
+                "file": "skills/professional-presentation/SKILL.md",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 278,
+                "sha256": "ae482bff39b0208b00716a3fcc9f1b273fc666ffc36fb761c6cbdff8be5e168b"
+              },
+              {
+                "file": "skills/professional-presentation/references/PPTX-PRODUCTION.md",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 305,
+                "sha256": "a0031b842805e6028888f28edaa4a8b4a92738424b961d243b1add11b49346e3"
+              },
+              {
+                "file": "skills/visual-quality-assurance/SKILL.md",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 258,
+                "sha256": "b4832557d3afb4393e2b313042842c37709400d9035e0956c0501a8e4d7eef94"
+              },
+              {
+                "file": "skills/visual-quality-assurance/references/VISUAL-QA.md",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 568,
+                "sha256": "36e52d5d9801863478eba74738f1108ffad5bcabf2d8a6c0f446db3e10978c01"
+              }
+            ],
+            "instructionWordsRead": 1409,
+            "supportingAssetsRead": [
+              {
+                "file": "skills/visual-quality-assurance/assets/schemas/qa-report.schema.json",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 358,
+                "sha256": "08912eee6c2d8d5a1ad165881a32eb6d406a20afcd23108732171be9f6755210"
+              }
+            ],
+            "supportingAssetWordsRead": 358,
+            "inspectedCodeFiles": [
+              {
+                "file": "skills/professional-presentation/scripts/build-pptx.mjs",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 251,
+                "sha256": "615defdfe807ae2aab18f53155780f6923bdcd22f84451465f494c2d334c3392"
+              },
+              {
+                "file": "skills/professional-presentation/scripts/render-pptx.mjs",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 132,
+                "sha256": "0534d61e3a94c6562b67d95872a7fc1513198f076ac1d0116493ba25ba543fad"
+              },
+              {
+                "file": "skills/professional-presentation/scripts/check-slide-bounds.mjs",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 150,
+                "sha256": "f49fd65d895d37616829a1aad9c1cf61ca8b86c1679f732a17070d4f371fc734"
+              },
+              {
+                "file": "skills/professional-presentation/scripts/create-contact-sheet.mjs",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 108,
+                "sha256": "93a638f996ac9cd764828cb033dad0b1a74fb9c78d3c0b51fb7c691e1fd12fba"
+              },
+              {
+                "file": "skills/visual-quality-assurance/scripts/qa-report.mjs",
+                "reads": 1,
+                "complete": true,
+                "wordsPerRead": 913,
+                "sha256": "3a99fda84f2c70d37977a12ff42b632b9a3de00fc14f259605f42637eea1a565"
+              }
+            ],
+            "inspectedCodeWordsRead": 1554,
+            "tokens": null,
+            "durationMs": null,
+            "evidenceDirectory": "evidence/v0.2.1/editable-deck/initial-candidate",
+            "regressionDetected": true,
+            "finding": "Initial candidate honestly reported limited QA but left Liberation Sans preview substitution unresolved, while baseline recovered installed Arial."
+          },
+          {
+            "configuration": "candidate-retest",
+            "regressionDetected": false,
+            "finding": "Added conditional font discovery/recovery guidance and a family-comparison helper. A fresh evaluator used project-local renderer configuration, recovered installed Arial, preserved approved source, and inspected all eleven final renders."
+          }
+        ],
+        "comparison": {
+          "factualIntegrity": "Both final runs preserve approved text, order, geometry, colours, theme and eleven notes; 204 structural/source assertions pass per final run.",
+          "scopeAdherence": "Approved specification went directly to build, without narrative redesign. Baseline additionally built a representative subset.",
+          "editability": "26 native text objects and two shapes in each final PPTX; live PowerPoint editing not tested.",
+          "visualDefects": "All final slides individually viewed by independent evaluators; no remaining clipping, missing text or unintended overlaps observed. Both final PDFs use approved Arial.",
+          "validationHonesty": "Initial failure is retained. Corrected run reports actual font checks, renderer-specific coverage, and no claim of PowerPoint/interactive or full accessibility certification.",
+          "regressionDetected": false
+        }
+      }
+    ],
+    "instructionLoadMethod": "Counted the exact full instruction/reference files reported as opened, including frontmatter and repeated reads. Supporting schemas/templates and inspected code counted separately. Runtime imports are not context reads. Command-help/output, host/system metadata, hidden caching and total context are not instrumented.",
+    "tokens": null,
+    "durationMs": null,
+    "statisticalImprovementClaim": false
+  },
+  "focusedModeCheck": {
+    "mode": "table-only",
+    "instructionFiles": [
+      "skills/data-visualisation/SKILL.md",
+      "skills/data-visualisation/references/TABLE-DESIGN.md"
+    ],
+    "chartReferenceLoaded": false,
+    "chartArtifactsProduced": false,
+    "sourceValuesPreserved": true,
+    "validation": "Static/semantic checks pass; browser render failed, correctly disclosed as unverified.",
+    "evidenceDirectory": "evidence/v0.2.1/table-only"
+  },
+  "visualFixtureInspection": {
+    "reviewer": "Codex primary agent",
+    "reviewedSurfaces": 20,
+    "contactSheetsReviewed": 2,
+    "reviews": [
+      {
+        "surface": "report-page-1",
+        "renderSha256": "bd6bd1973aa7c139f0ac139a884f81c1c84279f175c2fb09af692cf6b175e0dc",
+        "method": "full-size-render",
+        "observation": "Cover title and subtitle inside frame; large open area is deliberate fixture styling."
+      },
+      {
+        "surface": "report-page-2",
+        "renderSha256": "2a2da682c93bb03b6ec0a56d93e1083e423c76622980144f64499a6c31ece655",
+        "method": "full-size-render",
+        "observation": "Three metrics and labels intact; substantial underfill remains."
+      },
+      {
+        "surface": "report-page-3",
+        "renderSha256": "19ccb7f3da39fa98fe99f944e44e21e67d98b40ab3d900d5eb8d36793157548d",
+        "method": "full-size-render",
+        "observation": "Labelled synthetic illustration and authenticity caveat legible; not documentary evidence."
+      },
+      {
+        "surface": "report-page-4",
+        "renderSha256": "fd60a7871b42031d847420bc0d380d1c9fedad1f0932ec4d7238b75354fe5dc4",
+        "method": "full-size-render",
+        "observation": "Four activities and source line legible; substantial underfill remains."
+      },
+      {
+        "surface": "report-page-5",
+        "renderSha256": "f11a9271e94314ffed6b4c568033c43bba59f9c92b59df9a09491c3c035bc73c",
+        "method": "full-size-render",
+        "observation": "Two bar labels remain readable; substantial underfill remains."
+      },
+      {
+        "surface": "report-page-6",
+        "renderSha256": "e2e4a3a6c812da176d8a86ed5c6581005f931baf98904225142ae21776494d47",
+        "method": "full-size-render",
+        "observation": "Table values, sample and overlapping-response caveat readable."
+      },
+      {
+        "surface": "report-page-7",
+        "renderSha256": "77c9b2d1b7cc3bb26e5015cc5b1c9ccede33c6bfb26bed8085cd489e553d4c94",
+        "method": "full-size-render",
+        "observation": "Four limitation bullets intact; substantial underfill remains."
+      },
+      {
+        "surface": "report-page-8",
+        "renderSha256": "4f1b2fd4c180007a525d5b799e4427a931355da7b5f4c24f20829f36a8d4050f",
+        "method": "full-size-render",
+        "observation": "Three recommendations intact; substantial underfill remains."
+      },
+      {
+        "surface": "report-page-9",
+        "renderSha256": "c81d0ab5aac3676b10a478d6669b3361b93d0cc2426a7b04ddc1c062387ae36d",
+        "method": "full-size-render",
+        "observation": "Methods paragraph intact; substantial underfill remains."
+      },
+      {
+        "surface": "presentation-slide-1",
+        "renderSha256": "157c5598600f56dda7e13995d65db7c458961c6088d5b669bd67dbbef666063a",
+        "method": "full-size-render",
+        "observation": "Two-line title/subtitle clear."
+      },
+      {
+        "surface": "presentation-slide-2",
+        "renderSha256": "68afc055aba27cc2f47b666d35f5dd43ef96a451bb19f17909cdab8d1fd92b24",
+        "method": "full-size-render",
+        "observation": "Four system labels fit below two-line title."
+      },
+      {
+        "surface": "presentation-slide-3",
+        "renderSha256": "deaddc8bf1044db8f518cfe5cb88cb7c511d29b9813e8145335f36057e93f808",
+        "method": "full-size-render",
+        "observation": "Full headline and orange 120 intact."
+      },
+      {
+        "surface": "presentation-slide-4",
+        "renderSha256": "dbc7664c86e695075075da7997bba8733e922239e6b347eff9838a02cd86ed5f",
+        "method": "full-size-render",
+        "observation": "120/18 bars, values and maintenance label readable."
+      },
+      {
+        "surface": "presentation-slide-5",
+        "renderSha256": "da89169d1ed44869162d17147918319771e0431ab12a6b8bf6a899ce22990cb3",
+        "method": "full-size-render",
+        "observation": "4,800 and unique-people caveat intact."
+      },
+      {
+        "surface": "presentation-slide-6",
+        "renderSha256": "b58574018ca959cf15c9cd2b38c97f4b8de39a6cfce321a23bf2e7e8a92ed3ea",
+        "method": "full-size-render",
+        "observation": "Education 62, Services 55, income-related 41 legible."
+      },
+      {
+        "surface": "presentation-slide-7",
+        "renderSha256": "68b8f2837fed6a122cb86e34814ac2d73d0621b9f3d275fc564180252e00bf65",
+        "method": "full-size-render",
+        "observation": "White headline and pale caveat readable on navy."
+      },
+      {
+        "surface": "presentation-slide-8",
+        "renderSha256": "95e79f1c60168bca1690a979bc43883565334d97e9aa0897609f2b363457e153",
+        "method": "full-size-render",
+        "observation": "Both coloured barrier labels separated."
+      },
+      {
+        "surface": "presentation-slide-9",
+        "renderSha256": "ab59d2b9aa91c5ff5e8e7cc449461b09862452ced64263a72c51ff2d2b7068f2",
+        "method": "full-size-render",
+        "observation": "Three workstreams and title fit."
+      },
+      {
+        "surface": "presentation-slide-10",
+        "renderSha256": "0ffc89a623edd120e82cd1ed25c414ddbb20aa368b528c54b606a643fe308f93",
+        "method": "full-size-render",
+        "observation": "Design/test/measure sequence and arrows intact."
+      },
+      {
+        "surface": "presentation-slide-11",
+        "renderSha256": "4162f416742430a7f5d9edc917284fdd593686f344ede3c7c998bfb0c39776ca",
+        "method": "full-size-render",
+        "observation": "Closing ask and next steps readable on teal."
+      }
+    ],
+    "comparison": "Final instrumented smoke renders are byte-identical to the individually inspected first export.",
+    "limitations": [
+      "Existing sparse report fixture remains underfilled and exposes synthetic traceability labels; it tests rendering paths, not premium report design.",
+      "The smoke test reports only its declared technical checks, not an overall publication-quality pass.",
+      "Paired deck evaluators reviewed their own final renders; review records cannot prove perception."
+    ]
+  },
+  "limitations": [
+    "One baseline/candidate run per task plus one corrective deck retest; no statistical or cross-agent quality superiority claim.",
+    "Behavioural evaluation used Codex subagents, not live Hermes/Claude sessions; all three installation paths were tested separately.",
+    "Visual judgment was not blinded. Styling and placed widths differ in chart/table outputs.",
+    "Native OOXML editability was inspected; Microsoft PowerPoint live editing/rendering was not tested.",
+    "No screen-reader/PDF-UA certification, physical print/projection test, or external validation of synthetic source claims.",
+    "Exact tokens, total context use and complete task elapsed times were unavailable and remain null.",
+    "Schema/helper invariants are covered by regression tests; the standalone corrected deck run used explicit surface-review records rather than claiming a canonical QA 2.0 pass."
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0",
+  "task": "Independent forward evaluation: exact course-option lookup and monthly enrolment over time",
+  "outputDirectory": "evaluation-output/visual-a",
+  "tokens": null,
+  "tokenNote": "Exact instruction-token accounting was not exposed. Approximate original_token_count values from file-read tool outputs are recorded separately without treating them as exact instruction tokens.",
+  "instructionAndReferenceReads": [
+    {
+      "path": "evaluation-snapshots/baseline/skills/data-visualisation/SKILL.md",
+      "kind": "skill instruction",
+      "read": "full",
+      "readCount": 1,
+      "partialReads": [],
+      "tokens": null,
+      "toolOriginalTokenCountApprox": 748
+    },
+    {
+      "path": "evaluation-snapshots/baseline/skills/table-design/SKILL.md",
+      "kind": "skill instruction",
+      "read": "full",
+      "readCount": 1,
+      "partialReads": [],
+      "tokens": null,
+      "toolOriginalTokenCountApprox": 706
+    },
+    {
+      "path": "evaluation-snapshots/baseline/skills/data-visualisation/references/CHART-SELECTION.md",
+      "kind": "required reference",
+      "read": "full",
+      "readCount": 1,
+      "partialReads": [],
+      "tokens": null,
+      "toolOriginalTokenCountApprox": 315
+    },
+    {
+      "path": "evaluation-snapshots/baseline/skills/table-design/references/TABLE-DESIGN.md",
+      "kind": "required reference",
+      "read": "full",
+      "readCount": 1,
+      "partialReads": [],
+      "tokens": null,
+      "toolOriginalTokenCountApprox": 213
+    },
+    {
+      "path": "evaluation-snapshots/baseline/skills/professional-publication/references/REPORT-COMPOSITION.md",
+      "kind": "target-medium composition reference",
+      "read": "full",
+      "readCount": 1,
+      "partialReads": [],
+      "tokens": null,
+      "toolOriginalTokenCountApprox": 784
+    },
+    {
+      "path": "evaluation-snapshots/baseline/skills/publication-design-system/assets/design-tokens.template.json",
+      "kind": "design-system asset inspected for chart theme and output contract",
+      "read": "full",
+      "readCount": 1,
+      "partialReads": [],
+      "tokens": null,
+      "toolOriginalTokenCountApprox": 317,
+      "note": "The charts component is empty in this template. Used its canvas/text/rule/primary colours and 170 mm placed-figure width; defined a simple chart theme locally. No complete design-system skill was loaded."
+    }
+  ],
+  "dataReads": [
+    {
+      "path": "evaluation-snapshots/baseline/inputs/visual-evidence.json",
+      "read": "full",
+      "manualReadCount": 1,
+      "programmaticReadCount": 1,
+      "tokens": null,
+      "toolOriginalTokenCountApprox": 269
+    },
+    {
+      "path": "evaluation-output/visual-a/source-data.json",
+      "read": "full programmatic",
+      "successfulReadCount": 3,
+      "tokens": null
+    }
+  ],
+  "codeInspected": [
+    {
+      "path": "evaluation-snapshots/baseline/skills/data-visualisation/scripts/validate-chart-spec.mjs",
+      "read": "full",
+      "readCount": 1,
+      "tokens": null,
+      "toolOriginalTokenCountApprox": 193,
+      "executionRecordedSeparately": true
+    }
+  ],
+  "scriptsExecuted": [
+    {
+      "path": "evaluation-output/visual-a/build.mjs",
+      "origin": "authored for this task",
+      "attempts": [{"result":"success","exitCode":0}],
+      "tokens": null
+    },
+    {
+      "path": "evaluation-snapshots/baseline/skills/data-visualisation/scripts/validate-chart-spec.mjs",
+      "origin": "snapshot skill script",
+      "attempts": [{"result":"success","exitCode":0}],
+      "tokens": null
+    },
+    {
+      "path": "evaluation-output/visual-a/render-validate.mjs",
+      "origin": "authored for this task",
+      "attempts": [
+        {"result":"Chrome launch blocked by local access controls","exitCode":1,"escalated":false},
+        {"result":"success","exitCode":0,"escalated":true},
+        {"result":"success after adding 2x PNG export","exitCode":0,"escalated":true}
+      ],
+      "tokens": null
+    }
+  ],
+  "otherToolsExecuted": [
+    {"tool":"rg --files","purpose":"Snapshot skill resource inventory and dependency package discovery; no file content loaded"},
+    {"tool":"node require.resolve","purpose":"Resolve read-only Playwright dependency; no dependency source inspected"},
+    {"tool":"which","purpose":"Confirm installed rendering tools"},
+    {"tool":"pdfinfo","purpose":"Check combined and standalone PDFs; all one-page A4"},
+    {"tool":"pdftoppm","purpose":"Rasterize combined report PDF for reading-size visual inspection","result":"success"},
+    {"tool":"inkscape","purpose":"Attempt PNG export","result":"failed to start, exit 134; no successful Inkscape export claimed"},
+    {"tool":"view_image","purpose":"Visual inspection of report-a4.png, monthly-enrolment-browser.png and monthly-enrolment.png; an initial display-forwarding call failed and was retried"}
+  ],
+  "repeatedInstructionReads": [],
+  "partialInstructionReads": [],
+  "globalDocumentSkillsRead": false,
+  "repositoryOrGlobalSkillsModified": false,
+  "subagentsSpawned": false
+}

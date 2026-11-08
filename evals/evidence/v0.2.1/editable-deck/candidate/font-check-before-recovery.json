@@ -1,0 +1,39 @@
+{
+  "status": "repair-required",
+  "expected": [
+    "Arial"
+  ],
+  "rendered": [
+    "BAAAAA+LiberationSans-Bold",
+    "CAAAAA+LiberationSans",
+    "DAAAAA+LiberationSans-Bold",
+    "EAAAAA+LiberationSans-Bold",
+    "FAAAAA+LiberationSans-Bold",
+    "GAAAAA+LiberationSans-Bold",
+    "HAAAAA+LiberationSans",
+    "IAAAAA+LiberationSans-Bold",
+    "JAAAAA+LiberationSans",
+    "KAAAAA+LiberationSans",
+    "LAAAAA+LiberationSans-Bold",
+    "MAAAAA+LiberationSans",
+    "NAAAAA+LiberationSans-Bold",
+    "OAAAAA+LiberationSans-Bold"
+  ],
+  "mismatches": [
+    "BAAAAA+LiberationSans-Bold",
+    "CAAAAA+LiberationSans",
+    "DAAAAA+LiberationSans-Bold",
+    "EAAAAA+LiberationSans-Bold",
+    "FAAAAA+LiberationSans-Bold",
+    "GAAAAA+LiberationSans-Bold",
+    "HAAAAA+LiberationSans",
+    "IAAAAA+LiberationSans-Bold",
+    "JAAAAA+LiberationSans",
+    "KAAAAA+LiberationSans",
+    "LAAAAA+LiberationSans-Bold",
+    "MAAAAA+LiberationSans",
+    "NAAAAA+LiberationSans-Bold",
+    "OAAAAA+LiberationSans-Bold"
+  ],
+  "note": "Family/style normalization is heuristic; review unusual font naming. A match does not establish visual quality or embedding."
+}

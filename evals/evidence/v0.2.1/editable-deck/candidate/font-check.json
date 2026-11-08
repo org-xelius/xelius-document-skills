@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "expected": [
+    "Arial"
+  ],
+  "rendered": [
+    "BAAAAA+Arial-BoldMT",
+    "CAAAAA+ArialMT",
+    "DAAAAA+Arial-BoldMT",
+    "EAAAAA+Arial-BoldMT",
+    "FAAAAA+Arial-BoldMT",
+    "GAAAAA+Arial-BoldMT",
+    "HAAAAA+ArialMT",
+    "IAAAAA+Arial-BoldMT",
+    "JAAAAA+ArialMT",
+    "KAAAAA+ArialMT",
+    "LAAAAA+Arial-BoldMT",
+    "MAAAAA+ArialMT",
+    "NAAAAA+Arial-BoldMT",
+    "OAAAAA+Arial-BoldMT"
+  ],
+  "mismatches": [],
+  "note": "Family/style normalization is heuristic; review unusual font naming. A match does not establish visual quality or embedding."
+}

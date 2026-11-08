@@ -1,0 +1,51 @@
+{
+  "baselineRef": "v0.2.0",
+  "candidateVersion": "0.2.1",
+  "cases": [
+    {
+      "id": "protected-copy",
+      "baselineSkills": [
+        "editorial-copy-fitting"
+      ],
+      "candidateSkills": [
+        "content-information-architecture"
+      ],
+      "input": "inputs/protected-copy.txt",
+      "prompt": "Fit the supplied paragraph into a report caption of at most 60 words. Preserve the exact protected phrase, facts, periods, scope, caveats, and sources. Deliver fitted copy and a concise transformation record. Do not redesign or plan the report."
+    },
+    {
+      "id": "citation-audit",
+      "baselineSkills": [
+        "citation-and-references"
+      ],
+      "candidateSkills": [
+        "content-information-architecture"
+      ],
+      "input": "inputs/references.json",
+      "prompt": "Audit these references offline. Preserve IDs and supplied fields. Report missing citations, uncited entries, duplicates, malformed identifiers, ambiguous matches, and what cannot be verified. Normalize only what the supplied information supports. Deliver structured findings and a short readable summary; do not rewrite or plan the publication."
+    },
+    {
+      "id": "chart-table",
+      "baselineSkills": [
+        "data-visualisation",
+        "table-design"
+      ],
+      "candidateSkills": [
+        "data-visualisation"
+      ],
+      "input": "inputs/visual-evidence.json",
+      "prompt": "Choose and produce the most useful form for each of these two reader tasks: exact course-option lookup, and understanding monthly enrolment over time. Deliver editable HTML/SVG assets, source notes, and a brief form-selection rationale. Preserve all supplied values and uncertainty. Test the visuals at report reading size and state what validation you actually performed."
+    },
+    {
+      "id": "editable-deck",
+      "baselineSkills": [
+        "pptx-production"
+      ],
+      "candidateSkills": [
+        "professional-presentation"
+      ],
+      "input": "inputs/deck-spec.json",
+      "prompt": "Build this approved specification as an editable PPTX. Keep its copy, order, colours, geometry, and notes unchanged; do not revisit the narrative. Resolve production dependencies from the provided project root. Export PDF previews, render and inspect every slide, and deliver build sources with an honest check summary."
+    }
+  ]
+}
