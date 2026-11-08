@@ -4,11 +4,12 @@ import path from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
 import { validateJsonFile } from "../shared/validation/schema-utils.mjs";
+import { parse } from "yaml";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const errors = [];
 const warnings = [];
-const textExtensions = new Set([".md", ".json", ".mjs", ".js", ".sh", ".yaml", ".yml", ".css", ".html", ".csv", ".txt"]);
+const textExtensions = new Set([".md", ".json", ".mjs", ".js", ".py", ".sh", ".yaml", ".yml", ".css", ".html", ".csv", ".txt"]);
 const ignoredDirectories = new Set([".git", "node_modules", "dist", "tmp", "work", "coverage"]);
 const ignoredLinkPrefixes = ["http://", "https://", "mailto:", "#", "$"];
 const secretPatterns = [
@@ -29,12 +30,7 @@ function frontmatter(file) {
   const text = fs.readFileSync(file, "utf8");
   const match = text.match(/^---\n([\s\S]*?)\n---\n/);
   if (!match) return null;
-  const fields = {};
-  for (const line of match[1].split("\n")) {
-    const field = line.match(/^([a-zA-Z0-9_-]+):\s*(.*)$/);
-    if (field) fields[field[1]] = field[2].replace(/^["']|["']$/g, "");
-  }
-  return fields;
+  try { return parse(match[1]); } catch { return null; }
 }
 
 function validateLinks(file, text) {
@@ -62,7 +58,11 @@ for (const entry of skillDirs) {
   const fields = frontmatter(file);
   if (!fields?.name || !fields?.description) errors.push(`skills/${entry.name}/SKILL.md: invalid or incomplete front matter`);
   if (fields?.name !== entry.name) errors.push(`skills/${entry.name}/SKILL.md: name must match folder`);
-  if (fields?.name && !/^[a-z0-9-]{1,64}$/.test(fields.name)) errors.push(`skills/${entry.name}/SKILL.md: invalid skill name`);
+  if (fields?.name && (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(fields.name) || fields.name.length > 64)) errors.push(`skills/${entry.name}/SKILL.md: invalid skill name`);
+  if (typeof fields?.description !== "string" || fields.description.length > 1024) errors.push(`skills/${entry.name}/SKILL.md: description must be a string of at most 1024 characters`);
+  const pkg = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8"));
+  if (fields?.license !== "MIT" || fields?.metadata?.version !== pkg.version) errors.push(`skills/${entry.name}/SKILL.md: stale license or version metadata; run npm run sync:portable`);
+  if (!fs.existsSync(path.join(dir, "LICENSE")) || !fs.readFileSync(path.join(dir, "LICENSE")).equals(fs.readFileSync(path.join(root, "LICENSE")))) errors.push(`skills/${entry.name}: missing or stale MIT notice`);
   if (fields?.name) {
     if (names.has(fields.name)) errors.push(`duplicate skill name: ${fields.name}`);
     names.set(fields.name, file);
@@ -99,6 +99,10 @@ const portableCopies = [
   [
     path.join(root, "shared", "validation", "detect-environment.mjs"),
     path.join(root, "skills", "document-production-orchestrator", "scripts", "detect-environment.mjs")
+  ],
+  [
+    path.join(root, "shared", "validation", "schema-utils.mjs"),
+    path.join(root, "skills", "visual-quality-assurance", "scripts", "schema-utils.mjs")
   ]
 ];
 for (const [source, target] of portableCopies) {

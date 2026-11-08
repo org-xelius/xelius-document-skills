@@ -1,6 +1,13 @@
 ---
 name: pdf-production
-description: "Export, inspect, preflight, render, and validate final PDFs from semantic HTML, paged media, PPTX, or other approved sources. Use when a report, handout, or presentation PDF requires font, page-size, image-resolution, selectable-text, bookmark, link, metadata, SVG, transparency, glyph, colour, bleed, file-size, accessibility, page-render, and contact-sheet checks."
+description: Export and preflight PDFs, inspect fonts and document structure, and compare
+  transformed files. Use for PDF rendering, metadata, tagging, links, selectable text, or export
+  repair after the source composition is defined.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # PDF Production
@@ -27,9 +34,9 @@ Final PDF, preflight report, page renders, contact sheet, link report, and expli
 
 1. Read [PDF-PREFLIGHT.md](references/PDF-PREFLIGHT.md).
 2. Detect browser, office, Poppler, Ghostscript, and PDF inspection tools.
-3. Export through the approved source path.
-4. Inspect metadata, encryption, page count and dimensions, fonts, text selection, images, bookmarks, links, annotations, SVGs, transparency, glyphs, colour, bleed, and file size where tools permit.
-5. When any optimizer, splitter, merger, sanitizer, print driver, or converter changes the exported PDF, run `node scripts/compare-pdf-properties.mjs raw.pdf final.pdf --strict`.
+3. Export through the approved source path. For HTML, run `node scripts/render-html-to-pdf.mjs input.html output.pdf --project-root <workspace>`; use `--browser-executable <path>` or `CHROME_PATH` for an existing Chromium installation.
+4. Derive required properties from the publication contract and run `node scripts/preflight-pdf.mjs output.pdf --expect expectations.json --json`. Adapt `assets/pdf-expectations.template.json`; do not invent mandatory bookmarks, language, page count, or font policy.
+5. When any optimizer, splitter, merger, sanitizer, print driver, or converter changes the exported PDF, run `node scripts/compare-pdf-properties.mjs raw.pdf final.pdf --expect expectations.json --json`. Use `--strict` to block unresolved warnings; record a reason for intended page or text changes.
 6. Render every page to PNG at an inspection resolution.
 7. Create a contact sheet, invoke visual QA, repair the source, and repeat.
 
@@ -40,6 +47,8 @@ Final PDF, preflight report, page renders, contact sheet, link report, and expli
 - Preserve readable source lines, live links, selectable text, page numbers, and accurate dimensions.
 - Fix accidental blank pages, overflow, or pagination at the editable source; do not hide them with a PDF transformation that removes tags, metadata, outlines, links, or text.
 - Reject unexplained regressions between raw and final PDF properties.
+- Distinguish transformation integrity from publication requirements: identical raw and final files can both lack required metadata or navigation.
+- Treat Type 3 fonts as a review condition unless the output contract rejects them; never switch fonts solely to satisfy an uncalibrated blanket rule.
 - Repair at the editable source when possible.
 
 ## Checkpoints
@@ -49,6 +58,12 @@ Run preflight on representative output and final output. Report remaining warnin
 ## Files to read by phase
 
 Read PDF preflight before export and the visual QA reference before inspection.
+
+## Script dependencies and results
+
+Install Playwright in the production project for HTML export. The renderer resolves it from `--project-root` (default: the current directory), waits for fonts and images, and requests tagged PDF and outlines. Confirm the exported properties rather than assuming the browser created them.
+
+Preflight uses Poppler plus Python `pypdf` for tags, language, links, bookmarks, and every page's dimensions. Select Python with `--python <executable>` or `XELIUS_PYTHON`. Missing required inspection tools produce `limited` with exit code 3; detected failures use exit code 1; invalid arguments use 2. JSON output includes stable check IDs and captured tool warnings. Technical success does not establish visual quality or full accessibility conformance.
 
 ## Quality checks
 

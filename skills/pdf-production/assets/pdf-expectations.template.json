@@ -1,0 +1,10 @@
+{
+  "requiredMetadata": ["title"],
+  "requireTagged": true,
+  "language": "en",
+  "requireSelectableText": true,
+  "minimumLinks": 0,
+  "minimumBookmarks": 0,
+  "pageSize": [595.28, 841.89],
+  "pageSizeTolerance": 1
+}

@@ -3,17 +3,29 @@ import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 
-const require = createRequire(import.meta.url);
-const [specFile, outputFile] = process.argv.slice(2);
+const args = process.argv.slice(2);
+if (args.includes("--help")) {
+  console.log("Usage: node build-pptx.mjs deck-spec.json output.pptx [--project-root directory]");
+  process.exit(0);
+}
+const projectFlag = args.indexOf("--project-root");
+if (projectFlag !== -1 && (!args[projectFlag + 1] || args[projectFlag + 1].startsWith("--"))) {
+  console.error("--project-root requires a directory.");
+  process.exit(2);
+}
+const projectRoot = path.resolve(projectFlag === -1 ? process.cwd() : args[projectFlag + 1] || "");
+if (projectFlag !== -1) args.splice(projectFlag, 2);
+const require = createRequire(path.join(projectRoot, "package.json"));
+const [specFile, outputFile] = args;
 if (!specFile || !outputFile) {
-  console.error("Usage: node build-pptx.mjs <deck-spec.json> <output.pptx>");
+  console.error("Usage: node build-pptx.mjs <deck-spec.json> <output.pptx> [--project-root <directory>]");
   process.exit(2);
 }
 let PptxGenJS;
 try {
   PptxGenJS = require("pptxgenjs");
 } catch {
-  console.error("pptxgenjs is unavailable. Install it in the production workspace or select another documented PPTX implementation.");
+  console.error(`pptxgenjs is unavailable from project ${projectRoot}. Install it there or pass --project-root to the workspace containing it.`);
   process.exit(3);
 }
 const spec = JSON.parse(fs.readFileSync(specFile, "utf8"));

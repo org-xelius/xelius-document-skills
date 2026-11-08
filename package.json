@@ -1,20 +1,35 @@
 {
   "name": "xelius-document-skills",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "description": "Portable Agent Skills for professional reports, presentations, visual assets, and render-based QA.",
   "license": "MIT",
+  "repository": {"type": "git", "url": "git+https://github.com/org-xelius/xelius-document-skills.git"},
+  "homepage": "https://skills.sh/org-xelius/xelius-document-skills",
+  "keywords": ["agent-skills", "reports", "presentations", "pdf", "pptx", "hermes", "codex", "claude-code"],
   "scripts": {
     "sync:portable": "node scripts/sync-portable-assets.mjs",
     "validate": "node scripts/validate-all-skills.mjs",
     "test": "node --test shared/validation/*.test.mjs",
+    "test:install": "node scripts/smoke-install.mjs",
+    "test:artifacts": "node scripts/smoke-artifacts.mjs",
+    "eval:prepare": "node scripts/prepare-evals.mjs",
     "check:environment": "node shared/validation/detect-environment.mjs",
     "render:examples": "node scripts/render-examples.mjs",
     "package:skill": "node scripts/package-skill.mjs",
     "release": "node scripts/create-release.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.20.0"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0",
+    "pptxgenjs": "4.0.1",
+    "skills": "1.7.6",
+    "yaml": "2.9.1"
+  },
+  "overrides": {
+    "pptxgenjs": {"image-size": "2.1.0"}
   }
 }

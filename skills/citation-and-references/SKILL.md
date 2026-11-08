@@ -1,6 +1,13 @@
 ---
 name: citation-and-references
-description: "Normalize and validate footnotes, endnotes, author-date and numbered references, chart and table sources, image credits, DOI formatting, bibliography links, and hyperlink destinations. Use when an artifact needs missing-entry, uncited-reference, duplicate, numbering, URL, figure-source, table-source, or credit checks without losing traceability."
+description: Normalize and check citations, bibliographies, figure sources, table notes, and image
+  credits. Use for missing entries, duplicate sources, numbering, DOI formatting, and link
+  validation while preserving source traceability.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Citation and References

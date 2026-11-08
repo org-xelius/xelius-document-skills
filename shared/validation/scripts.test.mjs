@@ -27,12 +27,6 @@ test("SVG validator accepts an accessible fixture", () => {
   assert.equal(result.status, 0, result.stderr);
 });
 
-test("strict SVG validation rejects an unwrapped long label", () => {
-  const result = run("skills/svg-illustration/scripts/validate-svg.mjs", path.join(validationFixtures, "svg-long-label.svg"), "--strict");
-  assert.notEqual(result.status, 0);
-  assert.match(result.stderr, /explicit wrapping/);
-});
-
 test("chart specification includes analytical safeguards", () => {
   const result = run("skills/data-visualisation/scripts/validate-chart-spec.mjs", path.join(fixtures, "development-impact-report", "chart-spec.json"));
   assert.equal(result.status, 0, result.stderr);

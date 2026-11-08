@@ -31,3 +31,13 @@ Render every page with Poppler when available. Use a second renderer for suspici
 ## Status
 
 Use `pass`, `repair-required`, or `limited`. A missing tool produces `limited`, never an assumed pass.
+
+## Publication expectations
+
+Use `assets/pdf-expectations.template.json` as a starting point, and retain only requirements from the brief. Supported fields are `requiredMetadata` (title, author, subject, keywords), `requireTagged`, `language`, `requireSelectableText`, `requireEmbeddedFonts`, `minimumLinks`, `minimumBookmarks`, `pageCount`, `pageSize` (width and height in points), `pageSizeTolerance`, and `rejectType3Fonts`.
+
+`preflight-pdf.mjs input.pdf --expect expectations.json --json` checks those properties even when they were absent in the raw export. Structural checks require `pypdf`; select its interpreter with `--python` or `XELIUS_PYTHON`.
+
+`compare-pdf-properties.mjs raw.pdf final.pdf --expect expectations.json --json` additionally checks lost metadata, tags, language, bookmark/link destinations, normalized text content, and dimensions or rotation on every matched page. Approved revisions can supply `--allow-page-count-change "reason"` or `--allow-text-change "reason"`; these allowances do not waive metadata, links, or geometry failures. `--strict` blocks unresolved warning conditions; it does not mean a warning is universally forbidden for every document type.
+
+Inspect every diagnostic and keep the machine-readable result with the delivered QA. A passing technical result concerns only its listed checks; reading order, link reachability, font appearance, image quality, and full accessibility conformance need their own appropriate review.

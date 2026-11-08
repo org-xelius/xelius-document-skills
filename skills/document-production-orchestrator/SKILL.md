@@ -1,11 +1,27 @@
 ---
 name: document-production-orchestrator
-description: "Route and govern multi-output document production across reports, annual reports, research reports, case studies, policy briefs, white papers, toolkits, manuals, executive decks, pitch decks, partner briefings, conference or training presentations, data presentations, combined report-and-deck projects, and visual asset packs. Use when a request spans production stages or requires coordinated specialist skills, shared evidence, checkpoints, rendering, editable sources, exports, and a production report."
+description: Coordinate reports, presentations, or combined deliverables that need several
+  production stages. Use for a new publication, major revision, or shared evidence across formats;
+  route a narrow edit or export directly to its specialist.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Document Production Orchestrator
 
-Coordinate the system. Do not perform specialist composition inside this skill.
+Coordinate the requested work and use only the specialists it needs.
+
+## Select the mode
+
+- **Create:** establish evidence, architecture, design, representative output, production, and final QA.
+- **Revise:** inspect existing sources and renders, preserve approved content and identity, then repair the requested scope. Reuse valid plans and evidence instead of rebuilding them.
+- **Review:** inspect and report findings; do not modify the artifact unless asked.
+- **Export:** use PDF or PPTX production directly when composition is approved.
+
+Record the selected mode and required output properties in the project manifest. Resolve routine choices from the brief and existing authorization. Use checkpoints only where a meaningful decision is unresolved; uninterrupted delivery records decisions internally.
 
 ## When to use
 
@@ -34,7 +50,7 @@ Route a narrow chart, citation, table, SVG, image, PPTX, PDF, or QA task directl
 2. Read [ROUTING.md](references/ROUTING.md) and [TOOL-DETECTION-AND-FALLBACKS.md](references/TOOL-DETECTION-AND-FALLBACKS.md).
 3. Run `node scripts/detect-environment.mjs --json` when the implementation environment matters.
 4. Establish Checkpoint 1: audience, purpose, action, outputs, approximate length, brand mode, assets, formats, and interactive or uninterrupted mode.
-5. Invoke `content-information-architecture`; require a source inventory and evidence register before visual composition.
+5. Reuse the current inventory and evidence register, or invoke `content-information-architecture` when sources or structure need organizing.
 6. Route the structure:
    - Reports: publication plan, then `professional-publication`.
    - Presentations: storyline, then `professional-presentation`.
@@ -42,8 +58,8 @@ Route a narrow chart, citation, table, SVG, image, PPTX, PDF, or QA task directl
 7. Invoke `publication-design-system` once the structure and output constraints are known.
 8. Establish Checkpoint 2 on architecture or storyline, design direction, image strategy, chart strategy, and production format.
 9. Route specialist assets to data, table, SVG, imagery, citation, copy-fitting, PPTX, and PDF skills.
-10. Require a representative sample and Checkpoint 3 unless uninterrupted mode is explicit.
-11. Produce complete artifacts, render every page or slide, invoke `visual-quality-assurance`, repair, and re-render.
+10. For a new system or major redesign, inspect a representative sample before full composition; preserve the user's checkpoint preference.
+11. Render final outputs, use `visual-quality-assurance`, repair, and re-render. Validate canonical QA JSON before deriving a delivery manifest or claiming pass.
 12. Establish Checkpoint 4 and write the production report.
 
 ## Hard rules
@@ -52,7 +68,7 @@ Route a narrow chart, citation, table, SVG, image, PPTX, PDF, or QA task directl
 - Give reports and presentations separate composition logic.
 - Preserve caveats, rights, credits, citations, and uncertainty.
 - Do not skip render-based QA; do not call unavailable checks passed.
-- Do not route around an approval checkpoint unless the manifest records uninterrupted mode or an explicit waiver.
+- Respect existing user authorization and record checkpoint decisions without inventing new approval requirements.
 - Do not silently substitute synthetic documentary imagery.
 
 ## Checkpoints
@@ -84,3 +100,5 @@ Stop only for missing critical authority, unsafe destructive changes, irreconcil
 ## Adjacent skills
 
 Invoke all specialists through [ROUTING.md](references/ROUTING.md). The orchestrator owns sequencing and handoffs; specialists own their craft and validation.
+
+Check that required specialist skills are installed. If one is missing, identify its role and installation selector, then use available equivalent capabilities for authorized work and state any resulting limitation. A single installed orchestrator does not imply the whole collection is present.

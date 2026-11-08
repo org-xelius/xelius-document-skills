@@ -10,11 +10,41 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [22, 24]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
       - run: npm run validate
       - run: npm test
       - run: npm run render:examples
+      - run: npm run test:install
+  artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: python -m pip install pypdf==6.10.0
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils libreoffice inkscape
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+      - run: npm run test:artifacts
+        env:
+          XELIUS_ARTIFACTS_DIR: ${{ runner.temp }}/xelius-artifact-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rendered-fixture-evidence
+          path: ${{ runner.temp }}/xelius-artifact-evidence

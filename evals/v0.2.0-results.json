@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "date": "2026-11-08",
+  "automatedChecks": {
+    "repositorySkills": 14,
+    "schemaFiles": 12,
+    "unitTests": 25,
+    "unitTestsFailed": 0,
+    "geometryRenderer": "Inkscape",
+    "installationAgents": ["codex", "hermes-agent", "claude-code"],
+    "installedSkillsPerAgent": 14,
+    "realReportPages": 9,
+    "realPresentationSlides": 11,
+    "dependencyAuditVulnerabilities": 0
+  },
+  "visualFixtureInspection": {
+    "reviewedSurfaces": 20,
+    "finding": "The initial presentation comparison chart lacked direct labels. Values and category labels were added and the repaired slide was re-rendered and inspected.",
+    "scope": "Synthetic fixtures establish rendering behavior, not a general publication-quality benchmark or PDF/UA conformance."
+  },
+  "behavioralEvaluation": {
+    "definedCases": 6,
+    "completedPairedCases": ["difficult-diagram"],
+    "baselineRef": "24c8ad9",
+    "candidateVersion": "0.2.0",
+    "isolatedContexts": true,
+    "observation": "Both versions produced seven ordered editable labels, legible at 170mm, with inspected PNG and A4 proof output. The candidate additionally produced measured geometry checks and canonical visual QA, and correctly reported PDF preflight limitations.",
+    "tokens": null,
+    "durationMs": null,
+    "statisticalImprovementClaim": false,
+    "remainingCases": ["short-report", "dense-table", "preserve-revision", "combined-output", "missing-renderer"],
+    "crossAgentBehavioralBenchmark": "not-run; installation compatibility was verified separately"
+  }
+}

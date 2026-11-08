@@ -1,11 +1,22 @@
 ---
 name: professional-publication
-description: "Plan, compose, export, and repair professionally designed reports for close reading, including A4 or US Letter portrait or landscape, custom sizes, short briefs, long research reports, annual reports, case studies, toolkits, manuals, and annex-heavy publications. Use when the final artifact requires staged architecture, representative spreads, semantic HTML and paged CSS or a justified fixed-layout path, PDF export, page rendering, and visual QA."
+description: Create or revise reports, briefs, annual reports, and manuals for close reading. Use
+  for publication architecture, page composition, representative spreads, and editable report
+  sources; use PDF production for export-only tasks.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Professional Publication
 
 Compose a reading experience, not a stack of decorated pages.
+
+## Scope the work
+
+Use create mode for a new publication, revise mode for changes to existing editable sources, and review mode for findings only. Preserve the supplied design and approved content in revise mode unless redesign is requested. Route export-only work to PDF production. Reuse current evidence and plans; do not restart them for a narrow edit.
 
 ## When to use
 
@@ -43,12 +54,13 @@ Editable semantic source, print and screen styles, final PDF, page renders, cont
 - Prevent orphaned headings; avoid widows where practical.
 - Keep figures with captions and tables with titles, headers, notes, and sources.
 - Repeat table headers; avoid splitting rows where practical.
-- Avoid more than two consecutive pages with the same dominant composition.
+- Review repeated compositions for pacing; allow repetition when the reference format or reader task benefits from it.
 - Balance dense and open pages; use full bleed selectively.
 - Consolidate unintentionally underfilled pages; do not stretch thin content to satisfy a planned page count.
 - Keep evidence IDs, production labels, implementation notes, and validation disclaimers out of reader-facing copy unless traceability is an explicit publication requirement.
 - Preserve meaningful whitespace, caveats, citations, and data.
 - Never fabricate missing content or evidence.
+- Define an output contract for type sizes, placed figure size, contrast, safe margins, language, and PDF properties; assess the actual output against it.
 
 ## Checkpoints
 

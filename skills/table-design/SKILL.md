@@ -1,6 +1,13 @@
 ---
 name: table-design
-description: "Decide, design, and validate research, financial, comparison, matrix, survey, annex, and compact presentation tables. Use when structured values need accurate lookup, row and column comparison, repeated headers, numeric alignment, totals, footnotes, sources, landscape handling, annex routing, or a decision about whether a chart is more appropriate."
+description: Design readable tables for exact lookup and comparison in reports or presentations. Use
+  for headers, column widths, numeric alignment, notes, repeated headers, or tables that do not fit
+  the available space.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Table Design

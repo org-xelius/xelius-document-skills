@@ -1,14 +1,19 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "2.0",
   "artifact": "synthetic-report.pdf",
   "artifactType": "pdf",
   "status": "pass",
   "reviewMethod": "manual-and-automated",
   "inspectionCoverage": {"rendered": 2, "inspected": 2, "total": 2},
+  "renders": [
+    {"location": "page-001", "path": "renders/page-001.png", "sha256": "0000000000000000000000000000000000000000000000000000000000000000"},
+    {"location": "page-002", "path": "renders/page-002.png", "sha256": "0000000000000000000000000000000000000000000000000000000000000000"}
+  ],
   "surfaceReviews": [
-    {"location": "page-001", "method": "full-size-render", "result": "clear", "observation": "Cover hierarchy and trim edges are clear."},
-    {"location": "page-002", "method": "full-size-render", "result": "clear", "observation": "Body text, figure, source line, and folio are legible."}
+    {"location": "page-001", "method": "full-size-render", "result": "clear", "observation": "Cover hierarchy and trim edges are clear.", "reviewer": "Synthetic fixture", "reviewedAt": "2026-11-08T00:00:00Z", "issueIds": [], "renderPath": "renders/page-001.png", "renderSha256": "0000000000000000000000000000000000000000000000000000000000000000"},
+    {"location": "page-002", "method": "full-size-render", "result": "clear", "observation": "Body text, figure, source line, and folio are legible.", "reviewer": "Synthetic fixture", "reviewedAt": "2026-11-08T00:00:00Z", "issueIds": [], "renderPath": "renders/page-002.png", "renderSha256": "0000000000000000000000000000000000000000000000000000000000000000"}
   ],
   "issues": [],
+  "checks": [],
   "limitations": []
 }

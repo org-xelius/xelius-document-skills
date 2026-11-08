@@ -1,6 +1,13 @@
 ---
 name: pptx-production
-description: "Build, edit, export, and validate editable PowerPoint presentations with native text, shapes, charts where practical, theme fonts and colours, reusable layout helpers, speaker notes, source lines, image crops, correct z-order, slide numbers, bounds checks, and render-based QA. Use after a deck storyline and slide system are approved or for focused PPTX production repair."
+description: Build, edit, and export editable PowerPoint files with native text, shapes, charts, and
+  speaker notes. Use for an approved deck specification, bounds checks, rendering, or focused PPTX
+  repair.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # PPTX Production
@@ -24,6 +31,8 @@ Approved storyline, slide specifications, design tokens, assets, notes, sources,
 Editable PPTX, build source, asset manifest, speaker notes, bounds report, PDF export when requested, and rendered slides.
 
 ## Required workflow
+
+Run the builder from the document workspace or pass its dependency root explicitly: `node scripts/build-pptx.mjs deck-spec.json deck.pptx --project-root <workspace>`. Install `pptxgenjs` in that workspace; a global skill directory does not contain the user's dependencies.
 
 1. Read [PPTX-PRODUCTION.md](references/PPTX-PRODUCTION.md).
 2. Detect the supported implementation library; prefer the repository-supported mature library and record the version.

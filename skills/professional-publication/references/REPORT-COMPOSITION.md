@@ -10,7 +10,7 @@ Each family defines content capacity, grid span, typography roles, source zone, 
 
 - Begin sections with orientation and a clear change in pace.
 - Alternate dense analysis with open explanatory or visual pages when the evidence supports it.
-- Avoid more than two consecutive pages with the same dominant composition.
+- Inspect runs of similar pages for pacing; preserve deliberate reference-table or catalogue patterns when they help readers.
 - Use consistent running furniture but vary content silhouettes.
 - Treat full bleed as emphasis, not default.
 - Distinguish purposeful whitespace from underfill. On an ordinary content page, a large unused region should trigger consolidation, a more useful visual, or a shorter publication rather than decorative filling.
@@ -40,3 +40,7 @@ Test:
 Use the longest realistic title, densest note, and most complex data component. Repair the system before expanding.
 
 Also test the shortest realistic page. If the planned length creates repeated card pages, oversized headings over sparse content, or large accidental blanks, combine sections or reduce the page count.
+
+## Revision and acceptance
+
+Preserve the approved design, protected wording, source locators, status boundaries, and citation relationships. Compare repaired output with its source and intended plan. Do not force a new font, fixed page count, or layout family because it worked for an earlier report. Validate actual placed type and visual bounds, not just CSS sizes. Keep cover text inside a contrast-safe region and give process connectors unambiguous direction.

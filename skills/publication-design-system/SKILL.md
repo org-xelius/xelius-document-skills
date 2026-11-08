@@ -1,6 +1,13 @@
 ---
 name: publication-design-system
-description: "Create output-specific design systems for reports, presentations, charts, tables, SVGs, and image treatments. Use to extend a brand, preserve a template, create a new direction, lightly modernise an artifact, or define an organisation-wide reusable system with typography, colour, layout, component, accessibility, and output rules."
+description: Define typography, colour, layout, and component contracts for reports and
+  presentations. Use to preserve a supplied template, extend a brand, or establish a reusable
+  publication system.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Publication Design System

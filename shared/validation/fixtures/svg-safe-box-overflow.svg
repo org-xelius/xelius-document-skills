@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" role="img" aria-labelledby="t d">
+  <title id="t">Label exceeds a declared container</title>
+  <desc id="d">The artboard is wide enough but the label exceeds its own narrow safe container.</desc>
+  <text id="label" x="20" y="90" font-family="Arial, sans-serif" font-size="24" data-safe-box="10 50 40 60">Container</text>
+</svg>

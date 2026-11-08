@@ -1,232 +1,134 @@
 # Xelius Document Skills
 
-`xelius-document-skills` is a portable Agent Skills repository for producing evidence-led reports, editable presentations, matching PDFs, visual assets, previews, and render-based quality reports.
+[![skills.sh](https://skills.sh/b/org-xelius/xelius-document-skills)](https://skills.sh/org-xelius/xelius-document-skills)
 
-The collection is a coordinated production system. One source inventory and evidence register can support several outputs, while reports and presentations keep separate composition logic.
+Fourteen portable Agent Skills for evidence-led reports, editable presentations, charts, diagrams, PDF export, and visual review. Reports and presentations share evidence and design tokens while retaining composition suited to each medium.
 
-## Supported outputs
+## Install
 
-- Professionally designed reports, briefs, case studies, annual reports, toolkits, and manuals
-- Editable PowerPoint decks with speaker notes
-- Report and presentation PDFs
-- Charts, tables, maps, diagrams, SVG illustrations, and image variants
-- Reusable publication and presentation design systems
-- Page and slide renders, contact sheets, preflight reports, and structured QA
+Requires Node.js 22.20 or later for the current Skills CLI. No Xelius npm package is required.
 
-## Skill catalogue
+```sh
+# Explore without installing
+npx skills add org-xelius/xelius-document-skills --list
 
-Installable skill identifiers use the `xelius/` namespace:
+# Install all skills globally for these agents
+npx skills add org-xelius/xelius-document-skills --global --skill '*' --agent codex hermes-agent claude-code
+
+# Pin this release for reproducible installation
+npx skills add org-xelius/xelius-document-skills@v0.2.0 --global --skill '*' --agent codex hermes-agent claude-code
+```
+
+Omit `--global` for a project installation. The CLI normally links each agent to a canonical copy; use `--copy` when your environment requires independent copies. Use `--yes` for an unattended install after choosing the source and agents.
+
+| Agent | CLI selector | Global skill directory |
+| --- | --- | --- |
+| Codex | `codex` | `~/.agents/skills/` |
+| Hermes | `hermes-agent` | `~/.hermes/skills/` |
+| Claude Code | `claude-code` | `~/.claude/skills/` |
+
+Some older Codex installations also contain `~/.codex/skills/`. Check for stale duplicate copies when upgrading; do not delete unrelated skills. Manual installation copies a complete folder from `skills/`, including its license and resources, to the directory your agent scans.
+
+```sh
+npx skills list --global
+npx skills check
+npx skills update --global
+npx skills find publication --owner org-xelius
+```
+
+See the [catalogue on skills.sh](https://skills.sh/org-xelius/xelius-document-skills) and the [official CLI reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) for update, removal, and agent options. skills.sh visibility and install rankings are external services; installation does not guarantee a particular search ranking.
+
+## Choose a workflow
+
+The source is `org-xelius/xelius-document-skills`; actual skill names have no slash prefix. For example, use `--skill professional-publication` when installing, and `$professional-publication` in a supporting agent or ask it to use that skill by name.
 
 | Skill | Responsibility |
 | --- | --- |
-| `xelius/document-production-orchestrator` | Route multi-stage and multi-output production |
-| `xelius/professional-publication` | Compose reports for close reading |
-| `xelius/professional-presentation` | Build audience-led storylines and slide systems |
-| `xelius/publication-design-system` | Define output-specific design contracts and tokens |
-| `xelius/content-information-architecture` | Inventory sources and create report or deck structures |
-| `xelius/data-visualisation` | Select and produce accurate analytical visuals |
-| `xelius/svg-illustration` | Create and validate robust vector assets |
-| `xelius/pptx-production` | Build editable PowerPoint files |
-| `xelius/pdf-production` | Export and preflight PDFs |
-| `xelius/visual-quality-assurance` | Inspect rendered output and govern repair |
-| `xelius/editorial-copy-fitting` | Fit copy without weakening meaning |
-| `xelius/table-design` | Design research and presentation tables |
-| `xelius/image-art-direction` | Inventory, crop, credit, and direct imagery |
-| `xelius/citation-and-references` | Normalize and validate citations and source lines |
+| `document-production-orchestrator` | Coordinate stages and outputs |
+| `professional-publication` | Compose and revise reports for close reading |
+| `professional-presentation` | Develop narrative, slides, and speaker notes |
+| `publication-design-system` | Set typography, layout, component, and output contracts |
+| `content-information-architecture` | Inventory sources and plan evidence-led structure |
+| `data-visualisation` | Produce accurate analytical visuals |
+| `svg-illustration` | Create and inspect vector diagrams |
+| `pptx-production` | Build editable PowerPoint files |
+| `pdf-production` | Export, inspect, and compare PDFs |
+| `visual-quality-assurance` | Review rendered surfaces and verify repairs |
+| `editorial-copy-fitting` | Fit copy while preserving meaning |
+| `table-design` | Make exact lookup and comparison legible |
+| `image-art-direction` | Select, crop, and credit raster imagery |
+| `citation-and-references` | Maintain citations and traceability |
 
-## How the skills work together
+Install an individual specialist for a focused task. A report workflow usually also needs content architecture, design system, PDF production, and visual QA; presentation work additionally needs PPTX production. The orchestrator checks available specialists and reports missing capabilities. Installing the full collection is the easiest starting point.
 
 ```text
-brief + sources
-      |
-      v
-orchestrator
-      |
-      v
-source inventory + evidence register
-      |
-      +-------------------+
-      |                   |
-publication plan     deck storyline
-      |                   |
-report composition   slide composition
-      |                   |
-PDF production       PPTX + PDF production
-      +---------+---------+
-                |
-          rendered visual QA
+Use document-production-orchestrator to turn the supplied knowledge base into
+a report and an editable partner deck. Share one evidence register, preserve
+the supplied brand, and deliver sources, exports, renders, and validated QA.
 ```
 
-Charts, tables, SVGs, images, citations, and copy fitting join only when the plans require them.
-
-## Installation
-
-Install the collection from the Xelius GitHub organisation:
-
-```sh
-npx skills add org-xelius/xelius-document-skills
-npx skills add org-xelius/xelius-document-skills --skill document-production-orchestrator
-npx skills add org-xelius/xelius-document-skills --skill professional-publication
+```text
+Use professional-publication in revise mode on this existing report.
+Preserve the approved content and design. Repair the identified layout defects,
+re-render affected pages, and produce QA against the current renders.
 ```
 
-Manual installation is agent-agnostic: copy any complete folder from `skills/` into the skill directory your agent scans. Common destinations include:
+For review-only work, report findings without modifying the artifact. For export-only work, use the relevant production specialist. Load only the instructions and references needed for the selected mode.
 
-| Agent | Common project location |
-| --- | --- |
-| Codex | `.codex/skills/<skill-name>/` |
-| Claude Code | `.claude/skills/<skill-name>/` |
-| Cursor and generic Agent Skills hosts | `.agents/skills/<skill-name>/` |
-| Hermes and other compatible agents | Use the host's documented Agent Skills directory |
+## Production dependencies
 
-Keep each complete folder together; references, scripts, assets, templates, and examples are part of the skill.
-
-## Optional production toolchain
-
-The skills detect available tools and select documented fallbacks. Only install the capabilities your workflow needs.
-
-### macOS with Homebrew
-
-For PDF inspection and page rendering:
+Skill installation does not install production programs. Install capabilities in the document project when needed:
 
 ```sh
-brew install poppler
-```
-
-Poppler provides `pdfinfo`, `pdffonts`, `pdftoppm`, and `pdftocairo`. These support PDF metadata and page-size checks, font inspection, full-page rendering, and contact-sheet workflows.
-
-For robust SVG editing, conversion, and raster checks:
-
-```sh
-brew install --cask inkscape
-```
-
-Inkscape supports SVG-to-PNG and SVG-to-PDF conversion, path and artboard inspection, and cross-checking SVG assets before they enter reports or presentations.
-
-Useful complementary tools:
-
-```sh
-brew install imagemagick ghostscript ffmpeg
-brew install --cask libreoffice
-```
-
-| Tool | Enables |
-| --- | --- |
-| ImageMagick | Image inspection, format conversion, and page or slide contact sheets |
-| Ghostscript | Secondary PDF rendering and print-oriented inspection |
-| LibreOffice | Headless PPTX-to-PDF export when Microsoft PowerPoint is unavailable |
-| ffmpeg | Media inspection, frame extraction, and visual-scene preparation |
-
-For browser-based paged-media PDF generation:
-
-```sh
-npm add --save-dev playwright
+npm add --save-dev playwright pptxgenjs
 npx playwright install chromium
+python3 -m pip install pypdf
 ```
 
-Install Playwright in the document-production project rather than bundling it inside an individual skill.
+The render/build scripts accept `--project-root` so globally installed scripts can resolve the project's dependencies. Use `--help` on a helper to see its options. In restricted environments, use approved existing tools and report unavailable checks as limited.
 
-### Verify the environment
+On macOS:
 
 ```sh
-npm run check:environment
-command -v inkscape pdfinfo pdffonts pdftoppm
+brew install poppler imagemagick ghostscript
+brew install --cask inkscape libreoffice
 ```
 
-When Inkscape was installed as a macOS cask, its command may live inside the application bundle rather than on `PATH`. The environment check recognizes both locations. You can verify the cask directly with:
+Poppler supplies PDF inspection and rendering. Inkscape supplies SVG geometry and previews; its macOS cask executable may be inside `/Applications/Inkscape.app/Contents/MacOS/inkscape`. LibreOffice exports PPTX to PDF. Browser, office, and accessibility capabilities vary by host.
+
+## Quality and QA
+
+V0.2.0 separates schema validity, technical preflight, and actual visual review. A successful export or a matching raw/final PDF does not prove that a publication meets its requirements.
+
+- Define audience, typography minima, placed visual sizes, contrast, language, and required PDF features in an output contract.
+- Keep facts, caveats, sources, credits, and protected status wording traceable.
+- Create QA using the bundled helper and schema version `2.0`; see the installed `visual-quality-assurance` skill for exact commands.
+- Review every surface in final-delivery QA. Render hashes tie reviews to the artifact version; records document coverage but cannot prove that someone viewed an image.
+- Derive Markdown summaries and delivery status from canonical QA JSON. Schema `1.0` reports require explicit migration and fresh review evidence; do not silently relabel old reports as current.
+- Use `repair-required` for known defects and `limited` for missing required checks. Respect accepted deviations with attribution and rationale.
+
+## Develop and verify
 
 ```sh
-/Applications/Inkscape.app/Contents/MacOS/inkscape --version
-```
-
-Tool availability does not itself prove output quality. PDF, SVG, and PPTX artifacts must still be rendered and visually inspected. When a required utility is absent or cannot run in the host environment, the QA report must use `limited` status and name the missing check.
-
-## Quick start
-
-Multi-output production:
-
-```text
-Use xelius/document-production-orchestrator to turn the supplied research,
-dataset, brand assets, and photographs into a 24-page report and a 12-slide
-partner briefing. Preserve one evidence register, use separate report and
-presentation composition, and deliver editable sources, PDFs, renders, and QA.
-```
-
-Focused report:
-
-```text
-Use xelius/professional-publication with this approved publication plan and
-design system. Build and review a representative spread before full composition.
-```
-
-Focused deck:
-
-```text
-Use xelius/professional-presentation to create a 15-minute executive decision
-deck with message-led headlines, speaker notes, an editable PPTX, and PDF export.
-```
-
-## Repository structure
-
-```text
-xelius/
-├── skills/                  # Fourteen portable Agent Skills
-├── shared/
-│   ├── schemas/             # Project, evidence, plan, storyline, and QA schemas
-│   ├── design-tokens/       # Machine-readable direction contracts
-│   ├── example-content/     # Shared synthetic evidence base
-│   ├── fixtures/            # Report and presentation source projects
-│   └── validation/          # Environment and schema utilities
-├── scripts/                 # Validation, packaging, examples, and release
-└── dist/                    # Generated packages, excluded from source control
-```
-
-## Validation
-
-Requires Node.js 20 or later.
-
-```sh
-npm run validate
-npm test
-npm run check:environment
-npm run render:examples
-```
-
-Validation checks skill front matter, unique names, internal links, JSON and schema shape, executable scripts, release placeholders, large files, fonts, secrets, absolute local paths, portable resource parity, strict SVG wrapping, per-surface QA evidence, and required packaging files.
-
-Visual validation remains environment-dependent. A missing renderer produces a limited status, never a false pass.
-
-## Examples
-
-`shared/fixtures/development-impact-report/` specifies a nine-page synthetic report. `shared/fixtures/executive-partner-presentation/` uses the same evidence base for an 11-slide partner deck with speaker notes. Both include reproducible source and explicit synthetic-image labels; generated binaries are not committed.
-
-## Releases
-
-Run `npm run release` to validate and create one compressed package per skill plus a SHA-256 release manifest in `dist/`. The release workflow performs the same validation before uploading artifacts.
-
-## Publishing to GitHub and Skills.sh
-
-Publish the contents of this `xelius/` directory as the root of a public GitHub repository named `xelius-document-skills`. Before the first push:
-
-```sh
+npm ci
 npm run sync:portable
 npm run validate
 npm test
-npx skills add . --list
+npm run test:install
+npx playwright install chromium
+npm run test:artifacts
 ```
 
-After publishing, repeat discovery against GitHub:
+`test:install` uses the pinned Skills CLI in a temporary project and verifies installed files for Codex, Hermes, and Claude Code. `test:artifacts` produces real PDF/PPTX output, renders every page, and writes technical evidence; it does not fabricate a visual-review pass. Set `PYTHON` to a Python executable with `pypdf` and optionally `CHROME_PATH` to an installed Chromium executable. LibreOffice and Poppler must be runnable for the complete artifact test.
 
-```sh
-npx skills add org-xelius/xelius-document-skills --list
-npx skills add org-xelius/xelius-document-skills --skill professional-publication
-```
+`npm run render:examples` stages synthetic source projects; add `-- --render` for binary output. `npm run eval:prepare` prepares isolated v0.1.1/v0.2.0 evaluation workspaces. See [evals/README.md](evals/README.md) for prompts, expected behavior, and how to record actual results without invented benchmark scores.
 
-The Skills CLI discovers each folder under `skills/` from its `SKILL.md` front matter. The public Skills.sh page is expected at `https://skills.sh/org-xelius/xelius-document-skills/<skill-name>` after the repository has been indexed. Indexing is an external service step, so verify the final URLs after the first public installation.
+## Release
 
-## Contributing
+`npm run release` validates, tests, inspects all fourteen archives, and writes a manifest containing versions, source commit, and SHA-256 checksums. CI additionally performs installation and rendered-artifact checks before creating a tagged GitHub release. Tag and package versions must agree. Each installed skill includes MIT licensing and author/version/source metadata.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md). Keep changes portable, evidence-safe, render-aware, and scoped to the smallest responsible skill.
+The repository retains the standard `skills/<name>/SKILL.md` layout for Skills CLI discovery. A separate npm CLI and optional skills.sh packs are future distribution options, not dependencies of this release.
 
-## License
+## Contributing and license
 
-MIT. See [LICENSE](LICENSE). Fonts and third-party assets require their own compatible licenses and are not included by default.
+Read [CONTRIBUTING.md](CONTRIBUTING.md). The repository and skill instructions are [MIT licensed](LICENSE). Third-party tools and assets retain their own licenses; documentary or proprietary source material must not be redistributed as public evaluation fixtures.

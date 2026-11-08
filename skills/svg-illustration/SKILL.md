@@ -1,6 +1,13 @@
 ---
 name: svg-illustration
-description: "Create, validate, render, and integrate SVG icons, process and architecture diagrams, maps, timelines, system illustrations, editorial graphics, infographic elements, and presentation diagrams. Use when assets require valid XML, explicit viewBox, accessible metadata, closed and simplified paths, print-safe colours, robust masks, tested raster previews, and verification inside PDF or PPTX."
+description: Create or repair editable SVG diagrams, icons, timelines, and conceptual illustrations.
+  Use for XML validity, label fit, rendered bounds, and integration into PDF or PPTX; use data
+  visualisation for quantitative charts.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # SVG Illustration
@@ -29,7 +36,7 @@ Validated SVG, PNG render, optional transparent and solid-background variants, i
 2. Define the artboard, hierarchy, labels, geometry, and target size.
 3. Create valid XML with explicit `viewBox`, `<title>`, and `<desc>`.
 4. Use consistent strokes, closed paths, safe masks, and available fonts or outlined display lettering where licensing permits.
-5. Run `node scripts/validate-svg.mjs asset.svg --strict`.
+5. Run `node scripts/validate-svg.mjs asset.svg --geometry --strict --json`; store the measured-check report. Python 3 parses XML; Inkscape supplies rendered bounds. Set `XELIUS_PYTHON` or `--inkscape` when their executables are outside the usual paths.
 6. Rasterize with Inkscape, ImageMagick, or browser fallback.
 7. Inspect the PNG at the intended placed size, checking every label and each artboard edge.
 8. Test the SVG inside the target PDF or PPTX and repeat inspection after integration.
@@ -37,11 +44,11 @@ Validated SVG, PNG render, optional transparent and solid-background variants, i
 ## Hard rules
 
 - No accidental clipping, broken masks, unsupported filters, missing fonts, invisible initial states, or objects outside the artboard.
-- Wrap long labels deliberately with target-safe `<tspan>` lines; never truncate source text or rely on SVG text to wrap automatically.
+- Wrap labels with target-safe `<tspan>` lines when their measured width requires it; never truncate source text or rely on SVG text to wrap automatically.
 - Keep text and strokes inside a safe inset and verify bounds from the rendered asset, not coordinates alone.
 - Simplify paths and avoid embedded raster data unless explicitly required.
 - Preserve label readability, print-safe colours, and contrast.
-- Do not claim validation until both structural and rendered checks complete.
+- Keep structural, measured-geometry, and visual review results distinct. A successful XML or bounds check does not establish visual quality.
 
 ## Checkpoints
 

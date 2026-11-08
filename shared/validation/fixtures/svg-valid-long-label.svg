@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 200" role="img" aria-labelledby="t d">
+  <title id="t">Wide diagram with an intentionally long label</title>
+  <desc id="d">A long single-line label fits a wide artboard and must not fail on character count.</desc>
+  <rect width="1400" height="200" fill="#ffffff"/>
+  <text id="label" x="30" y="100" font-family="Arial, sans-serif" font-size="14">This production label intentionally exceeds seventy characters and remains comfortably inside the wide artboard.</text>
+</svg>

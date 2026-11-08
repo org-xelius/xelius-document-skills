@@ -25,6 +25,7 @@ For every page, slide, artboard, or image, record:
 - Review method: `full-size-render`, `source-only`, or `unverifiable`
 - Result: `clear`, `issue-found`, or `unverifiable`
 - A concise observation specific to that surface
+- Reviewer identity, timestamp, render path and SHA-256, and linked issue IDs
 
 Automated blank-page, edge-density, OCR, bounds, resolution, or file checks are triage signals. They do not prove visual inspection and cannot support `pass` without full-size review records.
 
@@ -33,3 +34,15 @@ Automated blank-page, edge-density, OCR, bounds, resolution, or file checks are 
 Inspect typography, overflow, clipping, contrast, margins, alignment, crops, missing images, SVG integrity, chart and table legibility, accidental blank regions, density, repetitive layouts, furniture, source lines, headings, page numbers, reading order, opening, closing, and transition logic.
 
 Treat clipped or unreadable content, lost evidence, and accessibility regressions as high severity. Treat repeated composition, unintentional underfill, tiny supporting text, and exposed production metadata according to their effect on use. A `pass` has no open or unverifiable issue. An accepted deviation must name the decision-maker and reason.
+
+## Derived status and summaries
+
+Use schema 2.0 and the bundled helper to avoid handwritten near-compatible JSON. A complete canonical record is required even for `limited` status.
+
+- `repair-required`: an issue remains open or a required check reports a repair.
+- `limited`: no actionable repair remains, but review coverage, a required check, or verification is incomplete.
+- `pass`: all declared surfaces have clear full-size reviews, required checks pass, and no limitation or unverifiable issue remains.
+
+Preserve domain checks under `checks`: `technical`, `visual`, `editorial`, or `accessibility`. Use `not-requested` only for checks outside the agreed scope; do not turn an unperformed required check into an optional one.
+
+Accepted deviations require `acceptedBy` and `acceptanceReason`. After repair or acceptance, record the current page review again; do not relabel the old issue-found review as clear without inspection. Generate Markdown summaries and manifests from the canonical report with `qa-report.mjs report`. Before delivery, use `validate-qa-report.mjs --verify-files` to detect stale renders and artifact hashes.

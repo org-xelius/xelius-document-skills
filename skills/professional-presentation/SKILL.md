@@ -1,6 +1,13 @@
 ---
 name: professional-presentation
-description: "Develop audience-centred presentation strategy and composition for executive decks, pitches, partner briefings, conference talks, training decks, and data presentations. Use when a deck needs a central takeaway, desired audience action, message-led storyline, representative sequence, coherent slide system, editable PPTX, speaker notes, PDF export, slide renders, and narrative and visual QA."
+description: Create or revise executive, partner, pitch, conference, and training presentations. Use
+  for audience decisions, narrative, slide composition, and speaker notes; use PPTX production for
+  file-building or export-only tasks.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Professional Presentation

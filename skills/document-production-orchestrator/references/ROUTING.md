@@ -2,7 +2,7 @@
 
 ## Production-mode routes
 
-| Request | Mandatory route | Conditional specialists |
+| Request | Default route | Conditional specialists |
 | --- | --- | --- |
 | Report, annual report, research report, case study, policy brief, white paper, toolkit, manual | content architecture -> design system -> professional publication -> PDF production -> visual QA | copy, data, table, SVG, image, citations |
 | Executive, pitch, partner, conference, training, or data deck | content architecture -> design system -> professional presentation -> PPTX production -> PDF production -> visual QA | copy, data, table, SVG, image, citations |
@@ -21,6 +21,8 @@
 6. If precise values matter more than pattern, route to table design; otherwise route analytical relationships to data visualisation.
 7. Route conceptual vector explanation to SVG illustration and authentic raster evidence to image art direction.
 8. Route every final PDF through PDF production and every rendered sequence through visual QA.
+
+For revision work, reuse approved evidence, plans, and design contracts; open only the stages affected by the edit. Review mode returns findings without editing. Export mode does not reopen composition unless a defect requires source repair. Check that a named specialist exists before attempting to invoke it.
 
 ## Handoff contract
 

@@ -1,18 +1,495 @@
 {
   "layout": "LAYOUT_WIDE",
-  "metadata": {"title": "Riverbend Community Network - Synthetic Partner Briefing", "author": "Xelius", "subject": "Synthetic production fixture", "language": "en-US"},
-  "theme": {"headFontFace": "Arial", "bodyFontFace": "Arial", "lang": "en-US"},
+  "metadata": {
+    "title": "Riverbend Community Network - Synthetic Partner Briefing",
+    "author": "Xelius",
+    "subject": "Synthetic production fixture",
+    "language": "en-US"
+  },
+  "theme": {
+    "headFontFace": "Arial",
+    "bodyFontFace": "Arial",
+    "lang": "en-US"
+  },
   "slides": [
-    {"background": {"color": "EAF2F0"}, "items": [{"type": "text", "text": "Local capacity made connectivity usable", "options": {"x": 0.8, "y": 1.2, "w": 7.2, "h": 1.6, "fontSize": 42, "bold": true, "color": "16324F", "margin": 0}}, {"type": "text", "text": "Synthetic partner briefing", "options": {"x": 0.8, "y": 3.1, "w": 5.0, "h": 0.4, "fontSize": 18, "color": "D95D39", "margin": 0}}], "notes": ["Open with the proposition. This fixture contains no real participants or outcomes."]},
-    {"items": [{"type": "text", "text": "The pilot joined access, skills, device support, and governance", "options": {"x": 0.8, "y": 0.65, "w": 11.7, "h": 1.0, "fontSize": 32, "bold": true, "color": "16324F", "margin": 0}}, {"type": "text", "text": "ACCESS     SKILLS     DEVICES     GOVERNANCE", "options": {"x": 1.0, "y": 3.1, "w": 11.3, "h": 0.8, "fontSize": 24, "bold": true, "color": "0B5D57", "align": "center", "margin": 0}}], "notes": ["Explain why the intervention is a system rather than an infrastructure-only project."]},
-    {"items": [{"type": "text", "text": "120 residents completed introductory network training", "options": {"x": 0.8, "y": 0.65, "w": 11.7, "h": 1.0, "fontSize": 32, "bold": true, "color": "16324F", "margin": 0}}, {"type": "text", "text": "120", "options": {"x": 0.9, "y": 2.2, "w": 5.0, "h": 2.0, "fontSize": 92, "bold": true, "color": "D95D39", "margin": 0}}], "notes": ["Synthetic evidence EV-002. Distinguish completions from long-term capability."]},
-    {"items": [{"type": "text", "text": "18 advanced graduates formed the smaller maintenance pathway", "options": {"x": 0.8, "y": 0.65, "w": 11.7, "h": 1.0, "fontSize": 32, "bold": true, "color": "16324F", "margin": 0}}, {"type": "shape", "shape": "rect", "options": {"x": 1.0, "y": 2.2, "w": 9.0, "h": 0.75, "fill": {"color": "0B5D57"}, "line": {"color": "0B5D57"}}}, {"type": "shape", "shape": "rect", "options": {"x": 1.0, "y": 3.6, "w": 1.35, "h": 0.75, "fill": {"color": "D95D39"}, "line": {"color": "D95D39"}}}], "notes": ["120 introductory and 18 advanced completions. Bars share a zero baseline."]},
-    {"items": [{"type": "text", "text": "The two hubs recorded 4,800 visits in six months", "options": {"x": 0.8, "y": 0.65, "w": 11.7, "h": 1.0, "fontSize": 32, "bold": true, "color": "16324F", "margin": 0}}, {"type": "text", "text": "4,800", "options": {"x": 0.9, "y": 2.2, "w": 6.0, "h": 2.0, "fontSize": 88, "bold": true, "color": "0B5D57", "margin": 0}}, {"type": "text", "text": "Visits are not equivalent to unique people.", "options": {"x": 0.9, "y": 5.4, "w": 7.5, "h": 0.5, "fontSize": 16, "color": "52606D", "margin": 0}}], "notes": ["Synthetic evidence EV-003. State the caveat aloud."]},
-    {"items": [{"type": "text", "text": "Education was the most frequently reported use", "options": {"x": 0.8, "y": 0.65, "w": 11.7, "h": 1.0, "fontSize": 32, "bold": true, "color": "16324F", "margin": 0}}, {"type": "text", "text": "Education  62\nServices  55\nIncome-related  41", "options": {"x": 1.0, "y": 2.2, "w": 8.5, "h": 2.5, "fontSize": 26, "breakLine": false, "color": "16324F", "margin": 0.05}}], "notes": ["Synthetic evidence EV-004, n=80. Multiple responses were allowed."]},
-    {"background": {"color": "16324F"}, "items": [{"type": "text", "text": "Early use is promising, but it is not yet a verified outcome", "options": {"x": 0.9, "y": 1.4, "w": 11.3, "h": 1.8, "fontSize": 38, "bold": true, "color": "FFFFFF", "margin": 0}}, {"type": "text", "text": "Short follow-up · no comparison group · visits are not unique people · uses are self-reported", "options": {"x": 0.9, "y": 4.2, "w": 10.8, "h": 0.8, "fontSize": 20, "color": "DDEFE8", "margin": 0}}], "notes": ["Pause on the evidence boundary before recommending expansion."]},
-    {"items": [{"type": "text", "text": "Affordability and device access remain the largest practical gaps", "options": {"x": 0.8, "y": 0.65, "w": 11.7, "h": 1.0, "fontSize": 32, "bold": true, "color": "16324F", "margin": 0}}, {"type": "text", "text": "AFFORDABILITY", "options": {"x": 1.0, "y": 2.5, "w": 4.8, "h": 0.7, "fontSize": 28, "bold": true, "color": "D95D39", "margin": 0}}, {"type": "text", "text": "DEVICE ACCESS", "options": {"x": 7.0, "y": 2.5, "w": 4.8, "h": 0.7, "fontSize": 28, "bold": true, "color": "0B5D57", "margin": 0}}], "notes": ["These are reported implementation barriers in the synthetic narrative, not quantified outcome estimates."]},
-    {"items": [{"type": "text", "text": "The next phase should strengthen operations, affordability, and evidence", "options": {"x": 0.8, "y": 0.65, "w": 11.7, "h": 1.0, "fontSize": 32, "bold": true, "color": "16324F", "margin": 0}}, {"type": "text", "text": "1  LOCAL OPERATIONS\n2  AFFORDABILITY TEST\n3  TWELVE-MONTH MEASUREMENT", "options": {"x": 1.0, "y": 2.1, "w": 9.5, "h": 3.0, "fontSize": 26, "bold": true, "color": "0B5D57", "margin": 0.05}}], "notes": ["Present the three workstreams as one coordinated extension."]},
-    {"items": [{"type": "text", "text": "A twelve-month extension can answer the questions the pilot could not", "options": {"x": 0.8, "y": 0.65, "w": 11.7, "h": 1.0, "fontSize": 32, "bold": true, "color": "16324F", "margin": 0}}, {"type": "text", "text": "DESIGN  →  TEST  →  MEASURE", "options": {"x": 1.0, "y": 3.0, "w": 11.0, "h": 0.8, "fontSize": 32, "bold": true, "color": "D95D39", "align": "center", "margin": 0}}], "notes": ["Describe the measurement plan before the closing decision."]},
-    {"background": {"color": "0B5D57"}, "items": [{"type": "text", "text": "Approve design work for a measured twelve-month extension", "options": {"x": 0.9, "y": 1.4, "w": 11.2, "h": 1.8, "fontSize": 38, "bold": true, "color": "FFFFFF", "margin": 0}}, {"type": "text", "text": "Next: safeguards · costing · partner roles · measurement plan", "options": {"x": 0.9, "y": 4.4, "w": 10.6, "h": 0.7, "fontSize": 22, "color": "FFF3D6", "margin": 0}}], "notes": ["Ask for the specific decision and name the immediate design outputs."]}
+    {
+      "background": {
+        "color": "EAF2F0"
+      },
+      "items": [
+        {
+          "type": "text",
+          "text": "Local capacity made connectivity usable",
+          "options": {
+            "x": 0.8,
+            "y": 1.2,
+            "w": 7.2,
+            "h": 1.6,
+            "fontSize": 42,
+            "bold": true,
+            "color": "16324F",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "Synthetic partner briefing",
+          "options": {
+            "x": 0.8,
+            "y": 3.1,
+            "w": 5,
+            "h": 0.4,
+            "fontSize": 18,
+            "color": "D95D39",
+            "margin": 0
+          }
+        }
+      ],
+      "notes": [
+        "Open with the proposition. This fixture contains no real participants or outcomes."
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "text",
+          "text": "The pilot joined access, skills, device support, and governance",
+          "options": {
+            "x": 0.8,
+            "y": 0.65,
+            "w": 11.7,
+            "h": 1,
+            "fontSize": 32,
+            "bold": true,
+            "color": "16324F",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "ACCESS     SKILLS     DEVICES     GOVERNANCE",
+          "options": {
+            "x": 1,
+            "y": 3.1,
+            "w": 11.3,
+            "h": 0.8,
+            "fontSize": 24,
+            "bold": true,
+            "color": "0B5D57",
+            "align": "center",
+            "margin": 0
+          }
+        }
+      ],
+      "notes": [
+        "Explain why the intervention is a system rather than an infrastructure-only project."
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "text",
+          "text": "120 residents completed introductory network training",
+          "options": {
+            "x": 0.8,
+            "y": 0.65,
+            "w": 11.7,
+            "h": 1,
+            "fontSize": 32,
+            "bold": true,
+            "color": "16324F",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "120",
+          "options": {
+            "x": 0.9,
+            "y": 2.2,
+            "w": 5,
+            "h": 2,
+            "fontSize": 92,
+            "bold": true,
+            "color": "D95D39",
+            "margin": 0
+          }
+        }
+      ],
+      "notes": [
+        "Synthetic evidence EV-002. Distinguish completions from long-term capability."
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "text",
+          "text": "18 advanced graduates formed the smaller maintenance pathway",
+          "options": {
+            "x": 0.8,
+            "y": 0.65,
+            "w": 11.7,
+            "h": 1,
+            "fontSize": 32,
+            "bold": true,
+            "color": "16324F",
+            "margin": 0
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "options": {
+            "x": 1,
+            "y": 2.2,
+            "w": 9,
+            "h": 0.75,
+            "fill": {
+              "color": "0B5D57"
+            },
+            "line": {
+              "color": "0B5D57"
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "options": {
+            "x": 1,
+            "y": 3.6,
+            "w": 1.35,
+            "h": 0.75,
+            "fill": {
+              "color": "D95D39"
+            },
+            "line": {
+              "color": "D95D39"
+            }
+          }
+        },
+        {
+          "type": "text",
+          "text": "120 introductory completions",
+          "options": {
+            "x": 1.15,
+            "y": 2.36,
+            "w": 8,
+            "h": 0.45,
+            "fontSize": 22,
+            "bold": true,
+            "color": "FFFFFF",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "18",
+          "options": {
+            "x": 1.15,
+            "y": 3.76,
+            "w": 1,
+            "h": 0.45,
+            "fontSize": 22,
+            "bold": true,
+            "color": "FFFFFF",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "advanced maintenance completions",
+          "options": {
+            "x": 2.6,
+            "y": 3.76,
+            "w": 8,
+            "h": 0.45,
+            "fontSize": 22,
+            "color": "16324F",
+            "margin": 0
+          }
+        }
+      ],
+      "notes": [
+        "120 introductory and 18 advanced completions. Bars share a zero baseline."
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "text",
+          "text": "The two hubs recorded 4,800 visits in six months",
+          "options": {
+            "x": 0.8,
+            "y": 0.65,
+            "w": 11.7,
+            "h": 1,
+            "fontSize": 32,
+            "bold": true,
+            "color": "16324F",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "4,800",
+          "options": {
+            "x": 0.9,
+            "y": 2.2,
+            "w": 6,
+            "h": 2,
+            "fontSize": 88,
+            "bold": true,
+            "color": "0B5D57",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "Visits are not equivalent to unique people.",
+          "options": {
+            "x": 0.9,
+            "y": 5.4,
+            "w": 7.5,
+            "h": 0.5,
+            "fontSize": 16,
+            "color": "52606D",
+            "margin": 0
+          }
+        }
+      ],
+      "notes": [
+        "Synthetic evidence EV-003. State the caveat aloud."
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "text",
+          "text": "Education was the most frequently reported use",
+          "options": {
+            "x": 0.8,
+            "y": 0.65,
+            "w": 11.7,
+            "h": 1,
+            "fontSize": 32,
+            "bold": true,
+            "color": "16324F",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "Education  62\nServices  55\nIncome-related  41",
+          "options": {
+            "x": 1,
+            "y": 2.2,
+            "w": 8.5,
+            "h": 2.5,
+            "fontSize": 26,
+            "breakLine": false,
+            "color": "16324F",
+            "margin": 0.05
+          }
+        }
+      ],
+      "notes": [
+        "Synthetic evidence EV-004, n=80. Multiple responses were allowed."
+      ]
+    },
+    {
+      "background": {
+        "color": "16324F"
+      },
+      "items": [
+        {
+          "type": "text",
+          "text": "Early use is promising, but it is not yet a verified outcome",
+          "options": {
+            "x": 0.9,
+            "y": 1.4,
+            "w": 11.3,
+            "h": 1.8,
+            "fontSize": 38,
+            "bold": true,
+            "color": "FFFFFF",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "Short follow-up · no comparison group · visits are not unique people · uses are self-reported",
+          "options": {
+            "x": 0.9,
+            "y": 4.2,
+            "w": 10.8,
+            "h": 0.8,
+            "fontSize": 20,
+            "color": "DDEFE8",
+            "margin": 0
+          }
+        }
+      ],
+      "notes": [
+        "Pause on the evidence boundary before recommending expansion."
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "text",
+          "text": "Affordability and device access remain the largest practical gaps",
+          "options": {
+            "x": 0.8,
+            "y": 0.65,
+            "w": 11.7,
+            "h": 1,
+            "fontSize": 32,
+            "bold": true,
+            "color": "16324F",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "AFFORDABILITY",
+          "options": {
+            "x": 1,
+            "y": 2.5,
+            "w": 4.8,
+            "h": 0.7,
+            "fontSize": 28,
+            "bold": true,
+            "color": "D95D39",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "DEVICE ACCESS",
+          "options": {
+            "x": 7,
+            "y": 2.5,
+            "w": 4.8,
+            "h": 0.7,
+            "fontSize": 28,
+            "bold": true,
+            "color": "0B5D57",
+            "margin": 0
+          }
+        }
+      ],
+      "notes": [
+        "These are reported implementation barriers in the synthetic narrative, not quantified outcome estimates."
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "text",
+          "text": "The next phase should strengthen operations, affordability, and evidence",
+          "options": {
+            "x": 0.8,
+            "y": 0.65,
+            "w": 11.7,
+            "h": 1,
+            "fontSize": 32,
+            "bold": true,
+            "color": "16324F",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "1  LOCAL OPERATIONS\n2  AFFORDABILITY TEST\n3  TWELVE-MONTH MEASUREMENT",
+          "options": {
+            "x": 1,
+            "y": 2.1,
+            "w": 9.5,
+            "h": 3,
+            "fontSize": 26,
+            "bold": true,
+            "color": "0B5D57",
+            "margin": 0.05
+          }
+        }
+      ],
+      "notes": [
+        "Present the three workstreams as one coordinated extension."
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "text",
+          "text": "A twelve-month extension can answer the questions the pilot could not",
+          "options": {
+            "x": 0.8,
+            "y": 0.65,
+            "w": 11.7,
+            "h": 1,
+            "fontSize": 32,
+            "bold": true,
+            "color": "16324F",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "DESIGN  →  TEST  →  MEASURE",
+          "options": {
+            "x": 1,
+            "y": 3,
+            "w": 11,
+            "h": 0.8,
+            "fontSize": 32,
+            "bold": true,
+            "color": "D95D39",
+            "align": "center",
+            "margin": 0
+          }
+        }
+      ],
+      "notes": [
+        "Describe the measurement plan before the closing decision."
+      ]
+    },
+    {
+      "background": {
+        "color": "0B5D57"
+      },
+      "items": [
+        {
+          "type": "text",
+          "text": "Approve design work for a measured twelve-month extension",
+          "options": {
+            "x": 0.9,
+            "y": 1.4,
+            "w": 11.2,
+            "h": 1.8,
+            "fontSize": 38,
+            "bold": true,
+            "color": "FFFFFF",
+            "margin": 0
+          }
+        },
+        {
+          "type": "text",
+          "text": "Next: safeguards · costing · partner roles · measurement plan",
+          "options": {
+            "x": 0.9,
+            "y": 4.4,
+            "w": 10.6,
+            "h": 0.7,
+            "fontSize": 22,
+            "color": "FFF3D6",
+            "margin": 0
+          }
+        }
+      ],
+      "notes": [
+        "Ask for the specific decision and name the immediate design outputs."
+      ]
+    }
   ]
 }

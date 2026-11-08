@@ -11,8 +11,8 @@ let failed = false;
 for (const project of projects) {
   const build = path.join(examplesRoot, project.name, "build.mjs");
   if (!fs.existsSync(build)) continue;
-  const result = spawnSync(process.execPath, [build], { cwd: path.dirname(build), stdio: "inherit" });
+  const result = spawnSync(process.execPath, [build, ...(process.argv.includes("--render") ? ["--render"] : [])], { cwd: root, stdio: "inherit" });
   if (result.status !== 0) failed = true;
 }
 if (failed) process.exit(1);
-console.log(`Built ${projects.length} synthetic example source projects. Binary rendering remains environment-dependent and is reported by each fixture.`);
+console.log(`${process.argv.includes("--render") ? "Rendered" : "Staged"} ${projects.length} synthetic example projects.`);

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="t d">
+  <title id="t">Clipped short label</title>
+  <desc id="d">A short label crosses the right edge of the artboard.</desc>
+  <text id="label" x="95" y="50" font-family="Arial, sans-serif" font-size="24">Short</text>
+</svg>

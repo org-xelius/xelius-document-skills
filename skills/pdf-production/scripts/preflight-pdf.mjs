@@ -1,27 +1,18 @@
 #!/usr/bin/env node
-import { spawnSync } from "node:child_process";
+import { inspectPdf, parseOptions, preflightChecks, resultStatus, printReport } from "./pdf-inspection.mjs";
 
-const file = process.argv[2];
-if (!file) {
-  console.error("Usage: node preflight-pdf.mjs <input.pdf>");
-  process.exit(2);
+if (process.argv.includes("--help")) {
+  console.log("Usage: node preflight-pdf.mjs input.pdf [--expect expectations.json] [--python python3] [--json] [--strict]");
+  process.exit(0);
 }
-const checks = [
-  { name: "pdfinfo", command: "pdfinfo", args: [file] },
-  { name: "pdffonts", command: "pdffonts", args: [file] },
-  { name: "links", command: "pdfinfo", args: ["-url", file] }
-];
-let limited = false;
-for (const check of checks) {
-  const result = spawnSync(check.command, check.args, { encoding: "utf8" });
-  if (result.error || result.status !== 0) {
-    limited = true;
-    console.error(`UNAVAILABLE ${check.name}`);
-  } else {
-    console.log(`--- ${check.name} ---\n${result.stdout.trim()}`);
-  }
-}
-if (limited) {
-  console.error("Preflight is limited because one or more required tools were unavailable.");
-  process.exit(3);
+
+try {
+  const options = parseOptions(process.argv.slice(2));
+  if (options.positional.length !== 1) throw new Error("Usage: node preflight-pdf.mjs <input.pdf> [--expect expectations.json] [--python python3] [--json] [--strict]");
+  const snapshot = inspectPdf(options.positional[0], options);
+  const checks = preflightChecks(snapshot, options.expect);
+  printReport({ schemaVersion: "1.0", kind: "preflight", artifact: snapshot.artifact, status: resultStatus(checks, options.strict), scope: "Technical preflight; visual quality, reading order, and PDF/UA conformance require separate review.", checks, properties: snapshot.properties, structure: snapshot.structure, limitations: checks.filter((item) => item.status === "limited").map((item) => item.detail) }, options.json);
+} catch (error) {
+  console.error(error.message);
+  process.exitCode = 2;
 }

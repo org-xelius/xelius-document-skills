@@ -1,6 +1,13 @@
 ---
 name: content-information-architecture
-description: "Inspect mixed source material and turn it into a traceable report architecture or presentation storyline. Use for pasted text, Markdown, DOCX, PDF, URLs, spreadsheets, datasets, image folders, research notes, or mixed directories when a project needs a source inventory, evidence register, publication plan, message-led deck storyline, annex strategy, or source-aware visual opportunities."
+description: Turn mixed research, notes, documents, and datasets into a source inventory, evidence
+  register, report plan, or presentation storyline. Use before composition when the evidence or
+  structure needs organizing.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Content Information Architecture

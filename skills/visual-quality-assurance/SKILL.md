@@ -1,6 +1,13 @@
 ---
 name: visual-quality-assurance
-description: "Render, inspect, record, and verify visual defects across every report page, presentation slide, PDF, PPTX, SVG, and preview set. Use when production outputs require evidence-based QA for clipping, overflow, typography, contrast, margins, crops, missing assets, charts, tables, density, repetition, furniture, sources, pagination, accessibility, or narrative pacing."
+description: Review rendered reports, slides, diagrams, and visual packs; record defects and verify
+  repairs. Use for complete visual inspection or a requested review, with schema-validated QA and
+  evidence for every reviewed surface.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Visual Quality Assurance
@@ -30,10 +37,23 @@ Source artifact, all page or slide renders, contact sheet, expected count, desig
 3. Confirm rendered count equals source count.
 4. Review the contact sheet for pacing, repetition, missing pages, colour drift, and weak openings or closings.
 5. Inspect every render individually at full size and record a `surfaceReviews` entry even when it is clear.
-6. Record each defect against `assets/schemas/qa-report.schema.json`; automated checks may support but never replace this review.
+6. Use `scripts/qa-report.mjs` to record renders, reviews, issues, and required technical, editorial, or accessibility checks using `assets/schemas/qa-report.schema.json` version 2.0.
 7. Prioritize critical and high issues, assign concrete repairs, and return them to the owning skill.
 8. Re-render repaired artifacts and verify the exact locations.
-9. Finish only when no open critical or high issue remains.
+9. Run `node scripts/validate-qa-report.mjs qa-report.json --verify-files`, then generate summaries with `qa-report.mjs report`. Deliver the derived status and name unresolved checks.
+
+## Canonical QA records
+
+Run `node scripts/qa-report.mjs --help` for complete commands. Initialize with the intended artifact and positive surface count, register each render, then record the review after inspecting it:
+
+```sh
+node scripts/qa-report.mjs init --artifact report.pdf --type pdf --total 2 --out qa/qa-report.json
+node scripts/qa-report.mjs record-render --report qa/qa-report.json --location page-001 --render renders/page-001.png
+node scripts/qa-report.mjs record-review --report qa/qa-report.json --location page-001 --method full-size-render --result clear --reviewer Hermes --observation "Title, table labels, source, and trim edges are legible."
+node scripts/qa-report.mjs report --report qa/qa-report.json --out qa/summary.md --manifest qa/manifest.json
+```
+
+Record defects with `record-issue --issue issue.json` and link their IDs using review `--issues`. After re-export, use `record-artifact --artifact revised.pdf` to invalidate old renders and reviews, then register and inspect fresh renders. Registering a changed render invalidates its old review. Never copy a clear result across pages or revisions. Legacy schema 1.0 reports need fresh records using current renders; changing field names alone does not establish inspection.
 
 ## Hard rules
 
@@ -42,6 +62,7 @@ Source artifact, all page or slide renders, contact sheet, expected count, desig
 - Inspect all pages or slides, not a sample.
 - Never claim manual inspection when only blank-page, resolution, file-existence, or other automated checks ran.
 - A `pass` requires one unique full-size review record per surface and no open or unverifiable issue.
+- Record render paths and SHA-256 hashes, reviewer identity, review time, observation, and linked issue IDs. Records document coverage; they cannot prove that a person or agent actually viewed an image.
 - Record tool gaps as limitations; do not mark unavailable checks passed.
 - Keep accepted deviations explicit and attributable.
 
@@ -52,7 +73,7 @@ Run on representative samples before full production and again at final QA. Repo
 ## Files to read by phase
 
 - Inspection protocol: `references/VISUAL-QA.md`
-- Issue structure: shared QA schema
+- Record structure and migration: `assets/schemas/qa-report.schema.json` (schema 2.0), `scripts/qa-report.mjs --help`
 - Medium-specific checks: PDF, PPTX, SVG, data, table, or image references as applicable
 
 ## Quality checks

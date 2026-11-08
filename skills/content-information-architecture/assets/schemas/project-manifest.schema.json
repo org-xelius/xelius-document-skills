@@ -6,6 +6,7 @@
   "required": ["projectId", "title", "productionModes", "audience", "purpose", "desiredAction", "brandMode", "sourceRoots", "deliverables", "checkpoints"],
   "properties": {
     "schemaVersion": {"type": "string", "const": "1.0"},
+    "workflowMode": {"enum": ["create", "revise", "review", "export"]},
     "projectId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,63}$"},
     "title": {"type": "string", "minLength": 1},
     "productionModes": {

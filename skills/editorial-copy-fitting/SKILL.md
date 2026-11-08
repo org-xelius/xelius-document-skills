@@ -1,6 +1,13 @@
 ---
 name: editorial-copy-fitting
-description: "Adapt evidence-based copy to fit reports, briefs, slides, charts, tables, sidebars, captions, callouts, and speaker notes without weakening meaning. Use when headings, standfirsts, pull quotes, captions, insight titles, slide copy, terminology, dates, or numbers must be shortened or standardized while preserving caveats, uncertainty, safeguarding language, legal qualifications, attribution, and citations."
+description: Fit headings, paragraphs, captions, tables, and slide copy to real layout constraints.
+  Use to shorten or standardize evidence-based text while preserving meaning, qualifications,
+  citations, and uncertainty.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Editorial Copy Fitting

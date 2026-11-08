@@ -1,6 +1,13 @@
 ---
 name: image-art-direction
-description: "Inventory, evaluate, crop, credit, and direct photography and raster imagery for reports, presentations, handouts, and visual scenes. Use when a project must detect low resolution and duplicates, identify focal points, protect faces and meaningful objects, create aspect-ratio variants, distinguish documentary from decorative imagery, standardize treatment, or flag replacement instead of aggressive upscaling."
+description: Inventory, select, crop, and credit photographs or raster imagery for reports and
+  presentations. Use for resolution, focal points, authenticity, protected crop areas, rights, and
+  output-specific image variants.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Image Art Direction

@@ -1,6 +1,13 @@
 ---
 name: data-visualisation
-description: "Select, design, export, and validate analytical charts, maps, timelines, matrices, flows, small multiples, and metric displays for reports and presentations. Use when data must communicate one defensible message with accurate scales, units, periods, labels, source and sample notes, accessible tabular data, SVG and PNG exports, and output-specific report or projection treatment."
+description: Choose and produce accurate charts, maps, and analytical visuals for reports or
+  presentations. Use when evidence needs a defensible comparison with scales, units, uncertainty,
+  sources, and accessible data.
+license: MIT
+metadata:
+  author: org-xelius
+  version: 0.2.0
+  source: https://github.com/org-xelius/xelius-document-skills
 ---
 
 # Data Visualisation

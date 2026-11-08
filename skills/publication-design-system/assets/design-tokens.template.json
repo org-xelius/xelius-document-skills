@@ -40,5 +40,16 @@
   "accessibility": {
     "contrastTarget": "WCAG-AA",
     "colourOnlyMeaning": false
+  },
+  "outputContract": {
+    "mode": "create",
+    "language": "en",
+    "minimumTypePt": {"body": 10.5, "table": 9, "source": 8},
+    "typeSizePolicy": "Starting values for A4 close reading; adapt to the audience and medium before approval.",
+    "placedFigureWidthMm": 170,
+    "safeInsetMm": 5,
+    "requiredPdfProperties": ["title", "language", "selectableText"],
+    "protectedWording": [],
+    "acceptedDeviations": []
   }
 }

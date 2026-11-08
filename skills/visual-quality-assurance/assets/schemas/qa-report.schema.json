@@ -1,12 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://xelius.example/schemas/qa-report.schema.json",
+  "$id": "https://xelius.org/schemas/qa-report-2.0.schema.json",
   "title": "Rendered visual QA report",
   "type": "object",
-  "required": ["artifact", "artifactType", "status", "inspectionCoverage", "issues"],
+  "required": ["schemaVersion", "artifact", "artifactType", "status", "reviewMethod", "inspectionCoverage", "renders", "surfaceReviews", "issues", "checks", "limitations"],
   "properties": {
-    "schemaVersion": {"type": "string", "const": "1.0"},
-    "artifact": {"type": "string"},
+    "schemaVersion": {"type": "string", "const": "2.0"},
+    "artifact": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "artifactSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "createdAt": {"type": "string", "minLength": 1},
+    "updatedAt": {"type": "string", "minLength": 1},
     "artifactType": {"enum": ["pdf", "pptx", "svg", "png-pack"]},
     "status": {"enum": ["pass", "repair-required", "limited"]},
     "reviewMethod": {"enum": ["manual-full-size", "manual-and-automated", "automated-only", "source-only"]},
@@ -16,7 +19,7 @@
       "properties": {
         "rendered": {"type": "integer", "minimum": 0},
         "inspected": {"type": "integer", "minimum": 0},
-        "total": {"type": "integer", "minimum": 0}
+        "total": {"type": "integer", "minimum": 1}
       },
       "additionalProperties": false
     },
@@ -24,14 +27,17 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["location", "severity", "category", "evidence", "repair", "status"],
+        "required": ["id", "location", "severity", "category", "evidence", "repair", "status"],
         "properties": {
-          "location": {"type": "string"},
+          "id": {"type": "string", "minLength": 1},
+          "location": {"type": "string", "minLength": 1},
           "severity": {"enum": ["critical", "high", "medium", "low"]},
           "category": {"enum": ["overflow", "clipping", "contrast", "typography", "spacing", "crop", "missing-asset", "svg", "chart", "table", "density", "repetition", "furniture", "source-line", "orphan", "pagination", "narrative", "accessibility", "other"]},
-          "evidence": {"type": "string"},
-          "repair": {"type": "string"},
-          "status": {"enum": ["open", "repaired", "accepted", "unverifiable"]}
+          "evidence": {"type": "string", "minLength": 1},
+          "repair": {"type": "string", "minLength": 1},
+          "status": {"enum": ["open", "repaired", "accepted", "unverifiable"]},
+          "acceptedBy": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "acceptanceReason": {"type": "string", "minLength": 1, "pattern": "\\S"}
         },
         "additionalProperties": false
       }
@@ -40,17 +46,49 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["location", "method", "result", "observation"],
+        "required": ["location", "method", "result", "observation", "reviewer", "reviewedAt", "issueIds"],
         "properties": {
           "location": {"type": "string", "minLength": 1},
           "method": {"enum": ["full-size-render", "source-only", "unverifiable"]},
           "result": {"enum": ["clear", "issue-found", "unverifiable"]},
-          "observation": {"type": "string", "minLength": 1}
+          "observation": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "reviewer": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "reviewedAt": {"type": "string", "minLength": 1},
+          "renderPath": {"type": "string", "minLength": 1},
+          "renderSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "issueIds": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
         },
         "additionalProperties": false
       }
     },
-    "limitations": {"type": "array", "items": {"type": "string"}}
+    "renders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["location", "path", "sha256"],
+        "properties": {
+          "location": {"type": "string", "minLength": 1},
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "domain", "status", "evidence"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "domain": {"enum": ["technical", "editorial", "visual", "accessibility"]},
+          "status": {"enum": ["pass", "repair-required", "limited", "not-requested"]},
+          "evidence": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "limitations": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1, "pattern": "\\S"}}
   },
   "additionalProperties": false
 }

@@ -1,9 +1,13 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "2.0",
   "artifact": "riverbend-partner-briefing.pptx",
   "artifactType": "pptx",
   "status": "limited",
+  "reviewMethod": "source-only",
   "inspectionCoverage": {"rendered": 0, "inspected": 0, "total": 11},
+  "renders": [],
+  "surfaceReviews": [],
   "issues": [],
+  "checks": [],
   "limitations": ["The committed fixture contains complete source, not rendered PPTX, PDF, PNG previews, or contact sheet. Run build.mjs --render and the production render scripts."]
 }
