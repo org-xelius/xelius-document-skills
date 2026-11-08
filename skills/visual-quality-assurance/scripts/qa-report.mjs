@@ -6,7 +6,7 @@ import { deriveStatus, hashFile, validateQa } from "./qa-utils.mjs";
 const [command, ...args] = process.argv.slice(2);
 const help = `Usage: node qa-report.mjs <action> [options]
   init --artifact file.pdf --type pdf --total 3 --out qa/qa-report.json
-  record-artifact --report qa/qa-report.json --artifact revised.pdf
+  record-artifact --report qa/qa-report.json --artifact revised.pdf [--total 4]
   record-render --report qa/qa-report.json --location page-001 --render renders/page-001.png
   record-review --report qa/qa-report.json --location page-001 --method full-size-render --result clear --reviewer Hermes --observation "Labels and edges are legible."
   record-issue --report qa/qa-report.json --issue issue.json
@@ -62,11 +62,17 @@ try {
   };
   if (command === "record-artifact") {
     need("artifact");
+    if (options.total !== undefined) {
+      const total = Number(options.total);
+      if (!Number.isInteger(total) || total < 1) throw new Error("--total must be a positive integer.");
+      report.inspectionCoverage.total = total;
+    }
     report.artifact = storedPath(options.artifact);
     report.artifactSha256 = hashFile(path.resolve(options.artifact));
     report.renders = [];
     report.surfaceReviews = [];
     report.reviewMethod = "source-only";
+    report.checks = report.checks.map((check) => check.status === "not-requested" ? check : { ...check, status: "limited", evidence: "Artifact changed; rerun this check against the current export." });
   } else if (command === "record-render") {
     need("location", "render");
     const render = { location: options.location, path: storedPath(options.render), sha256: hashFile(path.resolve(options.render)) };

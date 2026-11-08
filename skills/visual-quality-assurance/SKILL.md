@@ -55,6 +55,8 @@ node scripts/qa-report.mjs report --report qa/qa-report.json --out qa/summary.md
 
 Record defects with `record-issue --issue issue.json` and link their IDs using review `--issues`. After re-export, use `record-artifact --artifact revised.pdf` to invalidate old renders and reviews, then register and inspect fresh renders. Registering a changed render invalidates its old review. Never copy a clear result across pages or revisions. Legacy schema 1.0 reports need fresh records using current renders; changing field names alone does not establish inspection.
 
+Re-registering an artifact also resets performed domain checks to limited; rerun them for the new export. Pass `--total` when the intended page or slide count changes.
+
 ## Hard rules
 
 - Never infer visual quality from a successful export.

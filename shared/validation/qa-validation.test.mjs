@@ -93,13 +93,18 @@ test("QA helper records explicit reviews, derives reports, and detects stale fil
     report = JSON.parse(fs.readFileSync(reportFile));
     assert.equal(report.status, "limited");
     assert.equal(report.surfaceReviews.length, 0);
+    const checkFile = path.join(temp, "check.json");
+    fs.writeFileSync(checkFile, JSON.stringify({ id: "metadata", domain: "technical", status: "pass", evidence: "Title verified on original export." }));
+    okay("record-check", "--report", reportFile, "--check", checkFile);
     fs.appendFileSync(artifact, "changed");
     assert.ok(validateQa(report, { reportDir: path.dirname(reportFile), verifyFiles: true }).some((error) => error.includes("Artifact")));
-    okay("record-artifact", "--report", reportFile, "--artifact", artifact);
+    okay("record-artifact", "--report", reportFile, "--artifact", artifact, "--total", "2");
     report = JSON.parse(fs.readFileSync(reportFile));
     assert.deepEqual(report.renders, []);
     assert.deepEqual(report.surfaceReviews, []);
     assert.equal(report.status, "limited");
+    assert.equal(report.inspectionCoverage.total, 2);
+    assert.equal(report.checks[0].status, "limited", "Checks from the previous artifact cannot stay passed.");
     assert.deepEqual(validateQa(report, { reportDir: path.dirname(reportFile), verifyFiles: true }), []);
   } finally {
     fs.rmSync(temp, { recursive: true, force: true });
